@@ -1,0 +1,372 @@
+.calculator {
+  $this: &;
+
+  max-width: 890px;
+  padding: 80px 15px 126px;
+  margin: 0 auto;
+  @include mobile() {
+    padding: 40px 20px 90px;
+  }
+
+  &__separator {
+    display: block;
+    width: 75px;
+    height: 13px;
+    color: $green;
+    margin: 0 auto 16px;
+    @include mobile() {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__suptitle {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.2;
+    @include ls();
+    margin-bottom: 3px;
+    @include mobile() {
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: -5px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: $green-dark;
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 1;
+    @include ls-m();
+    margin-bottom: 7px;
+    @include mobile() {
+      font-size: 32px;
+      margin-bottom: -3px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 62px;
+    @include ls();
+    @include mobile() {
+      font-size: 18px;
+      line-height: 2;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    @include mobile() {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__main {
+    max-width: 475px;
+    flex: 1;
+    @include mobile() {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+
+  &__head {
+    font-size: 30px;
+    line-height: 1.2;
+    @include book();
+    margin-bottom: 42px;
+    width: 100%;
+    @include mobile() {
+      font-size: 24px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__left {
+    width: 190px;
+
+    @include mobile() {
+      width: 100%;
+      margin-right: 12px;
+    }
+  }
+
+  &__right {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include mobile() {
+      width: 100%;
+      margin-top: 14px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 17px;
+    @include mobile() {
+      font-size: 14px;
+      line-height: 1.85;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__form {
+    display: block;
+    margin-bottom: 4px;
+    cursor: pointer;
+    @include mobile() {
+      margin-bottom: 5px;
+    }
+
+    input {
+      display: none;
+    }
+
+    div {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 15px 0 24px;
+      font-size: 15px;
+      line-height: 1.2;
+      color: $gray-dark;
+      border: 1px solid $gray;
+      border-right: 0;
+      position: relative;
+      z-index: 1;
+      @include skew('right', 'top', 10deg, 1px) {
+        border: 1px solid $gray;
+        border-left: 0;
+        @include anim();
+      }
+      @include anim();
+      @include mobile() {
+        height: 50px;
+        font-size: 14px;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      width: 41px;
+      height: 41px;
+      @include anim();
+      @include mobile() {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    input:checked + div {
+      border-color: $green-dark;
+      color: $black;
+
+      &:after {
+        border-color: $green-dark;
+      }
+
+      svg {
+        color: $green-dark;
+      }
+    }
+
+    &:hover {
+      color: $black;
+
+      svg {
+        color: $green-dark;
+      }
+    }
+  }
+
+  &__sSlider {
+  }
+
+  &__sValue {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      margin-top: 17px;
+    }
+  }
+
+  &__sInput {
+    height: 40px;
+    border: 1px solid $gray;
+    font-size: 15px;
+    @include ls();
+    padding: 0 20px;
+    flex: 1;
+    @include anim();
+    max-width: 105px;
+
+    &:hover {
+      border-color: $green;
+    }
+
+    &:focus {
+      border-color: $green-dark;
+    }
+  }
+
+  &__sSup {
+    font-size: 15px;
+    color: $gray-dark;
+    margin-left: 10px;
+  }
+
+  &__covers {
+    @include mobile() {
+      margin-top: 20px;
+    }
+  }
+
+  &__cover {
+    display: block;
+    margin-bottom: 4px;
+    cursor: pointer;
+    @include mobile() {
+      margin-bottom: 5px;
+    }
+
+    input {
+      display: none;
+    }
+
+    div {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $gray;
+      color: $gray-dark;
+      font-size: 15px;
+      @include ls();
+      @include anim();
+      @include mobile() {
+        font-size: 14px;
+      }
+    }
+
+    input:checked + div {
+      border-color: $green-dark;
+      color: $black;
+    }
+
+    &:hover div {
+      color: $black;
+    }
+  }
+
+  &__aside {
+    margin-left: auto;
+    max-width: 310px;
+    width: 100%;
+    position: relative;
+    margin-top: 28px;
+    align-self: flex-start;
+    @include mobile() {
+      margin: 45px auto 0;
+    }
+  }
+
+  &__details {
+    color: $white;
+    background: $green-dark;
+    text-align: center;
+    position: relative;
+    padding: 32px 0 57px;
+    @include skew('top', 'right', 3.5deg) {
+      background: $green-dark;
+    }
+    @include mobile() {
+      padding: 24px 0 47px;
+    }
+  }
+
+  &__sumLabel {
+    font-size: 18px;
+    line-height: 1.15;
+    @include ls();
+    @include mobile() {
+      font-size: 16px;
+      line-height: 1.125;
+    }
+  }
+
+  &__sum {
+    margin-top: 5px;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: bold;
+    @include ls();
+    @include mobile() {
+      font-size: 20px;
+      margin-top: 6px;
+    }
+
+    &--cover {
+      margin-bottom: 32px;
+      @include mobile() {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--total {
+      color: $green-dark;
+      font-size: 30px;
+      @include mobile() {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__complect {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    opacity: .5;
+    line-height: 1.15;
+    @include ls();
+    @include mobile() {
+      line-height: 1.25;
+    }
+
+    li {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__total {
+    text-align: center;
+    padding: 27px 0 34px;
+    background: $gray;
+    position: relative;
+    z-index: 1;
+    @include skew('top', 'right', 3.5deg) {
+      background: $gray;
+    }
+    @include mobile() {
+      padding: 23px 0 25px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+}

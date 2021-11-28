@@ -1,0 +1,13 @@
+mixin the_svg(svgIcon)
+  svg()&attributes(attributes): use(xlink:href="img/sprite.svg#" + svgIcon + '-usage')
+
+mixin the_card(imgIndex, big, bigMobile)
+  a.card(class=[big && 'card--big', bigMobile && 'card--bigMobile'].filter(Boolean).join(' ') href='#')
+    .card__badge -18%
+    .card__image: img(src=require('src/img/catalog/' + (imgIndex % 5 + 1) + '.jpg'))
+    .card__content
+      .card__category какой-то раздел
+      .card__name Какой-то товар продается PRO
+      .card__price #[span 380 руб.]/м#[sup 2]
+      .card__priceOld 788 руб./м#[sup 2]
+      .card__button: button.btn.btn--leftBottom.btn--smMobile В корзину

@@ -1,0 +1,87 @@
+.btn {
+  $this: &;
+
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  @include anim();
+  padding: 0 25px 0 30px;
+  height: 50px;
+  //padding: 16px 25px 16px 30px;
+  @include book();
+  font-size: 15px;
+  line-height: 1.2;
+  color: $black;
+  background: $yellow;
+  z-index: 1;
+
+  @include skew('right', 'bottom', 15deg) {
+    background: $yellow;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    text-decoration: none;
+    filter: drop-shadow(0 11px 20px rgba($yellow, .35));
+  }
+
+
+  &:disabled {
+    color: $gray-dark;
+    background: $gray-light;
+
+    &:hover {
+      filter: none;
+    }
+
+    &:after {
+      background: $gray-light;
+    }
+  }
+
+  &--leftBottom, &--leftTop {
+    padding-left: 25px;
+    padding-right: 30px;
+  }
+
+  &--leftBottom {
+    @include skew('left', 'bottom', 15deg) {
+      background: $yellow;
+    }
+  }
+
+  &--leftTop {
+    @include skew('left', 'top', 15deg) {
+      background: $yellow;
+    }
+  }
+
+  @mixin smButton() {
+    height: 40px;
+    font-size: 13px;
+    padding-left: 25px;
+    padding-right: 20px;
+
+    &#{$this}--leftBottom, &#{$this}--leftTop {
+      padding-right: 25px;
+      padding-left: 20px;
+    }
+  }
+
+  &--sm {
+    @include smButton();
+  }
+
+  &--smMobile {
+    @include mobile() {
+      @include smButton();
+    }
+  }
+}
+

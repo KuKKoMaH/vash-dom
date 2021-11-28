@@ -1,0 +1,49 @@
+footer.footer
+  .footer__top
+    .c.footer__row
+      .footer__info
+        .footer__logo: img(src=require('src/img/logo.png'))
+        .footer__meta Равным образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.
+
+      .footer__menu
+        ul
+          li
+            ul
+              li: a(href='#') Производство
+              li: a(href='#') Услуги
+              li: a(href='#') Рекомендации эксперта
+              li: a(href='#') Дилерам и строителям
+              li: a(href='#') VIP материалы
+          li
+            ul
+              li: a(href='#') Кровля
+              li: a(href='#') Металлочерепица
+              li: a(href='#') Профнастил
+              li: a(href='#') Гибкая черепица
+              li: a(href='#') Заборы
+              li: a(href='#') Фасады
+
+      .footer__address
+        .footer__city г. Пенза
+        ul.footer__addresses
+          li ул. Калинина, 22 / Чкалова, 19
+          li  ул. Новотерновская д.3, ТЦ «Форпост»
+          li ул. Чаадаева 60Б
+        .footer__works пн-вс с 8.00 до 19.00
+
+      .footer__contacts
+        a.footer__phone(href='tel:+78412210567')
+          +the_svg('phone2')
+          | +7 (8412) 21-05-67
+        a.footer__email(href='mailto:vashdom-pnz@yandex.ru') vashdom-pnz@yandex.ru
+        .footer__socials
+          a.footer__social(href="#"): +the_svg('twitter')
+          a.footer__social(href="#"): +the_svg('fb')
+          a.footer__social(href="#"): +the_svg('g+')
+          a.footer__social(href="#"): +the_svg('vk')
+
+  .footer__bottom
+    .c.footer__row
+      .footer__label 2021 © Завод «Ваш дом»
+      .footer__label Все права защищены
+      button.footer__politic Политика конфиденциальности

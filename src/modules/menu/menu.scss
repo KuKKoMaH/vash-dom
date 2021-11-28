@@ -1,0 +1,170 @@
+.menu {
+  $this: &;
+
+  color: $black;
+  padding: 28px 58px 34px;
+  @include mobile() {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__categories {
+    display: none;
+    @include mobile() {
+      display: block;
+      @include anim(.25s);
+      width: 100%;
+
+      ul, li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        border-bottom: 1px solid $gray;
+        position: relative;
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        padding: 14px 40px 14px 23px;
+        text-transform: uppercase;
+        line-height: 1.25;
+        @include demi();
+      }
+
+      svg {
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        color: $green-dark;
+        right: 20px;
+        top: 50%;
+        margin-top: -4px;
+        transform: rotate(-90deg);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__items {
+    @include mobile() {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 100%;
+      @include anim(.25s);
+    }
+
+    ul, li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      @include anim();
+
+      &:hover {
+        text-decoration: none;
+        color: $green-dark;
+        border-color: $green-dark;
+      }
+    }
+
+    & > ul {
+      column-count: 4;
+      column-fill: balance;
+      column-gap: 0;
+
+      @include mobile() {
+        display: flex;
+        flex-direction: column;
+      }
+
+      & > li {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        padding: 25px 0px;
+        @include mobile() {
+          display: none;
+          padding: 24px 23px;
+        }
+
+        > a {
+          text-transform: uppercase;
+          font-size: 24px;
+          line-height: 1.25;
+          @include demi();
+          @include mobile() {
+            //display: block;
+            font-size: 20px;
+            //padding: 14px 23px;
+          }
+        }
+
+        > ul {
+          margin-top: 10px;
+          @include mobile() {
+            margin-top: 17px;
+          }
+
+          li {
+            margin-top: 11px;
+          }
+
+          a {
+            border-bottom: 1px dotted $black;
+            @include mobile() {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__back {
+    display: none;
+    @include mobile() {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid $gray;
+      height: 40px;
+      color: $green-dark;
+      @include demi();
+      font-size: 13px;
+      text-transform: uppercase;
+
+      svg {
+        width: 9px;
+        height: 9px;
+        transform: rotate(90deg);
+        margin-right: 6px;
+      }
+    }
+  }
+
+  &--category {
+    #{$this}__categories {
+      transform: translateX(-100%);
+      position: absolute;
+      top: 0;
+    }
+
+    #{$this}__items {
+      transform: translateX(-100%);
+      position: relative;
+    }
+  }
+}

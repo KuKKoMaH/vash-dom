@@ -1,0 +1,265 @@
+.search {
+  $this: &;
+
+  &__input {
+    height: 60px;
+    background: $green-dark;
+    border: 1px solid $green-border;
+    border-right: 0;
+    @include mobile() {
+      height: 48px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      height: 100%;
+      @include placeholder(rgba($white, .25));
+      letter-spacing: 0;
+      @include book();
+      padding: 0 60px 0 30px;
+    }
+
+  }
+
+  &__icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 22px;
+    top: 22px;
+    pointer-events: none;
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__close {
+    display: none;
+    @include mobile() {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  &__results {
+    //width: 100%;
+    background: $white;
+    border: 1px solid $gray;
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $gray;
+    height: 100px;
+    padding: 0 30px;
+    color: $black;
+    @include mobile() {
+      height: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 19px 15px 21px;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    height: 20px;
+    padding: 0 7px;
+    background: $green-dark;
+    font-weight: bold;
+    font-size: 15px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    @include skew('right', 'bottom', 20deg) {
+      background: $green-dark;
+    }
+    @include mobile() {
+      left: 0;
+      top: 9px;
+      font-size: 12px;
+      height: 16px;
+      padding: 0 4px 0 6px;
+    }
+  }
+
+  &__image {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+
+    @include mobile() {
+      position: absolute;
+      left: 20px;
+      top: 25px;
+      width: 70px;
+      height: 70px;
+      margin: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    @include mobile() {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-left: 94px;
+    }
+  }
+
+  &__title {
+    font-size: 15px;
+    @include book();
+    width: 50%;
+    @include mobile() {
+      font-size: 14px;
+      line-height: 1.15;
+      width: 100%;
+    }
+  }
+
+  &__category {
+    font-size: 13px;
+    color: $gray-dark;
+    width: 40%;
+    @include mobile() {
+      font-size: 10px;
+      width: 100%;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__price {
+    width: 15%;
+    @include mobile() {
+      width: 100%;
+      padding-left: 94px;
+      margin-top: 7px;
+    }
+  }
+
+  &__priceNew {
+    font-size: 13px;
+    @include demi();
+    color: $green-dark;
+
+    span {
+      font-size: 18px;
+    }
+
+    @include mobile() {
+      font-size: 10px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__priceOld {
+    font-size: 13px;
+    color: $red;
+    text-decoration: line-through;
+    @include mobile() {
+      font-size: 10px;
+    }
+  }
+
+  &__count {
+    display: flex;
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__button {
+    width: 38px;
+    height: 38px;
+    border: 1px solid $gray;
+    background: $gray-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: $green-dark;
+  }
+
+  &__counter {
+    width: 38px;
+    height: 38px;
+    border: 1px solid $gray;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include book();
+  }
+
+  &__cart {
+    width: 15%;
+    text-align: right;
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    width: 5%;
+    text-align: right;
+    padding-right: 7px;
+
+    svg {
+      color: $green-dark;
+      width: 9px;
+      height: 9px;
+      transform: rotate(-90deg);
+    }
+
+    @include mobile() {
+      position: absolute;
+      width: auto;
+      right: 15px;
+      bottom: 18px;
+    }
+  }
+}

@@ -1,0 +1,239 @@
+.hints {
+  $this: &;
+
+  background: $gray-light;
+  padding-top: 45px;
+  @include mobile() {
+    padding: 0;
+  }
+
+  &__container {
+    max-width: 1140px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    @include mobile() {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+  }
+
+  &__main {
+    max-width: 530px;
+    //margin: 0 auto;
+    padding: 28px 0 50px;
+    align-self: flex-start;
+    position: relative;
+    @include mobile() {
+      width: 100%;
+      padding: 35px 0 31px;
+      align-self: center;
+    }
+  }
+
+  &__title {
+    font-size: 46px;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 31px;
+    letter-spacing: -.025em;
+    @include mobile() {
+      font-size: 32px;
+      margin-bottom: 21px;
+    }
+  }
+
+  &__separator {
+    width: 75px;
+    height: 20px;
+    color: $green;
+    margin-bottom: 25px;
+    @include mobile() {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__slides {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  &__head {
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 11px;
+    @include ls();
+    @include demi();
+    @include mobile() {
+      font-size: 18px;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    @include ls();
+    @include mobile() {
+      font-size: 14px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    @include mobile() {
+      margin-top: 24px;
+    }
+  }
+
+  &__nav {
+    margin-right: 15px;
+    color: $green-dark;
+    @include anim();
+
+    svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+
+    &:hover {
+      color: $green;
+    }
+
+    &--prev {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__button {
+    margin-left: auto;
+    position: relative;
+  }
+
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    right: 0;
+    bottom: 0;
+    margin-right: -148px;
+    margin-bottom: -20px;
+    z-index: 1;
+    @include mobile() {
+      bottom: auto;
+      margin-bottom: 0;
+      top: 77px;
+      margin-right: -18px;
+      height: 175px;
+      width: auto;
+    }
+  }
+
+  &__aside {
+    position: relative;
+    align-self: flex-end;
+    margin-right: 47px;
+    @include mobile() {
+      margin-right: 0;
+      padding-left: 79px;
+      align-self: center;
+    }
+  }
+
+  &__man {
+    position: relative;
+    z-index: 2;
+    @include mobile() {
+      height: 279px;
+      width: auto;
+    }
+  }
+
+  &__thumb {
+    position: absolute;
+    background: $green-dark;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    border: 10px solid $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 11px 38px rgba($green-dark, .25);
+    z-index: 2;
+    top: 198px;
+    left: 1px;
+    @include mobile() {
+      top: 141px;
+      left: 21px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      bottom: -20px;
+      left: -20px;
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__name {
+    position: absolute;
+    line-height: 1;
+    background: $white;
+    top: 38px;
+    left: -56px;
+    height: 50px;
+    padding: 0 40px 0 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    @include ls();
+    @include skew('left', 'top', 15deg) {
+      background: $white;
+    }
+    @include mobile() {
+      font-size: 12px;
+      height: 32px;
+      top: 44px;
+      left: 36px;
+      padding: 0 40px 0 11px;
+    }
+  }
+
+  &__position {
+    position: absolute;
+    font-size: 15px;
+    color: $gray-dark;
+    top: 104px;
+    left: -72px;
+    text-align: right;
+    @include ls();
+    @include mobile() {
+      font-size: 12px;
+      top: 86px;
+      left: 17px;
+    }
+  }
+}
+

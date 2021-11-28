@@ -1,0 +1,260 @@
+.footer {
+  $this: &;
+
+  &__top {
+    border-top: 1px solid $footer-border;
+    padding: 50px 0 50px;
+    background: $gray-light url(../../img/footer-bg.png) calc(50% + 410px) calc(100% + 80px) no-repeat;
+    @include mobile() {
+      padding: 34px 0 45px;
+      background-position: calc(100% + 70px) calc(100% - 80px);
+    }
+  }
+
+  &__bottom {
+    background: $footer-bottom;
+    border-top: 1px solid $footer-border;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      height: auto;
+      padding: 19px 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    @include mobile() {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 10px;
+    @include mobile() {
+      width: 45px;
+      margin-right: 25px;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__meta {
+    max-width: 180px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: $gray-dark;
+    @include mobile() {
+      max-width: 300px;
+      font-size: 12px;
+    }
+  }
+
+  &__menu {
+    flex: 2;
+    @include mobile() {
+      width: 100%;
+      margin-bottom: 22px;
+    }
+
+
+    ul, li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    > ul {
+      display: flex;
+      justify-content: center;
+      @include mobile() {
+        justify-content: flex-start;
+        margin: 0 -15px;
+      }
+    }
+
+    > ul > li {
+      margin: 0 30px;
+      @include mobile() {
+        margin: 0 15px;
+      }
+    }
+
+    > ul > li > a {
+      display: none;
+    }
+
+    > ul > li li {
+      margin-bottom: 9px;
+      @include mobile() {
+        margin-bottom: 10px;
+      }
+    }
+
+    a {
+      font-size: 15px;
+      border-bottom: 1px dotted $green-dark;
+      @include anim();
+
+      &:hover {
+        text-decoration: none;
+        color: $green;
+      }
+
+      @include mobile() {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__city {
+    @include demi();
+    margin-bottom: 8px;
+  }
+
+  &__address {
+    flex: 1;
+    @include mobile() {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__addresses {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      position: relative;
+      padding-left: 15px;
+      font-size: 15px;
+      margin-bottom: 8px;
+      @include mobile() {
+        font-size: 14px;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        background: $green-dark;
+        position: absolute;
+        top: 9px;
+        left: 0;
+      }
+    }
+  }
+
+  &__works {
+    @include book();
+    font-size: 15px;
+    color: $green-dark;
+    text-transform: uppercase;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+    @include mobile() {
+      margin-bottom: 5px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: $red;
+      margin-right: 10px;
+    }
+  }
+
+  &__email {
+    color: $green-dark;
+    margin-bottom: 17px;
+    @include mobile() {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+  }
+
+  &__social {
+    margin-right: 5px;
+    position: relative;
+    z-index: 1;
+    background: $gray;
+    @include anim();
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include skew('bottom', 'left', 10deg) {
+      background: $gray;
+      @include anim();
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: $gray-dark;
+      @include anim();
+    }
+
+    &:hover {
+      background: $yellow;
+
+      &:after {
+        background: $yellow;
+      }
+
+      svg {
+        color: $black;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 15px;
+    color: $gray-dark;
+  }
+
+  &__politic {
+    font-size: 15px;
+    border-bottom: 1px dotted $green-dark;
+    @include anim();
+
+    &:hover {
+      color: $green-dark;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.form {
+  $this: &;
+
+  &__title {
+    @include h3();
+    text-align: center;
+    margin-bottom: 60px;
+    @include mobile() {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content {
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__input {
+    margin-top: 60px;
+    @include mobile() {
+      margin-top: 40px;
+    }
+  }
+
+  &__confirm {
+    margin-top: 40px;
+    @include mobile() {
+      margin-top: 30px;
+    }
+  }
+
+  &__button {
+    margin-top: 60px;
+    @include mobile() {
+      margin-top: 40px;
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &__checkbox {
+    margin-top: 30px;
+    @include mobile() {
+      margin-top: 20px;
+    }
+  }
+
+  &__cols {
+    display: flex;
+    margin: 0 -40px;
+    @include mobile() {
+      margin: 0;
+      flex-direction: column;
+      display: contents;
+    }
+  }
+
+  &__col {
+    width: 280px;
+    margin: 0 40px;
+    @include mobile() {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+  }
+}

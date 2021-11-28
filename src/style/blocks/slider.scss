@@ -1,0 +1,49 @@
+.slider {
+  height: 16px;
+  box-shadow: none;
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  display: flex;
+
+  .noUi-base {
+    top: 0;
+  }
+
+  .noUi-connects {
+    background: $gray-dark;
+    height: 2px;
+    margin-top: 7px;
+  }
+
+  .noUi-connect {
+    background: $green;
+  }
+
+  .noUi-handle {
+    width: 16px;
+    height: 16px;
+    background: $green-dark;
+    box-shadow: none;
+    border: 0;
+    top: 0;
+    right: -8px;
+    border-radius: 0;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      left: 5px;
+      top: 5px;
+    }
+  }
+
+  .noUi-marker {
+    display: none;
+  }
+}

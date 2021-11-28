@@ -1,0 +1,546 @@
+.header {
+  $this: &;
+
+  background: $black;
+  color: $white;
+  position: relative;
+  z-index: 10;
+
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($black, .25);
+    z-index: -1;
+    @include hidden();
+    @include anim();
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+    @include mobile() {
+      height: 123px;
+      padding-top: 40px;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    @include mobile() {
+      width: 45px;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    @include mobile() {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background: $white;
+      color: $black;
+      height: 40px;
+      justify-content: center;
+    }
+
+    a {
+      margin: 0 20px;
+      font-size: 16px;
+      border-bottom: 1px dotted $green;
+      @include anim();
+      @include mobile() {
+        font-size: 12px;
+        margin: 0 7px;
+      }
+
+
+      &:hover {
+        text-decoration: none;
+        border-color: $green-dark;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__location {
+    position: relative;
+    padding-left: 35px;
+    margin-right: 40px;
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__locationIcon {
+    position: absolute;
+    color: $green;
+    width: 29px;
+    height: 29px;
+    top: 4px;
+    left: -2px;
+  }
+
+  &__locationLabel {
+    font-size: 13px;
+    opacity: .25;
+  }
+
+  &__locationValue {
+    @include demi();
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  &__contact {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  &__contactIcon {
+    position: absolute;
+    top: 7px;
+    left: -4px;
+    width: 29px;
+    height: 29px;
+    color: $green;
+  }
+
+  &__contactValue {
+    font-size: 15px;
+    margin-bottom: 10px;
+    @include demi();
+    @include mobile() {
+      font-size: 14px;
+    }
+  }
+
+  &__contactButton {
+    display: flex;
+    align-items: center;
+    color: $yellow;
+    font-size: 15px;
+    line-height: 1;
+    @include mobile() {
+      font-size: 12px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    svg {
+      width: 4px;
+      height: 6px;
+      margin-left: 8px;
+      margin-top: 4px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__cart {
+    position: relative;
+
+    &--top {
+      padding-left: 35px;
+
+      #{$this}__cartIcon {
+        position: absolute;
+        top: 11px;
+        left: 2px;
+      }
+
+      @include mobile() {
+        display: none;
+      }
+    }
+
+    &--bottom {
+      display: none;
+      @include mobile() {
+        background: $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+
+        #{$this}__cartCounter {
+          left: 50%;
+          margin-left: -21px;
+        }
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__cartIcon {
+    width: 22px;
+    height: 22px;
+    color: $green;
+  }
+
+  &__cartLabel {
+    font-size: 13px;
+    opacity: .25;
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__cartValue {
+    @include demi();
+    font-size: 15px;
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__cartCounter {
+    position: absolute;
+    left: -9px;
+    top: 4px;
+    height: 18px;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    background: $yellow;
+    color: $black;
+    z-index: 1;
+    @include skew('left', 'top', 10deg) {
+      background: $yellow;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    height: 60px;
+    position: relative;
+    z-index: 1;
+    background: $green-dark;
+    @include mobile() {
+      height: 48px;
+      background: transparent;
+    }
+  }
+
+  &__catalogButton {
+    height: 100%;
+    background: $green;
+    display: flex;
+    align-items: stretch;
+
+    &:hover {
+      svg {
+        color: $yellow;
+      }
+    }
+  }
+
+  &__catalogButtonIcon {
+    width: 60px;
+    position: relative;
+    @include mobile() {
+      width: 48px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 100%;
+      background: $white;
+      opacity: .25;
+      margin-left: auto;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 18px;
+      height: 18px;
+      margin-top: -9px;
+      margin-left: -9px;
+      @include anim();
+    }
+
+    .inactive {
+      opacity: 0;
+    }
+  }
+
+  &__catalogButtonText {
+    @include demi();
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile() {
+      font-size: 12px;
+      padding: 0 20px;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    position: relative;
+    @include mobile() {
+      position: static;
+      flex: 0;
+    }
+  }
+
+  &__menu {
+    height: 100%;
+    @include mobile() {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      @include hidden();
+      @include anim(.2s);
+    }
+
+    > ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      justify-content: stretch;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      @include mobile() {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      li {
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+        height: 100%;
+        @include mobile() {
+          height: auto;
+        }
+      }
+
+      a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $green-border;
+        border-right: 0;
+        background: $green-dark;
+        font-size: 15px;
+        @include demi();
+        text-transform: uppercase;
+        @include anim();
+
+        &:hover {
+          text-decoration: none;
+          color: $yellow;
+        }
+
+        @include mobile() {
+          height: 60px;
+          border: 1px solid $green-border;
+          border-top: 0;
+        }
+      }
+    }
+
+  }
+
+  &__searchButton {
+    position: relative;
+    width: 60px;
+    border: 1px solid $green-border;
+    background: $green-dark;
+    margin-left: auto;
+    @include mobile() {
+      width: 48px;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      margin-top: -8px;
+      margin-left: -8px;
+      @include anim();
+
+      &.inactive {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__search {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    @include anim(.2s);
+    @include hidden();
+    z-index: 1;
+
+  }
+
+  &__catalog {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: $white;
+    border: 1px solid $gray;
+    @include anim(.2s);
+    @include hidden();
+    transform: translateY(-20px);
+    z-index: -1;
+  }
+
+  &__menuButton {
+    display: none;
+    @include mobile() {
+      display: block;
+      position: relative;
+      width: 48px;
+      height: 48px;
+      color: $white;
+
+      svg {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -7px;
+        margin-left: -7px;
+      }
+
+      .inactive {
+        @include hidden();
+      }
+    }
+  }
+
+  &__locationBottom {
+    display: none;
+    @include mobile() {
+      background: $green-dark;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 30px 0 25px;
+    }
+  }
+
+  &__locationBottomIcon {
+    width: 25px;
+    height: 25px;
+    color: $green;
+    margin-bottom: 5px;
+  }
+
+  &__locationBottomLabel {
+    font-size: 12px;
+    opacity: .5;
+  }
+
+  &__locationBottomValue {
+    @include demi();
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &--search {
+    #{$this}__search {
+      @include visible();
+    }
+
+    #{$this}__searchButton {
+      .active {
+        opacity: 0;
+      }
+
+      .inactive {
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      @include visible();
+      pointer-events: none;
+    }
+  }
+
+  &--catalog {
+    #{$this}__catalog {
+      @include visible();
+      transform: none;
+    }
+
+    #{$this}__catalogButton {
+      .active {
+        opacity: 0;
+      }
+
+      .inactive {
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      @include visible();
+      pointer-events: none;
+    }
+  }
+
+  &--menu {
+    #{$this}__menu {
+      @include visible();
+    }
+
+    &:after {
+      @include visible();
+      pointer-events: none;
+    }
+  }
+}

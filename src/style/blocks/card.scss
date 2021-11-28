@@ -1,0 +1,184 @@
+.card {
+  $this: &;
+
+  position: relative;
+  display: block;
+  border: 1px solid $gray;
+  border-top: 0;
+  background: $white;
+  height: 100%;
+  padding: 20px 0 0;
+  z-index: 1;
+  @include anim();
+  @include skew('top', 'left', 7deg, 1px) {
+    background: $white;
+    border: 1px solid $gray;
+    border-bottom: 0;
+    @include anim();
+  }
+
+  &:hover {
+    text-decoration: none;
+    border-color: $green;
+
+    &:after {
+      border-color: $green;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $green-dark;
+    color: $white;
+    font-weight: bold;
+    font-size: 15px;
+    @include ls();
+    height: 20px;
+    line-height: 20px;
+    min-width: 48px;
+    padding: 0 4px;
+    z-index: 1;
+    @include skew('right', 'bottom', 15deg) {
+      background: $green-dark;
+    }
+    @include mobile() {
+      font-size: 12px;
+      height: 16px;
+      line-height: 16px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 160px;
+    max-width: 100%;
+    margin: 0 auto 18px;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__content {
+    padding: 0 28px 70px;
+    @include mobile() {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__category {
+    font-size: 13px;
+    line-height: 1;
+    color: $gray-dark;
+    @include ls();
+    margin-bottom: 3px;
+    //overflow: hidden;
+    //white-space: nowrap;
+    //text-overflow: ellipsis;
+    @include mobile() {
+      font-size: 10px;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 19px;
+    @include mobile() {
+      font-size: 14px;
+      line-height: 1.05;
+    }
+    //overflow: hidden;
+    //text-overflow: ellipsis;
+    //display: -webkit-box;
+    //-webkit-line-clamp: 2;
+    //line-clamp: 2;
+    //-webkit-box-orient: vertical;
+  }
+
+  &__price {
+    font-size: 13px;
+    line-height: 18px;
+    color: $green-dark;
+    @include demi();
+    @include mobile() {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    span {
+      font-size: 20px;
+      @include mobile() {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__priceOld {
+    margin-top: 3px;
+    font-size: 13px;
+    color: $red;
+    text-decoration: line-through;
+    @include mobile() {
+      font-size: 12px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  @mixin big() {
+    border-color: $yellow;
+    padding: 38px 0 0 10px;
+    display: flex;
+
+    @include skewTransform('top', 'left', 3.5deg) {
+      border-color: $yellow;
+    }
+
+    #{$this}__image {
+      margin: 0 auto;
+      width: auto;
+      max-width: 200px;
+      flex: 1;
+    }
+
+    #{$this}__content {
+      padding: 0 20px 70px 10px;
+      width: 180px;
+      flex: 1;
+      //padding-left: 248px;
+    }
+  }
+
+  &--big {
+    @include big();
+  }
+
+  &--bigMobile {
+    @include mobile() {
+      @include big();
+    }
+  }
+}

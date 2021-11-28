@@ -1,0 +1,137 @@
+.banners {
+  $this: &;
+  padding: 49px 0 80px;
+  @include mobile() {
+    padding: 17px 0 40px;
+  }
+
+  &__container {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    @include mobile() {
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    margin-top: 20px;
+    //margin: 0 10px;
+    flex: 1;
+    position: relative;
+    border: 1px solid $green-dark;
+    border-top: 0;
+    z-index: 1;
+    padding: 35px 49px 49px;
+    display: flex;
+    flex-direction: column;
+
+    @include skew('top', 'left', 4deg, 1px) {
+      border: 1px solid $green-dark;
+      border-bottom: 0;
+    }
+
+    @include mobile() {
+      padding: 19px 29px 24px;
+    }
+
+    &--gray {
+      background: $gray-light;
+      border-color: $gray-light;
+
+      &:after {
+        background: $gray-light;
+        border-color: $gray-light;
+      }
+    }
+  }
+
+  &__main {
+    position: relative;
+    padding: 55px 50px 46px;
+    flex: 1;
+    background: $green-dark;
+    overflow: hidden;
+    color: $white;
+    clip-path: polygon(0 0, 100% 20px, 100% 100%, 0% 100%);
+
+    @include mobile() {
+      padding: 39px 90px 30px 30px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    line-height: 1.25;
+    margin-bottom: 11px;
+    @include ls();
+    @include mobile() {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    @include ls();
+    margin-bottom: 16px;
+    @include mobile() {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    right: 6px;
+    top: -98px;
+    pointer-events: none;
+    @include mobile() {
+      width: 255px;
+      right: -101px;
+      top: 64px;
+    }
+  }
+
+  &__work {
+    font-size: 15px;
+    color: $gray-dark;
+    margin-top: -13px;
+    margin-bottom: 15px;
+
+    span {
+      font-size: 18px;
+      @include book();
+      color: $green-dark;
+    }
+  }
+
+  &__address {
+    margin-top: auto;
+    display: flex;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      color: $green-dark;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 15px;
+      @include ls();
+      border-bottom: 1px dotted $green-dark;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      span {
+        color: $green-dark;
+      }
+    }
+  }
+}
+

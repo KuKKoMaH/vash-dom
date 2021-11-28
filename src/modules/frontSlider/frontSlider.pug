@@ -1,0 +1,56 @@
+.frontSlider
+  .c
+    .frontSlider__top
+      .frontSlider__main
+        .frontSlider__slider
+          .frontSlider__slides
+            each i in [1,2]
+              .frontSlider__slide(style='background-image: url(' + require('src/modules/frontSlider/img/slide.jpg') + ')')
+                .frontSlider__title Гарантия#[br] лучшей цены!
+                +the_svg('wavyline').frontSlider__separator
+                .frontSlider__subtitle Нашли такой же товар дешевле?
+                .frontSlider__cta Снизим цену и подарим#[br] подарок!
+                .frontSlider__button.frontSlider__button--desktop: a.btn.btn--leftBottom(href='#') Подробнее
+                .frontSlider__button.frontSlider__button--mobile: a.btn.btn--leftTop(href='#') Подробнее
+
+        button.frontSlider__nav.frontSlider__nav--prev: +the_svg('arrow-right')
+        button.frontSlider__nav.frontSlider__nav--next: +the_svg('arrow-right')
+
+      .frontSlider__aside
+        .frontSlider__asideTitle Мы произвели
+        .frontSlider__asideCounter
+          span 1
+          span 2
+          span 3
+          span 4
+          span 5
+          span 6
+        .frontSlider__asideSubtitle квадратных метров кровли
+        .frontSlider__asideCategories
+          a(href='#') Металлочерепица
+          a(href='#') Кровельный профнастил
+          a(href='#') Натуральная черепица
+          a(href='#') Гибкая черепица
+          a(href='#') Сэндвич-панели
+          a(href='#') Композитная кровля
+          a(href='#') Фальцевая кровля
+
+    .frontSlider__categories
+      a.frontSlider__category(href='#')
+        +the_svg('category_01')
+        |Кровля
+      a.frontSlider__category(href='#')
+        +the_svg('category_02')
+        |Металлочерепица
+      a.frontSlider__category(href='#')
+        +the_svg('category_03')
+        |Профнастил
+      a.frontSlider__category(href='#')
+        +the_svg('category_04')
+        |Гибкая черепица
+      a.frontSlider__category(href='#')
+        +the_svg('category_05')
+        |Заборы
+      a.frontSlider__category(href='#')
+        +the_svg('category_06')
+        |Фасады

@@ -1,0 +1,55 @@
+.services {
+  $this: &;
+
+  background: $gray-light;
+  padding: 73px 0 50px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__aside {
+    width: 310px;
+    padding: 0 20px;
+  }
+
+  &__title {
+    font-size: 46px;
+    line-height: 1;
+    margin-bottom: 47px;
+    font-weight: bold;
+    @include ls-m();
+  }
+
+  &__nav {
+    background: $white;
+    border: 1px solid $gray;
+    border-top: 0;
+    position: relative;
+    z-index: 1;
+    padding: 27px 0;
+    @include skew('top', 'left', 3.5deg, 1px) {
+      background: $white;
+      border: 1px solid $gray;
+      border-bottom: 0;
+    }
+  }
+
+  &__head {
+    width: 100%;
+    @include ls();
+    text-align: center;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: $green-dark;
+    }
+
+    &--active {
+      @include book();
+    }
+  }
+}

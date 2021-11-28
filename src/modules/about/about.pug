@@ -1,0 +1,25 @@
+.about
+  .c.about__content
+    img.about__decor1(src=require('src/modules/about/img/decor1.png'))
+    img.about__decor2(src=require('src/modules/about/img/decor2.png'))
+    +the_svg('wavyline').about__separator
+    .about__title О заводе кровли «Ваш Дом»
+    .about__subtitle Почему 92% наших клиентов пришли к нам по отзывам
+
+    .about__points
+      .about__decor3: img(src=require('src/img/logo.png'))
+      .about__items
+        .about__item.about__item--active
+          .about__main #[span 4500] м#[sup 2]
+          .about__text складских помещений
+        .about__item
+          .about__text более
+          .about__main #[span 15 ] лет
+          .about__text занимаемся кровлей
+        .about__item
+          .about__text свыше
+          .about__main #[span 50000]
+          .about__text домов с нашей кровлей
+        .about__item
+          .about__main #[span 15]
+          .about__text бригад монтажников

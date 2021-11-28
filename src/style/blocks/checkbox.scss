@@ -1,0 +1,74 @@
+//.wpcf7-checkbox .wpcf7-list-item, .checkbox {
+//  position: relative;
+//  display: flex;
+//  align-items: center;
+//  cursor: pointer;
+//  padding-left: 30px;
+//  min-height: 20px;
+//  @include mobile() {
+//    min-height: 14px;
+//  }
+//
+//  input {
+//    display: none
+//  }
+//
+//  span {
+//    display: block;
+//    @include text5();
+//    color: $dark-gray;
+//    @include mobile() {
+//      font-size: 10px;
+//    }
+//
+//    &:before, &:after {
+//      content: '';
+//      position: absolute;
+//    }
+//
+//    &:before {
+//      left: 0;
+//      top: 0;
+//      width: 20px;
+//      height: 20px;
+//      border: 1px solid $black;
+//      @include mobile() {
+//        width: 14px;
+//        height: 14px;
+//      }
+//    }
+//
+//    &:after {
+//      opacity: 0;
+//      width: 6px;
+//      height: 10px;
+//      left: 7px;
+//      top: 3px;
+//      border: 1px solid $black;
+//      border-top: 0;
+//      border-left: 0;
+//      transform: rotate(45deg);
+//      @include anim();
+//      @include mobile() {
+//        width: 4px;
+//        height: 8px;
+//        left: 5px;
+//        top: 2px;
+//      }
+//    }
+//  }
+//
+//  a {
+//    text-decoration: underline;
+//
+//    &:hover {
+//      text-decoration: none;
+//    }
+//  }
+//
+//  input:checked ~ span {
+//    &:after {
+//      opacity: 1;
+//    }
+//  }
+//}

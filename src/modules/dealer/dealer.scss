@@ -1,0 +1,126 @@
+.dealer {
+  $this: &;
+  padding: 69px 0 80px;
+  @include mobile() {
+    padding: 18px 0 40px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 1;
+    @include ls-m();
+    margin-bottom: 22px;
+    @include mobile() {
+      font-size: 32px;
+      margin-bottom: 21px;
+    }
+
+    span {
+      color: $green-dark;
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 62px;
+    text-align: center;
+    @include ls();
+    @include mobile() {
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: stretch;
+    margin: 0 -10px;
+    @include mobile() {
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    padding: 0 10px;
+    flex: 1;
+    @include mobile() {
+      padding: 0 0 47px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    border: 1px solid $gray-light;
+    border-top: 0;
+    height: 100%;
+    padding: 28px 29px 33px;
+    @include skew('top', 'left', 7deg, 1px) {
+      border: 1px solid $gray-light;
+      border-bottom: 0;
+    }
+    @include mobile() {
+      padding: 5px 29px 26px;
+      @include skewTransform('top', 'left', 5deg);
+    }
+
+    &--active {
+      color: $white;
+      background: $green-dark;
+      border-color: $green-border;
+      @include green-shadow();
+
+      &:after {
+        border-color: $green-border;
+        background: $green-dark;
+
+      }
+
+      #{$this}__icon {
+        color: $yellow;
+      }
+
+      #{$this}__text {
+        color: $white;
+      }
+    }
+  }
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+    color: $green;
+    margin-bottom: 12px;
+  }
+
+  &__head {
+    @include book();
+    line-height: 1.2;
+    @include ls();
+    margin-bottom: 12px;
+    @include mobile() {
+      font-size: 16px;
+      line-height: 1.375;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__text {
+    color: $gray-dark;
+    font-size: 15px;
+    line-height: 1.4;
+    @include ls();
+    @include mobile() {
+      font-size: 14px;
+    }
+  }
+
+}

@@ -1,0 +1,62 @@
+header.header
+  .c
+    .header__top
+      .header__logo: img(src=require('src/img/logo.png'))
+      .header__links
+        a(href='#') Производство по вашим размерам
+        a(href='#') Способы оплаты
+      .header__info
+        .header__location
+          +the_svg('geo')(class='header__locationIcon')
+          .header__locationLabel 3 магазина
+          .header__locationValue пн-вс с 8.00 до 19.00
+        .header__contact
+          +the_svg('phone')(class='header__contactIcon')
+          a.header__contactValue(href='tel:88412210567') 8 (8412) 21-05-67
+          button.header__contactButton
+            | заказать звонок
+            +the_svg('chevrone-down')
+
+      button.header__menuButton
+        +the_svg('hamburger').active
+        +the_svg('close').inactive
+
+      a.header__cart.header__cart--top(href='#')
+        +the_svg('cart')(class='header__cartIcon')
+        .header__cartLabel Корзина
+        .header__cartValue 2 560 руб.
+        .header__cartCounter 2
+
+    .header__bottom
+      button.header__catalogButton
+        .header__catalogButtonIcon
+          +the_svg('hamburger').active
+          +the_svg('close').inactive
+        .header__catalogButtonText Каталог
+
+      a.header__cart.header__cart--bottom(href='#')
+        +the_svg('cart')(class='header__cartIcon')
+        .header__cartCounter 2
+
+      .header__main
+        .header__search
+          include ../search/search
+
+        .header__menu
+          ul
+            li: a(href='#') Производство
+            li: a(href='#') Услуги
+            li: a(href='#') Рекомендации эксперта
+            li: a(href='#') Дилерам и строителям
+            li: a(href='#') VIP материалы
+          .header__locationBottom
+            +the_svg('geo')(class='header__locationBottomIcon')
+            .header__locationBottomLabel 3 магазина
+            .header__locationBottomValue пн-вс с 8.00 до 19.00
+
+      button.header__searchButton
+        +the_svg('search').active
+        +the_svg('close').inactive
+
+      .header__catalog
+        include ../menu/menu

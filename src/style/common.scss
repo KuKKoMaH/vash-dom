@@ -1,0 +1,90 @@
+html {
+  font-family: 'Futura New', sans-serif;
+  color: $black;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.45;
+  background: $white;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  scroll-behavior: smooth;
+  @include media('md') {
+    font-size: 16px;
+    line-height: 1.375;
+  }
+}
+
+@media print {
+  @page {
+    margin: 1cm;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+.c {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $container-lg;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  //@include media('lg') {
+  //  max-width: $container-md;
+  //}
+  @include media('md') {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+img[data-src],
+img[data-srcset] {
+  min-height: 1px;
+}
+
+.hidden {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.small {
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+.animated {
+  & > * {
+    visibility: hidden;
+  }
+}
+
+.nowrap {
+  display: inline;
+  white-space: nowrap;
+}
+
+.content {
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}

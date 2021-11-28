@@ -1,0 +1,29 @@
+.bests
+  .c
+    .bests__title #[span Лучшие товары] по отзывам наших клиентов
+    .bests__heads
+      button.bests__head.bests__head--active Кровля
+      button.bests__head Фасад
+      button.bests__head Забор
+      button.bests__head Допы
+    .bests__bodies
+      each i in [1,2,3,4]
+        .bests__body(class=(i === 1 ? 'bests__body--active' : ''))
+          .bests__items
+            each j in [1,2,3]
+              .bests__item.bests__item--big
+                +the_card(j, true)
+                //a.bests__card(href='#')
+                //  .bests__badge -18%
+                //  .bests__image: img(src=require('src/img/catalog/' + j + '.jpg'))
+                //  .bests__content
+                //    .bests__category какой-то раздел
+                //    .bests__name Какой-то товар продается PRO
+                //    .bests__price #[span 380 руб.]/м#[sup 2]
+                //    .bests__priceOld 788 руб./м#[sup 2]
+                //    .bests__button: button.btn.btn--leftBottom В корзину
+            each j in [1,2,3,4,5,6]
+              .bests__item
+                +the_card(j)
+
+    .bests__link: a(href='#') Каталог товаров

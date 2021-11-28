@@ -1,0 +1,24 @@
+.search
+  .search__input
+    input(placeholder='Введите запрос')
+    +the_svg('search').search__icon
+    button.search__close: +the_svg('close')
+
+  .search__results
+    each i in [1,2]
+      a.search__row(href='#')
+        .search__tag -20%
+        .search__image
+          img(src=require('src/img/catalog/1.jpg'))
+        .search__info
+          .search__title Название какого-либо товара который есть
+          .search__category какой-то раздел
+        .search__price
+          .search__priceNew #[span 80] руб. / м2.
+          .search__priceOld 95 руб./ м2
+        .search__count
+          button.search__button.search__button--minus &ndash;
+          .search__counter 0
+          button.search__button.search__button--plus +
+        .search__cart: button.btn.btn--leftBottom.btn--sm В корзину
+        .search__arrow: +the_svg('chevrone-down')

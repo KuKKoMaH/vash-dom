@@ -1,0 +1,251 @@
+.history {
+  $this: &;
+
+  background: $gray-light;
+  padding: 67px 0 79px;
+  @include mobile() {
+    padding: 30px 0 39px;
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    @include mobile() {
+      flex-direction: column;
+      max-width: 500px;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    max-width: 980px;
+    margin-right: auto;
+    @include mobile() {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  &__aside {
+    width: 200px;
+    margin-left: 20px;
+    padding-top: 7px;
+    @include mobile() {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 32px;
+    padding-left: 5px;
+    @include mobile() {
+      font-size: 24px;
+      line-height: 1.25;
+      margin-bottom: 35px;
+      padding-left: 0;
+      padding-right: 50px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &__media {
+    width: 330px;
+    position: relative;
+    margin-top: 5px;
+    @include mobile() {
+      margin: 0 auto 85px;
+      max-width: 100%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: (16px * 2);
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      @include green-shadow();
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+
+  &__img {
+    padding: 10px;
+    background: $white;
+    clip-path: polygon(0 0, 100% 16px, 100% 100%, 0% 100%);
+  }
+
+  &__slider {
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 16px, 100% 100%, 0% 100%);
+  }
+
+  &__slides {
+    display: flex;
+  }
+
+  &__slide {
+    width: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+    height: 328px;
+    position: relative;
+    @include mobile() {
+      height: 234px;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: flex;
+    margin-top: -10px;
+    margin-right: -61px;
+    @include mobile() {
+      margin-top: 0;
+      margin-right: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  &__button {
+    color: $white;
+    background: $green-dark;
+    height: 50px;
+    width: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include anim();
+    position: relative;
+    z-index: 1;
+
+    &:after {
+      @include anim();
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      @include anim();
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &:active {
+      background: $green;
+      color: $white;
+
+      &:after {
+        background: $green;
+      }
+    }
+
+    &--prev {
+      margin-right: 2px;
+      @include skew('left', 'top', 15deg) {
+        background: $green-dark;
+      }
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--next {
+      @include skew('right', 'bottom', 15deg) {
+        background: $green-dark;
+      }
+    }
+  }
+
+  &__content {
+    width: 545px;
+    padding-bottom: 40px;
+    @include mobile() {
+      width: 100%;
+      max-width: 545px;
+      margin: 0 auto 22px;
+      padding-bottom: 0;
+    }
+
+    span {
+      color: $green-dark;
+    }
+  }
+
+  &__label {
+    @include book();
+    margin-bottom: 44px;
+    @include mobile() {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    left: 50%;
+    pointer-events: none;
+
+    &--01 {
+      bottom: -73px;
+      margin-left: -10px;
+      @include mobile() {
+        margin-left: 0;
+        left: auto;
+        right: 0;
+        margin-right: -105px;
+        bottom: 183px;
+        transform: scale(0.8);
+      }
+    }
+
+    &--02 {
+      top: -46px;
+      margin-left: 210px;
+      @include mobile() {
+        margin-left: 0;
+        left: auto;
+        right: 0;
+        margin-right: -92px;
+        top: -11px;
+      }
+    }
+
+    &--03 {
+      bottom: 0px;
+      margin-left: 265px;
+      width: 75px;
+      height: 13px;
+      color: $green;
+      @include mobile() {
+        display: none;
+      }
+    }
+  }
+}

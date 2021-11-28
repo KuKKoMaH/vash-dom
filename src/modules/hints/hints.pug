@@ -1,0 +1,28 @@
+.hints
+  .hints__container
+    .hints__main
+      .hints__title Рекомендации экспертов и лайфхаки
+      +the_svg('wavyline').hints__separator
+      .hints__slider
+        .hints__slides
+          each i in [1,2,3]
+            .hints__slide
+              .hints__head Подбираем кровлю без потери времени и денег
+              .hints__text
+                p Прежде всего, покупайте у проверенных поставщиков и производителей, зарекомендовавших себя на рынке. В такой ситуации разумно прислушаться к совету знакомых, имеющих положительный опыт, сарафанное радио вас вряд ли обманет. Избегайте фирм-однодневок.
+                if(i === 2)
+                  p Прежде всего, покупайте у проверенных поставщиков и производителей, зарекомендовавших себя на рынке. В такой ситуации разумно прислушаться к совету знакомых, имеющих положительный опыт, сарафанное радио вас вряд ли обманет. Избегайте фирм-однодневок.
+                  p Прежде всего, покупайте у проверенных поставщиков и производителей, зарекомендовавших себя на рынке. В такой ситуации разумно прислушаться к совету знакомых, имеющих положительный опыт, сарафанное радио вас вряд ли обманет. Избегайте фирм-однодневок.
+
+      .hints__footer
+        button.hints__nav.hints__nav--prev: +the_svg('arrow-right')
+        button.hints__nav.hints__nav--next: +the_svg('arrow-right')
+        .hints__button: a.btn.btn--leftBottom(href='#') Показать полностью
+      img.hints__decor(src=require('src/modules/hints/img/hammer.png'))
+
+
+    .hints__aside
+      img.hints__man(src=require('src/modules/hints/img/man.png'))
+      .hints__thumb: img(src=require('src/modules/hints/img/thumb.png'))
+      .hints__name Николавев Иван
+      .hints__position Больше 15 лет в сфере#[br]строительства.

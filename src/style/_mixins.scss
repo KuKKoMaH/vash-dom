@@ -1,0 +1,147 @@
+@mixin cf() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin anim($duration: .1s) {
+  transition: all $duration ease-in;
+}
+
+@mixin media-max-width($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media($condition) {
+  @if ($condition == 'lg') {
+    @media screen and (max-width: $breakpoint-lg - 1) {
+      @content;
+    }
+  }
+  @if ($condition == 'md') {
+    @media screen and (max-width: $breakpoint-md - 1) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile() {
+  @include media('md') {
+    @content;
+  }
+}
+
+@mixin skew($position, $skew, $angle, $border-width: 0px) {
+  @include skewTransform($position, $skew, $angle) {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0 - $border-width;
+    left: 0 - $border-width;
+    right: 0 - $border-width;
+    bottom: 0 - $border-width;
+    @content;
+  }
+}
+
+@mixin skewTransform($position, $skew, $angle) {
+  &:after {
+    @content;
+    @if ($position == 'right') {
+      @if ($skew == 'bottom') {
+        transform-origin: 0 0;
+        transform: skew($angle);
+      }
+      @if ($skew == 'top') {
+        transform-origin: 0 100%;
+        transform: skew(-$angle);
+      }
+    }
+    @if ($position == 'left') {
+      @if ($skew == 'bottom') {
+        transform-origin: 100% 0;
+        transform: skew(-$angle);
+      }
+      @if ($skew == 'top') {
+        transform-origin: 100% 100%;
+        transform: skew($angle);
+      }
+    }
+    @if ($position == 'top') {
+      @if ($skew == 'left') {
+        transform-origin: 100% 100%;
+        transform: skew(0, $angle);
+      }
+      @if ($skew == 'right') {
+        transform-origin: 0 100%;
+        transform: skew(0, -$angle);
+      }
+    }
+    @if ($position == 'bottom') {
+      @if ($skew == 'left') {
+        transform-origin: 100% 0;
+        transform: skew(0, -$angle);
+      }
+      @if ($skew == 'right') {
+        transform-origin: 0 0;
+        transform: skew(0, $angle);
+      }
+    }
+  }
+}
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+}
+
+@mixin demi() {
+  font-family: 'Futura New Demi', sans-serif;
+}
+
+@mixin book() {
+  font-family: 'Futura New Book', sans-serif;
+}
+
+@mixin hidden() {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+@mixin visible() {
+  pointer-events: all;
+  visibility: visible;
+  opacity: 1;
+}
+
+@mixin sprite($name) {
+  background-image: url('img/sprite.svg#' + $name + '-usage');
+}
+
+@mixin ls() {
+  letter-spacing: .01em;
+}
+
+@mixin ls-m() {
+  letter-spacing: -.025em;
+}
+
+@mixin green-shadow() {
+  box-shadow: 0px 11px 31.92px 6.08px rgba(62, 145, 0, 0.24);
+}
