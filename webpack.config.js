@@ -67,7 +67,7 @@ module.exports = {
         use:  [
           isProd ? MiniCssExtractPlugin.loader : 'style-loader',
           {
-            loader: "css-loader",
+            loader:  "css-loader",
             options: {
               url: ( url ) => url.includes("img/sprite.svg") ? false : true,
             },
@@ -135,11 +135,18 @@ module.exports = {
         use:     [{
           loader:  'svg-sprite-loader',
           options: {
-            esModule:   false,
-            extract:    true,
-            outputPath: 'img/',
-            publicPath: `img/`,
-            symbolId:   filePath => path.basename(filePath).split('.')[0],
+            esModule:       false,
+            extract:        true,
+            outputPath:     'img/',
+            publicPath:     `img/`,
+            symbolId:       filePath => path.basename(filePath).split('.')[0],
+            spriteFilename: ( name ) => {
+              if (name.includes('src/modules')) {
+                return `${name.match(/.*\/src\/modules\/(.*?)\//)[1]}.sprite.svg`;
+              } else {
+                return `sprite.svg`;
+              }
+            },
           },
         }],
       },

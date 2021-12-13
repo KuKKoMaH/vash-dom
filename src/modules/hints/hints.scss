@@ -45,9 +45,6 @@
   }
 
   &__separator {
-    width: 75px;
-    height: 20px;
-    color: $green;
     margin-bottom: 25px;
     @include mobile() {
       margin-bottom: 10px;

@@ -1,5 +1,5 @@
 .calculator
-  +the_svg('wavyline').calculator__separator
+  +the_svg('wavyline').calculator__separator.wavyline
   .calculator__suptitle В отличие от конкурентов
   .calculator__title у нас выгодные цены
   .calculator__subtitle как на кровлю, так и на материалы
@@ -15,7 +15,7 @@
                 input(type='radio' name='form' value=name)
                 div
                   =name
-                  +the_svg('calculator_0' + (i + 1))
+                  +the_svg('calculator_0' + (i + 1), 'calculator')
 
         .calculator__right
           .calculator__s

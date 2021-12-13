@@ -145,3 +145,16 @@
 @mixin green-shadow() {
   box-shadow: 0px 11px 31.92px 6.08px rgba(62, 145, 0, 0.24);
 }
+
+@mixin green-shadow-filter() {
+  filter: drop-shadow(0px 11px 31.92px rgba(62, 145, 0, 0.24));
+}
+
+@mixin link() {
+  border-bottom: 1px dotted $green-dark;
+  @include anim();
+  &:hover {
+    color: $green-dark;
+    text-decoration: none;
+  }
+}

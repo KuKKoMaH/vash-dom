@@ -1,0 +1,272 @@
+.catalog {
+  $this: &;
+
+  background: $gray-light;
+  padding-bottom: 60px;
+  @include mobile() {
+    padding-bottom: 40px;
+  }
+
+  .catalog__body {
+    @include mobile() {
+      margin-top: 8px;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__filterButton {
+    display: none;
+    @include mobile() {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $green-dark;
+      color: $green-dark;
+      margin-right: 10px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &__searchInput {
+    flex: 1;
+    background: $white;
+    border: 1px solid $gray;
+    border-right: 0;
+    padding: 0 20px;
+    height: 50px;
+    @include anim();
+
+    &:hover {
+      border-color: $green;
+    }
+
+    &:focus {
+      border-color: $green-dark;
+    }
+  }
+
+  &__searchButton {
+    width: 50px;
+    height: 50px;
+    background: $green-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    @include anim();
+
+    &:hover {
+      color: $yellow;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__popular {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    a {
+      margin: 0 5px 5px 0;
+      border: 1px solid $gray;
+      font-size: 13px;
+      line-height: 1;
+      @include ls();
+      color: $gray-dark;
+      @include anim();
+      padding: 7px 10px 8px 11px;
+      flex-shrink: 0;
+      @include mobile() {
+        font-size: 12px;
+        padding: 8px 11px 8px 11px;
+      }
+
+      &:hover {
+        border-color: $green-dark;
+        background: $white;
+        color: $black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__popularLabel {
+    font-size: 13px;
+    line-height: (18/13);
+    @include ls();
+    margin-right: 11px;
+    margin-bottom: 5px;
+    @include mobile() {
+      font-size: 12px;
+      margin-right: 9px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 25px;
+    @include mobile() {
+      margin: 25px -20px 0;
+    }
+  }
+
+  &__aside {
+    width: 270px;
+    background: $white;
+    border: 1px solid $gray;
+    margin-right: -1px;
+    //border-right: 0;
+
+    @include mobile() {
+      width: 0;
+      border: 0;
+      margin: 0;
+    }
+
+    > *:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    background: $white;
+    border: 1px solid $gray;
+    padding: 50px 40px 59px;
+    @include mobile() {
+      margin: 0 auto;
+      padding: 33px 19px 19px;
+    }
+  }
+
+  &__menu {
+    border-bottom: 1px solid $gray;
+    padding: 22px 24px;
+    @include mobile() {
+      display: none;
+    }
+
+    &--active {
+      & #{$this}__category {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      & #{$this}__subcategories {
+        display: block;
+      }
+    }
+
+  }
+
+  &__category {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    line-height: (18/20);
+    @include demi();
+    @include ls();
+
+    svg {
+      width: 9px;
+      height: 9px;
+      color: $green-dark;
+      margin-right: 10px;
+      @include anim();
+    }
+  }
+
+  &__subcategories {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: -6px;
+
+    li {
+      margin: 0;
+      padding: 0;
+      margin-top: 4px;
+    }
+
+    a {
+      font-size: 16px;
+      @include ls();
+
+      &:hover, &.active {
+        text-decoration: none;
+        color: $green-dark;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @include mobile() {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 33px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: (34/30);
+    @include demi();
+    @include ls();
+    @include mobile() {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__sort {
+    width: 260px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    @include mobile() {
+      margin: 0 -5px;
+    }
+  }
+
+  &__item {
+    width: 25%;
+    padding: 35px 10px 10px 10px;
+    @include mobile() {
+      width: 50%;
+      padding: 25px 5px 10px 5px;
+    }
+  }
+
+  &__pagination {
+    margin-top: 51px;
+    @include mobile() {
+      margin-top: 20px;
+    }
+  }
+}

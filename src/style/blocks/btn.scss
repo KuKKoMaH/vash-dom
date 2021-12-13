@@ -48,17 +48,25 @@
   &--leftBottom, &--leftTop {
     padding-left: 25px;
     padding-right: 30px;
+    border-right: 0 !important;
   }
 
   &--leftBottom {
-    @include skew('left', 'bottom', 15deg) {
+    @include skewTransform('left', 'bottom', 15deg) {
       background: $yellow;
     }
   }
 
   &--leftTop {
-    @include skew('left', 'top', 15deg) {
+    @include skewTransform('left', 'top', 15deg) {
       background: $yellow;
+    }
+  }
+
+  &--rightBottom {
+    @include skewTransform('right', 'bottom', 15deg) {
+      background: $yellow;
+      border-left: 0 !important;
     }
   }
 
@@ -81,6 +89,37 @@
   &--smMobile {
     @include mobile() {
       @include smButton();
+    }
+  }
+
+  &--white {
+    background: $white;
+    color: $green-dark;
+
+    &:after {
+      background: $white;
+    }
+
+    &:hover {
+      filter: drop-shadow(0 11px 20px rgba($white, .35));
+    }
+  }
+
+  &--outline {
+    background: $white;
+    border: 1px solid $gray;
+
+    @include skew('right', 'bottom', 15deg, 1px) {
+      background: $white;
+    }
+
+    &:after {
+      background: $white;
+      border: 1px solid $gray;
+    }
+
+    &:hover {
+
     }
   }
 }

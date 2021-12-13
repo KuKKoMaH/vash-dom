@@ -1,0 +1,129 @@
+.filter
+  .filter__head
+    .filter__c
+      button.filter__close: +the_svg('close')
+      | Фильтры
+
+  .filter__container
+    .filter__item
+      button.filter__title
+        +the_svg('chevrone-down')
+        | Цена, руб.
+      .filter__body
+        .slider.filter__priceSlider(data-min=250 data-max=1000 data-value=[300, 500])
+        .filter__prices
+          .filter__price
+            .filter__priceLabel от
+            input.filter__priceInput.filter__priceInput--from(value=300)
+          .filter__price
+            .filter__priceLabel до
+            input.filter__priceInput.filter__priceInput--to(value=500)
+
+    .filter__item
+      button.filter__title
+        +the_svg('chevrone-down')
+        | Цвет
+      .filter__body
+        .filter__checkboxes
+          each i in [['черный', '#000'],['бирюзовый', '#2bc3a5'], ['красный', '#db0d0d'], ['синий', '#0949a8'], ['желтый', '#eddc22'], ['черный', '#000'],['бирюзовый', '#2bc3a5'], ['красный', '#db0d0d'], ['синий', '#0949a8'], ['желтый', '#eddc22']]
+            label.checkbox.filter__checkbox
+              input(type='checkbox')
+              span
+                =i[0]
+                span.filter__color(style='color: ' + i[1])
+          button.flatBtn.filter__button
+            .inactive Все 12
+            .active Скрыть
+
+    .filter__item
+      button.filter__title
+        +the_svg('chevrone-down')
+        | Толщина
+      .filter__body
+        .filter__checkboxes
+          each i in ['0.45', '0.5']
+            label.checkbox.filter__checkbox
+              input(type='checkbox')
+              span=i
+
+    .filter__item
+      button.filter__title
+        +the_svg('chevrone-down')
+        | Гарантия от сквозной коррозии:
+      .filter__body
+        .filter__checkboxes
+          each i in ['50 лет', '40 лет', '30 лет', '25 лет', '20 лет']
+            label.checkbox.filter__checkbox
+              input(type='checkbox')
+              span=i
+          button.flatBtn.filter__button
+            .inactive Все 9
+            .active Скрыть
+
+    .filter__item
+      button.filter__title
+        +the_svg('chevrone-down')
+        | Производитель:
+      .filter__body
+        .filter__checkboxes
+          each i in ['GRAND LINE', 'ВАШ ДОМ']
+            label.checkbox.filter__checkbox
+              input(type='checkbox')
+              span=i
+
+    .filter__item
+      button.filter__title
+        +the_svg('chevrone-down')
+        | Тип покрытия:
+      .filter__body
+        .filter__checkboxes
+          each i in ['глянцевый (классическое решение)', 'матовый (все более и более популярно)']
+            label.checkbox.filter__checkbox
+              input(type='checkbox')
+              span=i
+
+    .filter__item
+      button.filter__title
+        +the_svg('chevrone-down')
+        | Покрытие
+      .filter__body
+        .filter__checkboxes
+          each i in ['коралл', 'стальной бархат', 'стальной шёлк', 'satin®', 'quarzit', 'quarzit lite', 'velur®']
+            label.checkbox.filter__checkbox
+              input(type='checkbox')
+              span=i
+          button.flatBtn.filter__button
+            .inactive Все 9
+            .active Скрыть
+
+    .filter__item
+      button.filter__title
+        +the_svg('chevrone-down')
+        | Маркировка
+      .filter__body
+        .filter__checkboxes
+          each i in [['GL-10R', 'mark_01'],['GL-20R', 'mark_02'], ['GL-21R', 'mark_03'], ['GL-35R', 'mark_04'], ['GL-60R', 'mark_05'], ['GL-75R', 'mark_06']]
+            label.checkbox.filter__checkbox
+              input(type='checkbox')
+              span
+                =i[0]
+                img(src=require('src/modules/filter/img/' + i[1] + '.png'))
+          button.flatBtn.filter__button Скрыть
+
+    .filter__item
+      button.filter__title
+        +the_svg('chevrone-down')
+        | Форма нарезки
+      .filter__body
+        .filter__checkboxes
+          each i in ['form_01', 'form_02', 'form_03', 'form_04', 'form_05']
+            label.checkbox.filter__checkbox
+              input(type='checkbox')
+              span
+                img(src=require('src/modules/filter/img/' + i + '.png'))
+
+  .filter__footer
+    .filter__c
+      button.btn.btn--rightBottom.btn--outline.btn--sm Сбросить
+      button.btn.btn--leftBottom.btn--sm Сохранить
+

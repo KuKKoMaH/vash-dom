@@ -1,0 +1,26 @@
+.flatBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $gray;
+  @include anim();
+  height: 40px;
+  font-size: 15px;
+  @include ls();
+  line-height: (18/15);
+
+  &:hover {
+    border-color: $green;
+    z-index: 1;
+  }
+
+  &:active {
+    border-color: $green-dark;
+    z-index: 2;
+  }
+
+  svg {
+    width: 9px;
+    height: 9px;
+  }
+}

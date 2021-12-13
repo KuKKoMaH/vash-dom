@@ -7,7 +7,7 @@
             each i in [1,2]
               .frontSlider__slide(style='background-image: url(' + require('src/modules/frontSlider/img/slide.jpg') + ')')
                 .frontSlider__title Гарантия#[br] лучшей цены!
-                +the_svg('wavyline').frontSlider__separator
+                +the_svg('wavyline').frontSlider__separator.wavyline
                 .frontSlider__subtitle Нашли такой же товар дешевле?
                 .frontSlider__cta Снизим цену и подарим#[br] подарок!
                 .frontSlider__button.frontSlider__button--desktop: a.btn.btn--leftBottom(href='#') Подробнее
@@ -37,20 +37,20 @@
 
     .frontSlider__categories
       a.frontSlider__category(href='#')
-        +the_svg('category_01')
+        +the_svg('category_01', 'frontSlider')
         |Кровля
       a.frontSlider__category(href='#')
-        +the_svg('category_02')
+        +the_svg('category_02', 'frontSlider')
         |Металлочерепица
       a.frontSlider__category(href='#')
-        +the_svg('category_03')
+        +the_svg('category_03', 'frontSlider')
         |Профнастил
       a.frontSlider__category(href='#')
-        +the_svg('category_04')
+        +the_svg('category_04', 'frontSlider')
         |Гибкая черепица
       a.frontSlider__category(href='#')
-        +the_svg('category_05')
+        +the_svg('category_05', 'frontSlider')
         |Заборы
       a.frontSlider__category(href='#')
-        +the_svg('category_06')
+        +the_svg('category_06', 'frontSlider')
         |Фасады

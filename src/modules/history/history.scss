@@ -240,9 +240,6 @@
     &--03 {
       bottom: 0px;
       margin-left: 265px;
-      width: 75px;
-      height: 13px;
-      color: $green;
       @include mobile() {
         display: none;
       }

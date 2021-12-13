@@ -1,0 +1,300 @@
+.dealers {
+  $this: &;
+
+  padding: 30px 0 60px;
+  @include mobile() {
+    padding: 18px 0 40px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @include mobile() {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__main {
+    width: 860px;
+    @include mobile() {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  &__aside {
+    width: 360px;
+    margin-top: -43px;
+    @include mobile() {
+      margin-top: -14px;
+      max-width: 100%;
+    }
+  }
+
+  &__separator {
+    margin-bottom: 22px;
+    @include mobile() {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    @include mobile() {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 1.35;
+    margin-bottom: 80px;
+    @include ls();
+    @include mobile() {
+      font-size: 16px;
+      line-height: (22/16);
+      margin-bottom: 61px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 45px 20px;
+    margin-bottom: 55px;
+    @include mobile() {
+      display: block;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__item {
+    &--big {
+      grid-row: auto / span 2;
+    }
+
+    @include mobile() {
+      margin-bottom: 46px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__card {
+    border: 1px solid $gray;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    border-top: 0;
+    padding: 12px 28px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include skew('top', 'left', 7deg, 1px) {
+      border: 1px solid $gray;
+      border-bottom: 0;
+    }
+    @include mobile() {
+      padding: 5px 29px 23px;
+      @include skew('top', 'left', 5deg, 1px)
+    }
+  }
+
+  &__img {
+    svg {
+      display: block;
+      width: 38px;
+      height: 38px;
+      color: $green-dark;
+    }
+
+    margin-bottom: 13px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: (21 / 15);
+    @include ls();
+    @include mobile() {
+      font-size: 14px;
+      line-height: (20/14);
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+    font-size: 15px;
+    @include link();
+    @include mobile() {
+      margin-top: 10px;
+    }
+  }
+
+  &__note {
+    line-height: (22/18);
+    @include ls();
+    margin-bottom: 45px;
+    @include mobile() {
+      font-size: 16px;
+      line-height: (22/16);
+      margin-bottom: 54px;
+    }
+  }
+
+  &__call {
+    background: $green-dark;
+    color: $white;
+    position: relative;
+    z-index: 1;
+    padding: 24px 40px 40px;
+    margin-bottom: 20px;
+    @include skew('top', 'left', 3deg) {
+      background: $green-dark;
+    }
+    @include mobile() {
+      padding: 21px 30px 30px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__head {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: (21/15);
+    @include ls();
+    margin-bottom: 13px;
+    @include mobile() {
+      font-size: 14px;
+      line-height: (21/14);
+      margin-bottom: 8px;
+    }
+  }
+
+  &__phone {
+    font-size: 24px;
+    line-height: (20/24);
+    @include ls();
+    margin-bottom: 18px;
+    @include mobile() {
+      font-size: 20px;
+      line-height: 1;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__address {
+    background: $gray-light;
+    padding: 34px 40px 36px 40px;
+    margin-bottom: 20px;
+    @include mobile() {
+      padding: 26px 29px 27px 29px;
+      margin-bottom: 10px;
+    }
+
+    #{$this}__head {
+      margin-bottom: 18px;
+      @include mobile() {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__city {
+    @include demi();
+    margin-bottom: 8px;
+  }
+
+  &__addresses {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      position: relative;
+      padding-left: 15px;
+      font-size: 15px;
+      margin-bottom: 8px;
+      @include mobile() {
+        font-size: 14px;
+        @include mobile() {
+          margin-bottom: 6px;
+        }
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        background: $green-dark;
+        position: absolute;
+        top: 9px;
+        left: 0;
+      }
+    }
+  }
+
+  &__works {
+    @include book();
+    font-size: 15px;
+    color: $green-dark;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+    @include mobile() {
+      font-size: 14px;
+      line-height: (18/14);
+      margin-bottom: 20px;
+    }
+  }
+
+  &__map {
+    display: flex;
+    margin-left: -2px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      color: $green-dark;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 15px;
+      @include ls();
+      border-bottom: 1px dotted $green-dark;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      span {
+        color: $green-dark;
+      }
+    }
+  }
+
+  &__form {
+    border: 1px solid $green-dark;
+    padding: 33px 40px 39px 40px;
+    background: $white;
+    @include mobile() {
+      padding: 24px 29px 29px 29px;
+    }
+
+    #{$this}__head {
+      margin-bottom: 23px;
+      @include mobile() {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__input {
+    margin-bottom: 18px;
+    @include mobile() {
+      margin-bottom: 12px;
+    }
+  }
+}

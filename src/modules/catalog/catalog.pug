@@ -1,0 +1,82 @@
+.catalog
+  +breadcrumbs(['Каталог', 'Кровля', 'Металлочерепица'])
+  .c.catalog__body
+    .catalog__search
+      button.catalog__filterButton: +the_svg('filter')
+      input.catalog__searchInput
+      button.catalog__searchButton: +the_svg('search')
+
+    .catalog__popular
+      .catalog__popularLabel Популярный запросы
+      a(href='#') Кровля
+      a(href='#') Топ продаж
+      a(href='#') Забор
+      a(href='#') Коричневый
+      a(href='#') Кровля
+
+    .catalog__container
+      .catalog__aside
+        .catalog__menu.catalog__menu--active
+          button.catalog__category
+            +the_svg('chevrone-down')
+            |Кровля
+          ul.catalog__subcategories
+            li: a(href='#').active Металлочерепица
+            li: a(href='#') Кровельный профнастил
+            li: a(href='#') Гибкая черепица
+            li: a(href='#') Натуральная черепица
+            li: a(href='#') Сэндвич-панели
+            li: a(href='#') Композитная кровля
+            li: a(href='#') Фальцевая кровля
+        include ../filter/filter
+        .catalog__menu
+          button.catalog__category
+            +the_svg('chevrone-down')
+            | Фасады
+          ul.catalog__subcategories
+            li: a(href='#') Стеновой профнастил
+            li: a(href='#') Сэндвич-панели
+            li: a(href='#') Фиброцементный сайдинг
+            li: a(href='#') ЭкоБрус
+        .catalog__menu
+          button.catalog__category
+            +the_svg('chevrone-down')
+            | Заборы
+          ul.catalog__subcategories
+            li: a(href='#') Металлический штакетник
+            li: a(href='#') Модульные ограждения
+            li: a(href='#') Профильная труба для забора
+            li: a(href='#') Профнастил для забора
+            li: a(href='#') Сварные ограждения
+        .catalog__menu
+          button.catalog__category
+            +the_svg('chevrone-down')
+            | Сопутствующие материалы
+          ul.catalog__subcategories
+            li: a(href='#') Вентиляция и проходные элементы
+            li: a(href='#') Водосточные системы
+            li: a(href='#') Дымники
+            li: a(href='#') Мансардные окна
+            li: a(href='#') Снегозадержатели
+            li: a(href='#') Чердачные лестницы
+        .catalog__menu
+          button.catalog__category
+            +the_svg('chevrone-down')
+            | Прочее
+          ul.catalog__subcategories
+            li: a(href='#') Влагостойкая фанера OSB
+
+      .catalog__main
+        .catalog__head
+          .catalog__title Металлочерепица
+          .catalog__settings
+            select.select.catalog__sort
+              option Сначала дешевые
+              option Сначала дорогие
+
+        .catalog__items
+          each i in [1,2,3,4,5,6,7,8,9,10,11]
+            .catalog__item: +the_card(i)
+        .catalog__pagination
+          include ../pagination/pagination
+

@@ -1,0 +1,74 @@
+.dealers
+  .c
+    .dealers__container
+      .dealers__main
+        +the_svg('wavyline').wavyline.dealers__separator
+        h1.h2.dealers__title Стань нашим дилером
+        .dealers__subtitle и мы поможет вырасти вашему бизнесу!
+        .dealers__items
+          .dealers__item: .dealers__card
+            .dealers__img: +the_svg('dealers_01', 'dealers')
+            .dealers__text техническую и информационную поддержку
+          .dealers__item: .dealers__card
+            .dealers__img: +the_svg('dealers_02', 'dealers')
+            .dealers__text выезд#[br] специалистов#[br] «Ваш Дом»#[br] на объекты
+          .dealers__item: .dealers__card
+            .dealers__img: +the_svg('dealers_03', 'dealers')
+            .dealers__text заказы#[br] на монтажные#[br] работы
+          .dealers__item.dealers__item--big: .dealers__card
+            .dealers__img: +the_svg('dealers_04', 'dealers')
+            .dealers__text производство в размер - экономия#[br] до 30% стоимости материала.
+            a.dealers__link(href='#') Подробнее
+          .dealers__item: .dealers__card
+            .dealers__img: +the_svg('dealers_05', 'dealers')
+            .dealers__text рекламные#[br] материалы и#[br] образцы (каталоги) продукции
+          .dealers__item.dealers__item--big: .dealers__card
+            .dealers__img: +the_svg('dealers_06', 'dealers')
+            .dealers__text продукция собственного производства (металлочерепица, профлист, штакетник и тд.) по выгодным ценам
+          .dealers__item: .dealers__card
+            .dealers__img: +the_svg('dealers_07', 'dealers')
+            .dealers__text индивидуальный подход и работа с вашим персональным менеджером
+          .dealers__item: .dealers__card
+            .dealers__img: +the_svg('dealers_08', 'dealers')
+            .dealers__text бесплатные консультации#[br] наших экспертов
+          .dealers__item: .dealers__card
+            .dealers__img: +the_svg('dealers_09', 'dealers')
+            .dealers__text оперативное производство#[br] от 3х часов
+
+        include ../partners/partners
+
+      .dealers__aside
+        .dealers__note Более подробную#[br] информацию можно уточнить:
+        .dealers__call
+          .dealers__head ПОЗВОНИВ ПО ТЕЛЕФОНУ:
+          div.dealers__phone: a(href='#') 8 (8412) 21-05-67
+          button.btn.btn--white Заказать звонок
+
+        .dealers__address
+          .dealers__head ПОСЕТИВ НАШ ОФИС ПРОДАЖ:
+          .dealers__city г. Пенза
+          ul.dealers__addresses
+            li ул. Калинина, 22 / Чкалова, 19
+            li ул. Новотерновская д.3, ТЦ «Форпост»
+            li ул. Чаадаева 60Б
+          .dealers__works пн-вс с 8.00 до 19.00
+          button.dealers__map
+            +the_svg('pin')
+            span Магазины на карте
+
+        .dealers__form
+          .dealers__head ЗАПОЛНИТЕ ФОРМУ
+          .dealers__input
+            label.input
+              .input__label Имя
+              label.input__input: input
+          .dealers__input
+            label.input
+              .input__label Ваш телефон
+              .input__input: input(type='tel')
+          .dealers__input
+            label.checkbox
+              input(type='checkbox')
+              span даю согласие на обработку#[br] #[a(href='#') персональных данных]
+          button.btn Получить условия сотрудничества
+

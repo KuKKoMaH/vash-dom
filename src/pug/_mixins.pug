@@ -1,5 +1,6 @@
-mixin the_svg(svgIcon)
-  svg()&attributes(attributes): use(xlink:href="img/sprite.svg#" + svgIcon + '-usage')
+mixin the_svg(svgIcon, fileName)
+  svg()&attributes(attributes)
+    use(xlink:href=`img/${fileName ? fileName + '.sprite' : 'sprite'}.svg#` + svgIcon + '-usage')
 
 mixin the_card(imgIndex, big, bigMobile)
   a.card(class=[big && 'card--big', bigMobile && 'card--bigMobile'].filter(Boolean).join(' ') href='#')
@@ -11,3 +12,11 @@ mixin the_card(imgIndex, big, bigMobile)
       .card__price #[span 380 руб.]/м#[sup 2]
       .card__priceOld 788 руб./м#[sup 2]
       .card__button: button.btn.btn--leftBottom.btn--smMobile В корзину
+
+mixin breadcrumbs(items)
+  .breadcrumbs
+    .c
+      ul
+        li: a(href='#') Главная
+        each i in items
+          li: a(href='#')= i

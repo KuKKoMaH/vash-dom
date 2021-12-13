@@ -65,10 +65,6 @@
   }
 
   &__separator {
-    display: block;
-    color: $green;
-    width: 75px;
-    height: 20px;
     margin: 0 auto 19px;
     @include mobile() {
       margin-bottom: 5px;

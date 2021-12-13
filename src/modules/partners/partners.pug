@@ -1,0 +1,20 @@
+.partners
+  h2.partners__title #[span Мы предлагаем] следующие#[br] варианты сотрудничества:
+  .partners__items
+    .partners__item
+      .partners__icon: +the_svg('partners_01', 'partners')
+      .partners__name Оптовый клиент
+    .partners__item
+      .partners__icon: +the_svg('partners_02', 'partners')
+      .partners__name Дилер
+    .partners__item
+      .partners__icon: +the_svg('partners_03', 'partners')
+      .partners__name Партнер
+
+  .partners__text
+    | - Оптовые клиенты – контрагенты компании «Ваш Дом», приобретающие крупные партии товара.#[br]
+    | - Для оптовиков предусмотрены специальные цены и условия#[br]
+    | - Персональный подход — один из наших основных принципов.#[br]
+    | - Мы ценим каждого клиента и готовы обсудить индивидуальные условия сотрудничества.
+  button.btn Станьте частью нашей дилерской сети!
+  img.partners__map(src=require('src/modules/partners/img/map.png'))

@@ -21,6 +21,7 @@
 
   &__content {
     position: relative;
+    transform: translate3d(0,0,0);
   }
 
   &__slider {
@@ -63,6 +64,8 @@
   &__slide {
     width: 33.3333%;
     flex-shrink: 0;
+    will-change: filter;
+    transform: translateZ(0);
     @include mobile() {
       padding: 0 20px;
     }
@@ -194,3 +197,10 @@
   }
 }
 
+.blur {
+  -webkit-filter: url(#blurFilter);
+  -moz-filter: url(#blurFilter);
+  -ms-filter: url(#blurFilter);
+  -o-filter: url(#blurFilter);
+  filter: url(#blurFilter);
+}

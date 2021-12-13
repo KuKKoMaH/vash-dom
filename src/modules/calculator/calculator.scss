@@ -9,10 +9,6 @@
   }
 
   &__separator {
-    display: block;
-    width: 75px;
-    height: 13px;
-    color: $green;
     margin: 0 auto 16px;
     @include mobile() {
       margin-bottom: 3px;

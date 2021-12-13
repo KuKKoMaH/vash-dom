@@ -1,0 +1,111 @@
+.categories {
+  $this: &;
+
+  padding: 22px 0 12px;
+  @include mobile() {
+    padding: 13px 0 22px;
+  }
+
+  &__title {
+    margin-bottom: 51px;
+    @include mobile() {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 0 -10px -61px;
+    @include mobile() {
+      margin: 0;
+      flex-direction: column;
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item {
+    width: 33.3333%;
+    padding: 0 10px;
+    margin-bottom: 61px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    @include mobile() {
+      padding: 0;
+      width: 100%;
+      margin-bottom: 39px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    padding: 24px 20px 20px 20px;
+    background: $gray-light;
+    clip-path: polygon(0 0, 100% 66px, 100% 100%, 0% 100%);
+    margin-bottom: 26px;
+    position: relative;
+    @include mobile() {
+      clip-path: polygon(0 0, 100% 44px, 100% 100%, 0% 100%);
+      padding: 17px 15px 15px 15px;
+      margin-bottom: 21px;
+    }
+
+    div {
+      @include green-shadow-filter();
+
+      div {
+        height: 292px;
+        clip-path: polygon(0 0, 100% 60px, 100% 100%, 0% 100%);
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include mobile() {
+          clip-path: polygon(0 0, 100% 39px, 100% 100%, 0% 100%);
+          height: 192px;
+        }
+      }
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: (23/24);
+    @include ls();
+    @include demi();
+    margin-bottom: 21px;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+      color: $green-dark;
+    }
+
+    @include mobile() {
+      font-size: 20px;
+      line-height: (23/20);
+      margin-bottom: 14px;
+    }
+  }
+
+  &__link {
+    margin-bottom: 19px;
+    font-size: 18px;
+    line-height: 1;
+    @include ls();
+    @include link();
+    @include mobile() {
+      font-size: 15px;
+      line-height: (18/15);
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.pagination
+  button.flatBtn.pagination__more
+    | Загрузить еще
+    +the_svg('chevrone-down')
+
+  .pagination__pages
+    input.pagination__page(value='3')
+    .pagination__text из 37
+    a(href='#').flatBtn.pagination__nav.pagination__nav--prev: +the_svg('chevrone-down')
+    a(href='#').flatBtn.pagination__nav.pagination__nav--next: +the_svg('chevrone-down')

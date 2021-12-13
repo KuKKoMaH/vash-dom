@@ -1,0 +1,39 @@
+.breadcrumbs {
+  $this: &;
+
+  padding: 20px 0;
+  @include mobile() {
+    padding: 10px 0;
+  }
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  li {
+    padding: 5px;
+    font-size: 13px;
+    @include ls();
+    @include mobile() {
+      font-size: 10px;
+      line-height: (19/10);
+    }
+
+    &:after {
+      content: '/';
+      margin: 0 5px 0 14px;
+      @include mobile() {
+        margin: 0 0 0 7px;
+      }
+    }
+  }
+}

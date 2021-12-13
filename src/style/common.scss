@@ -43,6 +43,7 @@ html, body {
   @include media('md') {
     padding-left: 20px;
     padding-right: 20px;
+    max-width: 500px;
   }
 }
 
@@ -87,4 +88,11 @@ img[data-srcset] {
   > *:last-child {
     margin-bottom: 0;
   }
+}
+
+.wavyline {
+  display: block;
+  color: $green;
+  width: 75px;
+  height: 14px;
 }

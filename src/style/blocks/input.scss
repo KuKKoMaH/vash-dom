@@ -1,4 +1,54 @@
 .input {
+
+  &__label {
+    font-size: 15px;
+    line-height: (17/15);
+    @include ls();
+    margin-bottom: 5px;
+    @include mobile() {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__input {
+    display: block;
+    margin-right: 12px;
+    position: relative;
+    z-index: 1;
+    @include skew('right', 'bottom', 13deg) {
+      border: 1px solid $gray-light;
+      border-left: 0;
+      @include anim();
+    }
+
+    &:hover {
+      input, &:after {
+        border-color: $green;
+      }
+    }
+
+    &:focus-within {
+      input, &:after {
+        border-color: $green-dark;
+      }
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      @include book();
+      line-height: (22/16);
+      height: 50px;
+      border: 1px solid $gray-light;
+      border-right: 0;
+      padding: 0 25px;
+      @include anim();
+    }
+
+
+  }
+
   //input, textarea {
   //  display: block;
   //  width: 100%;

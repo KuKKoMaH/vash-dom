@@ -1,5 +1,7 @@
 import IMask from 'imask';
 
+require.context('./img/', true, /\.sprite.svg$/);
+
 $('.calculator').each(( i, el ) => {
   const $container = $(el);
   const $sSlider = $container.find('.calculator__sSlider');

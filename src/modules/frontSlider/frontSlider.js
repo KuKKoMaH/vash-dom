@@ -1,5 +1,7 @@
 import initSlider from "src/js/initSlider";
 
+require.context('./img/', true, /\.sprite.svg$/);
+
 initSlider('.frontSlider__slider', ( $el ) => ({
   wrapperClass: 'frontSlider__slides',
   slideClass:   'frontSlider__slide',
