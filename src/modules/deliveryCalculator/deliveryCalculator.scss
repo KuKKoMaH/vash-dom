@@ -1,0 +1,319 @@
+.deliveryCalculator {
+  $this: &;
+
+  &__block {
+    padding: 52px 59px 54px;
+    @include mobile() {
+      padding: 23px 29px 24px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: (36/30);
+    @include book();
+    margin-bottom: 22px;
+    margin-left: -2px;
+    @include mobile() {
+      font-size: 24px;
+      line-height: (30/24);
+      margin-bottom: 23px;
+    }
+  }
+
+  &__search {
+    display: flex;
+    margin-bottom: 25px;
+    @include mobile() {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__searchInput {
+    height: 50px;
+    border: 1px solid $gray;
+    border-right: 0;
+    padding: 0 20px;
+    flex: 1;
+    @include anim();
+
+    &:hover {
+      border-color: $green;
+    }
+
+    &:focus {
+      border-color: $green-dark;
+    }
+  }
+
+  &__searchButton {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    background: $green-dark;
+    color: $white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      @include anim();
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  &__note {
+    font-size: 15px;
+    line-height: (21/15);
+    margin-top: 4px;
+    @include mobile() {
+      font-size: 12px;
+      line-height: (15/12);
+      display: flex;
+      align-items: flex-start;
+      margin-top: 11px;
+    }
+
+    b {
+      font-weight: normal;
+      @include demi();
+      margin-right: 5px;
+      @include mobile() {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    right: 59px;
+    top: -44px;
+    background: $white;
+    border: 1px solid $gray;
+    border-top: 0;
+    width: 320px;
+    z-index: 1;
+    padding: 32px 38px 28px;
+    @include skew('top', 'right', 4deg, 1px) {
+      border: 1px solid $gray;
+      border-bottom: 0;
+      background: $white;
+    }
+    @include mobile() {
+      position: relative;
+      right: 0;
+      top: 0;
+      margin: 23px 29px -31px;
+      width: auto;
+      padding: 17px 23px 25px;
+    }
+  }
+
+  &__sup {
+    font-size: 13px;
+    line-height: (17/13);
+    color: $gray-dark;
+    margin-bottom: 4px;
+    @include mobile() {
+      font-size: 12px;
+      line-height: (17/12);
+      margin-bottom: 1px;
+    }
+  }
+
+  &__address {
+    font-weight: bold;
+    line-height: (19/18);
+    color: $green-dark;
+    margin-bottom: 23px;
+    @include mobile() {
+      font-size: 16px;
+      line-height: (19/16);
+      margin-bottom: 16px;
+    }
+  }
+
+  &__tariff {
+    display: flex;
+    align-items: flex-end;
+    font-size: 15px;
+    line-height: (22/15);
+    @include ls();
+    margin-bottom: 3px;
+    @include mobile() {
+      font-size: 12px;
+      line-height: (19/12);
+      margin-bottom: 4px;
+    }
+
+    &:after {
+      content: '';
+      height: 100%;
+      border-bottom: 1px dotted $black;
+      flex: 1;
+      order: 1;
+      margin: 6px 5px;
+      @include mobile() {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__label {
+    color: $gray-dark;
+  }
+
+  &__value {
+    @include book();
+    margin-left: auto;
+    order: 2;
+  }
+
+  &__free {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: (21/15);
+    @include ls();
+    margin: 21px 0;
+    @include mobile() {
+      font-size: 12px;
+      line-height: (14/12);
+      margin: 20px 0 16px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: $yellow;
+      margin-right: 10px;
+    }
+  }
+
+  &__manager {
+    font-size: 15px;
+    line-height: (21/15);
+    font-weight: bold;
+    @include ls();
+    margin-bottom: 17px;
+    @include mobile() {
+      font-size: 14px;
+      line-height: (20/14);
+      margin-bottom: 15px;
+    }
+
+    a {
+      margin-top: 5px;
+      font-size: 18px;
+      line-height: (19/18);
+      color: $green-dark;
+      text-decoration: none;
+      @include anim();
+      @include mobile() {
+        font-size: 16px;
+        line-height: (19/16);
+      }
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  &__button {
+    font-size: 15px;
+    line-height: (18/15);
+    @include ls();
+    border-bottom: 1px dotted $green-dark;
+    @include anim();
+    @include mobile() {
+      font-size: 14px;
+      line-height: (18/14);
+    }
+
+    &:hover {
+      border-color: $green;
+    }
+  }
+
+  &__map {
+    height: 456px;
+    background: $gray;
+    @include mobile() {
+      height: 330px;
+    }
+  }
+
+  &__danger {
+    background: $red;
+    color: $white;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: (21/15);
+    padding: 19px 59px;
+    @include ls();
+    @include book();
+    @include mobile() {
+      font-size: 12px;
+      line-height: (16/12);
+      padding: 16px 26px;
+      align-items: flex-start;
+
+      br {
+        display: none;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+      color: $white;
+      width: 31px;
+      height: 31px;
+      margin-right: 14px;
+      @include mobile() {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__text {
+    line-height: (26/18);
+    @include mobile() {
+      font-size: 16px;
+      line-height: (22/16);
+    }
+
+
+    b, span {
+      @include demi();
+      font-weight: normal;
+    }
+
+    span {
+      color: $green-dark;
+    }
+
+    p {
+      margin-bottom: 26px;
+      @include mobile() {
+        margin-bottom: 11px;
+      }
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

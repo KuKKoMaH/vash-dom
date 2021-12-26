@@ -1,0 +1,10 @@
+extends ../pug/_layout
+include ../modules/service/service
+include ../modules/serviceHead/serviceHead
+
+block body
+  +service(['Калькулятор стоимости материалов для кровли'], 2)
+    +serviceHead('Калькулятор стоимости<br/>материалов для кровли', 'Хотите доверить расчет кровельных и фасадных материалов строителям? – Правильное решение! К Вашим услугам специальный сервис на сайте «Ваш дом».', require('src/modules/serviceHead/img/service_03.png'))
+    include ../modules/paymentTypes/paymentTypes
+    include ../modules/paymentCalculator/paymentCalculator
+    include ../modules/individual/individual

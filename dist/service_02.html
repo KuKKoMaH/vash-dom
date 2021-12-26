@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <title>Ваш дом</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
+    <!--link(rel="stylesheet" media="all" href="style.css")-->
+    <!--link(rel="shortcut icon" href="/favicon.ico")-->
+  <link href="style.css?1640536824193" rel="stylesheet"></head>
+  <body onunload="">
+    <header class="header">
+      <div class="c">
+        <div class="header__top">
+          <div class="header__logo"><img src="img/img_logo.png"></div>
+          <div class="header__links"><a href="#">Производство по вашим размерам</a><a href="#">Способы оплаты</a></div>
+          <div class="header__info">
+            <div class="header__location">
+              <svg class="header__locationIcon">
+                <use xlink:href="img/sprite.svg#geo-usage"></use>
+              </svg>
+              <div class="header__locationLabel">3 магазина</div>
+              <div class="header__locationValue">пн-вс с 8.00 до 19.00</div>
+            </div>
+            <div class="header__contact">
+              <svg class="header__contactIcon">
+                <use xlink:href="img/sprite.svg#phone-usage"></use>
+              </svg><a class="header__contactValue" href="tel:88412210567">8 (8412) 21-05-67</a>
+              <button class="header__contactButton">заказать звонок
+                <svg>
+                  <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="header__menuButton">
+            <svg class="active">
+              <use xlink:href="img/sprite.svg#hamburger-usage"></use>
+            </svg>
+            <svg class="inactive">
+              <use xlink:href="img/sprite.svg#close-usage"></use>
+            </svg>
+          </button><a class="header__cart header__cart--top" href="#">
+            <svg class="header__cartIcon">
+              <use xlink:href="img/sprite.svg#cart-usage"></use>
+            </svg>
+            <div class="header__cartLabel">Корзина</div>
+            <div class="header__cartValue">2 560 руб.</div>
+            <div class="header__cartCounter">2</div></a>
+        </div>
+        <div class="header__bottom">
+          <button class="header__catalogButton">
+            <div class="header__catalogButtonIcon">
+              <svg class="active">
+                <use xlink:href="img/sprite.svg#hamburger-usage"></use>
+              </svg>
+              <svg class="inactive">
+                <use xlink:href="img/sprite.svg#close-usage"></use>
+              </svg>
+            </div>
+            <div class="header__catalogButtonText">Каталог</div>
+          </button><a class="header__cart header__cart--bottom" href="#">
+            <svg class="header__cartIcon">
+              <use xlink:href="img/sprite.svg#cart-usage"></use>
+            </svg>
+            <div class="header__cartCounter">2</div></a>
+          <div class="header__main">
+            <div class="header__search">
+              <div class="search">
+                <div class="search__input">
+                  <input placeholder="Введите запрос">
+                  <svg class="search__icon">
+                    <use xlink:href="img/sprite.svg#search-usage"></use>
+                  </svg>
+                  <button class="search__close">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#close-usage"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="search__results"><a class="search__row" href="#">
+                    <div class="search__tag">-20%</div>
+                    <div class="search__image"><img src="img/img_catalog_1.jpg"></div>
+                    <div class="search__info">
+                      <div class="search__title">Название какого-либо товара который есть</div>
+                      <div class="search__category">какой-то раздел</div>
+                    </div>
+                    <div class="search__price">
+                      <div class="search__priceNew"><span>80</span> руб. / м2.</div>
+                      <div class="search__priceOld">95 руб./ м2</div>
+                    </div>
+                    <div class="search__count">
+                      <button class="search__button search__button--minus">&ndash;</button>
+                      <div class="search__counter">0</div>
+                      <button class="search__button search__button--plus">+</button>
+                    </div>
+                    <div class="search__cart">
+                      <button class="btn btn--leftBottom btn--sm">В корзину</button>
+                    </div>
+                    <div class="search__arrow">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>
+                    </div></a><a class="search__row" href="#">
+                    <div class="search__tag">-20%</div>
+                    <div class="search__image"><img src="img/img_catalog_1.jpg"></div>
+                    <div class="search__info">
+                      <div class="search__title">Название какого-либо товара который есть</div>
+                      <div class="search__category">какой-то раздел</div>
+                    </div>
+                    <div class="search__price">
+                      <div class="search__priceNew"><span>80</span> руб. / м2.</div>
+                      <div class="search__priceOld">95 руб./ м2</div>
+                    </div>
+                    <div class="search__count">
+                      <button class="search__button search__button--minus">&ndash;</button>
+                      <div class="search__counter">0</div>
+                      <button class="search__button search__button--plus">+</button>
+                    </div>
+                    <div class="search__cart">
+                      <button class="btn btn--leftBottom btn--sm">В корзину</button>
+                    </div>
+                    <div class="search__arrow">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>
+                    </div></a>
+                </div>
+              </div>
+            </div>
+            <div class="header__menu">
+              <ul>
+                <li><a href="#">Производство</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Рекомендации эксперта</a></li>
+                <li><a href="#">Дилерам и строителям</a></li>
+                <li><a href="#">VIP материалы</a></li>
+              </ul>
+              <div class="header__locationBottom">
+                <svg class="header__locationBottomIcon">
+                  <use xlink:href="img/sprite.svg#geo-usage"></use>
+                </svg>
+                <div class="header__locationBottomLabel">3 магазина</div>
+                <div class="header__locationBottomValue">пн-вс с 8.00 до 19.00</div>
+              </div>
+            </div>
+          </div>
+          <button class="header__searchButton">
+            <svg class="active">
+              <use xlink:href="img/sprite.svg#search-usage"></use>
+            </svg>
+            <svg class="inactive">
+              <use xlink:href="img/sprite.svg#close-usage"></use>
+            </svg>
+          </button>
+          <div class="header__catalog">
+            <div class="menu">
+              <div class="menu__categories">
+                <ul>
+                  <li>
+                    <button>кровля</button>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                    </svg>
+                  </li>
+                  <li>
+                    <button>ФАСАДЫ</button>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                    </svg>
+                  </li>
+                  <li>
+                    <button>ПРОЧЕЕ</button>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                    </svg>
+                  </li>
+                  <li>
+                    <button>ЗАБОРЫ</button>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                    </svg>
+                  </li>
+                  <li>
+                    <button>Сопутствующие материалы</button>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu__items">
+                <button class="menu__back">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                  </svg>Каталог
+                </button>
+                <ul>
+                  <li><a href="#">кровля</a>
+                    <ul>
+                      <li><a href="#">Металлочерепица</a></li>
+                      <li><a href="#">Кровельный профнастил</a></li>
+                      <li><a href="#">Гибкая черепица</a></li>
+                      <li><a href="#">Натуральная черепица</a></li>
+                      <li><a href="#">Сэндвич-панели</a></li>
+                      <li><a href="#">Композитная кровля</a></li>
+                      <li><a href="#">Фальцевая кровля</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">ФАСАДЫ</a>
+                    <ul>
+                      <li><a href="#">Стеновой профнастил</a></li>
+                      <li><a href="#">Сэндвич-панели</a></li>
+                      <li><a href="#">Фиброцементный сайдинг</a></li>
+                      <li><a href="#">ЭкоБрус</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">ПРОЧЕЕ</a>
+                    <ul>
+                      <li><a href="#">Влагостойкая фанера OSB</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">ЗАБОРЫ</a>
+                    <ul>
+                      <li><a href="#">Металлический штакетник</a></li>
+                      <li><a href="#">Модульные ограждения</a></li>
+                      <li><a href="#">Профильная труба для забора</a></li>
+                      <li><a href="#">Профнастил для забора</a></li>
+                      <li><a href="#">Сварные ограждения</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Сопутствующие материалы</a>
+                    <ul>
+                      <li><a href="#">Вентиляция и проходные элементы</a></li>
+                      <li><a href="#">Водосточные системы</a></li>
+                      <li><a href="#">Дымники</a></li>
+                      <li><a href="#">Мансардные окна</a></li>
+                      <li><a href="#">Снегозадержатели</a></li>
+                      <li><a href="#">Чердачные лестницы</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="service">
+      <div class="service__content">
+        <div class="breadcrumbs">
+          <div class="c">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Бережная доставка</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="service__container"><a class="service__nav service__nav--prev" href="#">
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow-right-usage"></use>
+            </svg></a><a class="service__nav service__nav--next" href="#">
+            <svg>
+              <use xlink:href="img/sprite.svg#arrow-right-usage"></use>
+            </svg></a>
+          <div class="service__tabs"><a class="service__tab" href="#">Замер и доставка образцов</a><a class="service__tab service__tab--active" href="#">Бережная доставка</a><a class="service__tab" href="#">Проверенные монтажники</a><a class="service__tab" href="#">Оплата онлайн</a>
+          </div>
+          <div class="serviceHead">
+            <svg class="wavyline">
+              <use xlink:href="img/sprite.svg#wavyline-usage"></use>
+            </svg>
+            <h1 class="serviceHead__title">Бережная<br/>доставка</h1>
+            <div class="serviceHead__text">
+              <p>Мы доставляем стройматериалы в строгом соответствии с требованиями к транспортировке и отгрузке металлопрофиля.<br/>Это гарантирует нашим клиентам сохранность и безупречный<br/>вид доставленного товара.</p>
+            </div>
+            <div class="serviceHead__img"><img src="img/modules_serviceHead_img_service_02.png"></div>
+            <div class="serviceHead__sub">
+              <div class="bullets">
+                <div class="bullets__item">
+                  <div class="bullets__text bullets__text--narrow"><span>Мы используем</span> манипуляторы и ручную разгрузку в зависимости от объемов и требований к транспортировке материала.</div>
+                </div>
+                <div class="bullets__item">
+                  <div class="bullets__text bullets__text--narrow"><span>Доставка</span> осуществляется на спецтранспорте для перевозки строительных материалов ежедневно с 9.00 до 21.00.</div>
+                </div>
+                <div class="bullets__item">
+                  <div class="bullets__text"><span>Рассчитать стоимость</span> доставки Вы можете тут  или уточнить по телефону +7 (8412) 21-05-67</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="deliveryCalculator">
+            <div class="deliveryCalculator__block">
+              <div class="deliveryCalculator__title">Калькулятор доставки:</div>
+              <form class="deliveryCalculator__search">
+                <input class="deliveryCalculator__searchInput">
+                <button class="deliveryCalculator__searchButton">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#search-usage"></use>
+                  </svg>
+                </button>
+              </form>
+              <div class="deliveryCalculator__note"><b>Первый способ:</b> введите адрес доставки в поле и нажмите «поиск»</div>
+              <div class="deliveryCalculator__note"><b>Второй способ:</b> найдите место доставки на карте и щелкните по нему дважды мышкой</div>
+            </div>
+            <div class="deliveryCalculator__container">
+              <div class="deliveryCalculator__info">
+                <div class="deliveryCalculator__sup">стоимость доставки по адресу</div>
+                <div class="deliveryCalculator__address">Пенза, ул. Ленина, 51</div>
+                <div class="deliveryCalculator__tariff">
+                  <div class="deliveryCalculator__label">до 4 м., до 1,5 т.</div>
+                  <div class="deliveryCalculator__value">500 руб.</div>
+                </div>
+                <div class="deliveryCalculator__tariff">
+                  <div class="deliveryCalculator__label">до 5 м., до 1,7 т.</div>
+                  <div class="deliveryCalculator__value">600 руб.</div>
+                </div>
+                <div class="deliveryCalculator__tariff">
+                  <div class="deliveryCalculator__label">до 6 м., до 4 т.</div>
+                  <div class="deliveryCalculator__value">1 800 руб.</div>
+                </div>
+                <div class="deliveryCalculator__tariff">
+                  <div class="deliveryCalculator__label">до 7,4 м., до 3,5 т.</div>
+                  <div class="deliveryCalculator__value">1 900 руб.</div>
+                </div>
+                <div class="deliveryCalculator__tariff">
+                  <div class="deliveryCalculator__label">до 14 м., до 18 т.</div>
+                  <div class="deliveryCalculator__value">4 500 руб.</div>
+                </div>
+                <div class="deliveryCalculator__tariff">
+                  <div class="deliveryCalculator__label">Манипулятор (до 6,2 м.)</div>
+                  <div class="deliveryCalculator__value">по соглас.</div>
+                </div>
+                <div class="deliveryCalculator__tariff">
+                  <div class="deliveryCalculator__label">Манипулятор (до 7,2 м.)</div>
+                  <div class="deliveryCalculator__value">по соглас.</div>
+                </div>
+                <div class="deliveryCalculator__free">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#note-usage"></use>
+                  </svg>Возможна бесплатная доставка
+                </div>
+                <div class="deliveryCalculator__manager">Обратитесь за подробной информацией к менеджеру<br><a href="tel:+7 (8412) 223-400">+7 (8412) 223-400</a></div>
+                <button class="deliveryCalculator__button">Заказать обратный звонок</button>
+              </div>
+              <div class="deliveryCalculator__map"></div>
+            </div>
+            <div class="deliveryCalculator__danger">
+              <svg>
+                <use xlink:href="img/sprite.svg#note-usage"></use>
+              </svg>Расчет стоимости доставки до неокрашенных на карте зон рассчитывается<br> автоматически, и, поэтому, может быть произведен с некоторой погрешностью
+            </div>
+            <div class="deliveryCalculator__block">
+              <div class="deliveryCalculator__text">
+                <p><b>Если Вы заказали бережную доставку «Ваш Дом», <span>можете быть уверены в целостности товара.</span></b></p>
+                <p>Наш приоритет - сохранение надлежащего качества и вида транспортируемых строительных материалов и скорость доставки.<br>Поэтому мы соблюдаем самые строгие стандарты упаковки. Упаковка должна обеспечить сохранность профилированных листов и защитного покрытия от механических повреждений, а также от смещения листов в пакете относительно друг друга.</p>
+                <p>Для плоских и профилированных листов (оцинкованных или с полимерным покрытием), а также металлочерепицы мы применяем следующие виды упаковки:<br>– упаковка деревянными брусками (досками);<br>
+                  – упаковка деревянными брусками (досками) и защитными картонными или металлическими уголками;<br>
+                  – упаковка на поддоне с деревянными брусками (досками);<br>
+                  – упаковка на поддоне с деревянными брусками (досками) и защитными или металлическими картонными уголками.<br>
+                </p>
+                <p><span>Если Вы решили доставлять приобретенные строительные материалы самостоятельно</span> ознакомьтесь с <a href="#">рекомендациями нашего эксперта</a>. Также вам могут понадобиться важные советы по хранению профлиста.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="c footer__row">
+          <div class="footer__info">
+            <div class="footer__logo"><img src="img/img_logo.png"></div>
+            <div class="footer__meta">Равным образом сложившаяся структура организации влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.</div>
+          </div>
+          <div class="footer__menu">
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="#">Производство</a></li>
+                  <li><a href="#">Услуги</a></li>
+                  <li><a href="#">Рекомендации эксперта</a></li>
+                  <li><a href="#">Дилерам и строителям</a></li>
+                  <li><a href="#">VIP материалы</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#">Кровля</a></li>
+                  <li><a href="#">Металлочерепица</a></li>
+                  <li><a href="#">Профнастил</a></li>
+                  <li><a href="#">Гибкая черепица</a></li>
+                  <li><a href="#">Заборы</a></li>
+                  <li><a href="#">Фасады</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__address">
+            <div class="footer__city">г. Пенза</div>
+            <ul class="footer__addresses">
+              <li>ул. Калинина, 22 / Чкалова, 19</li>
+              <li> ул. Новотерновская д.3, ТЦ «Форпост»</li>
+              <li>ул. Чаадаева 60Б</li>
+            </ul>
+            <div class="footer__works">пн-вс с 8.00 до 19.00</div>
+          </div>
+          <div class="footer__contacts"><a class="footer__phone" href="tel:+78412210567">
+              <svg>
+                <use xlink:href="img/sprite.svg#phone2-usage"></use>
+              </svg>+7 (8412) 21-05-67</a><a class="footer__email" href="mailto:vashdom-pnz@yandex.ru">vashdom-pnz@yandex.ru</a>
+            <div class="footer__socials"><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprite.svg#twitter-usage"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprite.svg#fb-usage"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprite.svg#g+-usage"></use>
+                </svg></a><a class="footer__social" href="#">
+                <svg>
+                  <use xlink:href="img/sprite.svg#vk-usage"></use>
+                </svg></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="c footer__row">
+          <div class="footer__label">2021 © Завод «Ваш дом»</div>
+          <div class="footer__label">Все права защищены</div>
+          <button class="footer__politic">Политика конфиденциальности</button>
+        </div>
+      </div>
+    </footer>
+    <!--include ../modules/photoswipe/photoswipe-->
+    <div class="popup micromodal-slide" id="callback-popup" aria-hidden="true">
+      <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+        <div class="popup__container" role="dialog" aria-modal="true">
+          <!--button.popup__close(data-micromodal-close): +the_svg('close')-->
+          <div class="popup__form">
+            <div class="form">
+              <div class="form__title">ВЫЗВАТЬ ЗАМЕРЩИКА</div>
+              <div class="form__content">
+                <div class="form__input">
+                  <div class="input">
+                    <input placeholder="Ваше имя">
+                  </div>
+                </div>
+                <div class="form__input">
+                  <div class="input">
+                    <input placeholder="Телефон" type="tel">
+                  </div>
+                </div>
+                <div class="form__confirm">
+                  <label class="checkbox">
+                    <input type="checkbox"><span>Я согласен с обработкой <a href="#">персональных данных</a></span>
+                  </label>
+                </div>
+                <div class="form__button">
+                  <button class="btn btn--black">ОТПРАВИТЬ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--.popup__iframe-->
+          <!--iframe(allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)-->
+          <!--.popup__image(style='background-image: url(' + require('src/modules/popup/img/img.jpg') + ')')-->
+          <!--.popup__content.content-->
+          <!--  h5 Оставьте заявку-->
+          <!--  p Оставьте ваши контактные данные и наши менеджеры свяжутся с вами в ближайшее время-->
+          <!--  .input-->
+          <!--    input(placeholder="ФИО")-->
+          <!--  .input-->
+          <!--    input(placeholder="Организация")-->
+          <!--  .input-->
+          <!--    input(placeholder="E-mail")-->
+          <!--  .input-->
+          <!--    input(placeholder="Телефон" type="tel")-->
+          <!---->
+          <!--  .popup__accept-->
+          <!--    label.checkbox-->
+          <!--      input(type='checkbox')-->
+          <!--      span Согласен(а) на обработку моих #[a(href='#') персональных данных]-->
+          <!---->
+          <!--  button.btn Оставить заявку-->
+          <!---->
+          <!--  .popup__success-->
+          <!--    span.-->
+          <!--      Спасибо!<br/>-->
+          <!--      Ваша заявка отправлена.<br/>-->
+          <!--      Скоро с Вами свяжется специалист.-->
+        </div>
+      </div>
+    </div>
+    <div class="popup popup--wide micromodal-slide" id="discount-popup" aria-hidden="true">
+      <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+        <div class="popup__container" role="dialog" aria-modal="true">
+          <!--button.popup__close(data-micromodal-close): +the_svg('close')-->
+          <div class="popup__form">
+            <div class="form">
+              <div class="form__title">УЗНАТЬ О РАЗМЕРЕ СКИДКИ</div>
+              <div class="form__cols">
+                <div class="form__col">
+                  <div class="form__content">
+                    <div class="form__checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox"><span>У меня новостройка</span>
+                      </label>
+                    </div>
+                    <div class="form__checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox"><span>Мне нужно более 3-х дверей</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__col">
+                  <div class="form__content">
+                    <div class="form__checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox"><span>Пенсионер / Многодетная семья</span>
+                      </label>
+                    </div>
+                    <div class="form__checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox"><span>Нашел дешевле</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__cols">
+                <div class="form__col">
+                  <div class="form__input">
+                    <div class="input">
+                      <input placeholder="Ваше имя">
+                    </div>
+                  </div>
+                </div>
+                <div class="form__col">
+                  <div class="form__input">
+                    <div class="input">
+                      <input placeholder="Телефон" type="tel">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__confirm">
+                <label class="checkbox">
+                  <input type="checkbox"><span>Я согласен с обработкой <a href="#">персональных данных</a></span>
+                </label>
+              </div>
+              <div class="form__button">
+                <button class="btn btn--black">ОТПРАВИТЬ</button>
+              </div>
+            </div>
+          </div>
+          <!--.popup__iframe-->
+          <!--iframe(allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)-->
+          <!--.popup__image(style='background-image: url(' + require('src/modules/popup/img/img.jpg') + ')')-->
+          <!--.popup__content.content-->
+          <!--  h5 Оставьте заявку-->
+          <!--  p Оставьте ваши контактные данные и наши менеджеры свяжутся с вами в ближайшее время-->
+          <!--  .input-->
+          <!--    input(placeholder="ФИО")-->
+          <!--  .input-->
+          <!--    input(placeholder="Организация")-->
+          <!--  .input-->
+          <!--    input(placeholder="E-mail")-->
+          <!--  .input-->
+          <!--    input(placeholder="Телефон" type="tel")-->
+          <!---->
+          <!--  .popup__accept-->
+          <!--    label.checkbox-->
+          <!--      input(type='checkbox')-->
+          <!--      span Согласен(а) на обработку моих #[a(href='#') персональных данных]-->
+          <!---->
+          <!--  button.btn Оставить заявку-->
+          <!---->
+          <!--  .popup__success-->
+          <!--    span.-->
+          <!--      Спасибо!<br/>-->
+          <!--      Ваша заявка отправлена.<br/>-->
+          <!--      Скоро с Вами свяжется специалист.-->
+        </div>
+      </div>
+    </div>
+    <div class="popup micromodal-slide" id="iframe-popup" aria-hidden="true">
+      <div class="popup__overlay" tabindex="-1" data-micromodal-close>
+        <div class="popup__container" role="dialog" aria-modal="true">
+          <!--button.popup__close(data-micromodal-close): +the_svg('close')-->
+          <div class="popup__iframe">
+            <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--include ../modules/popup/popup-order-->
+    <!--include ../modules/popup/popup-politic-->
+    <div class="hidden"></div>
+    <script>(function ( w, dE ) {function u() {dE.style.setProperty('--scrollbar-width', w.innerWidth - dE.clientWidth + "px");}w.addEventListener('resize', u);u()})(window, document.documentElement)</script>
+  <script defer src="app.js"></script></body>
+</html>

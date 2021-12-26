@@ -88,3 +88,13 @@ $('.slider').each(( i, el ) => {
     });
   }
 });
+
+$('.file').each(( i, el ) => {
+  const $el = $(el);
+  const $name = $el.find('.file__name');
+  const originalText = $name.text();
+  $el.find('input[type="file"]').on('change', function () {
+    const files = $(this)[0].files;
+    $name.text(files.length ? files[0].name : originalText);
+  });
+});

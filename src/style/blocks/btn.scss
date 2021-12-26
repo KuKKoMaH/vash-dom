@@ -69,6 +69,12 @@
       border-left: 0 !important;
     }
   }
+  &--rightTop {
+    @include skewTransform('right', 'top', 15deg) {
+      background: $yellow;
+      border-left: 0 !important;
+    }
+  }
 
   @mixin smButton() {
     height: 40px;

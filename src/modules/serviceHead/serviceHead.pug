@@ -1,0 +1,9 @@
+mixin serviceHead(title, text, img)
+  .serviceHead
+    +the_svg('wavyline').wavyline
+    h1.serviceHead__title !{title}
+    .serviceHead__text
+      p !{text}
+    .serviceHead__img: img(src=img)
+    if block
+      block

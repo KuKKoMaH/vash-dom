@@ -1,0 +1,14 @@
+extends ../pug/_layout
+include ../modules/service/service
+include ../modules/serviceHead/serviceHead
+
+block body
+  +service(['Бережная доставка'], 1)
+    +serviceHead('Бережная<br/>доставка', 'Мы доставляем стройматериалы в строгом соответствии с требованиями к транспортировке и отгрузке металлопрофиля.<br/>Это гарантирует нашим клиентам сохранность и безупречный<br/>вид доставленного товара.', require('src/modules/serviceHead/img/service_02.png'))
+      .serviceHead__sub
+        .bullets
+          .bullets__item: .bullets__text.bullets__text--narrow #[span Мы используем] манипуляторы и ручную разгрузку в зависимости от объемов и требований к транспортировке материала.
+          .bullets__item: .bullets__text.bullets__text--narrow #[span Доставка] осуществляется на спецтранспорте для перевозки строительных материалов ежедневно с 9.00 до 21.00.
+          .bullets__item: .bullets__text #[span Рассчитать стоимость] доставки Вы можете тут  или уточнить по телефону +7 (8412) 21-05-67
+
+    include ../modules/deliveryCalculator/deliveryCalculator

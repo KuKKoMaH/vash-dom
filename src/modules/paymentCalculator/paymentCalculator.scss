@@ -1,0 +1,8 @@
+.paymentCalculator {
+  $this: &;
+
+  padding: 52px 60px 56px;
+  @include mobile() {
+    padding:22px 29px 75px;
+  }
+}

@@ -1,0 +1,57 @@
+.paymentForm {
+  $this: &;
+  padding: 53px 60px 51px;
+  border-bottom: 1px solid $gray;
+  @include mobile(){
+    padding: 24px 28px 25px;
+  }
+
+  &__title {
+    font-weight: bold;
+    line-height: (26/18);
+    @include ls();
+    margin-bottom: 17px;
+    @include mobile(){
+      line-height: (22/16);
+      margin-bottom: 10px;
+    }
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @include mobile(){
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    &--narrow {
+      max-width: 610px;
+    }
+
+    .input__label {
+      width: 300px;
+      @include mobile(){
+        width: 100%;
+      }
+    }
+
+    .input__input {
+      flex: 1;
+    }
+  }
+
+  &__note {
+    font-size: 13px;
+    line-height: (26/13);
+    @include ls();
+    margin-top: 14px;
+    color: $gray-dark;
+    @include mobile(){
+      font-size: 12px;
+      line-height: (18/12);
+      margin-top: 22px;
+    }
+  }
+}

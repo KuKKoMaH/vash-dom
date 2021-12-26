@@ -1,0 +1,19 @@
+.individual
+  .individual__aside
+    .individual__title Мне нужен#[br] индивидуальный#[br] расчет!
+    .individual__text Если у Вас есть какие-то особые пожелания или конструкция дома/кровли является сложной, подайте заявку на индивидуальный расчет и наши инженеры – проектировщики максимально учтут все особенности.
+  .individual__main
+    form.individual__form
+      label.input
+        .input__label Имя
+        label.input__input.input__input--rightTop: input
+      label.input
+        .input__label Ваш телефон
+        .input__input.input__input--rightTop: input(type='tel')
+
+      .file
+        input(type='file')
+        +the_svg('file')
+        span.file__name Прикрепите файл
+
+      button.btn.btn--rightTop Получить точный расчет кровли

@@ -1,49 +1,44 @@
 .calculator
-  +the_svg('wavyline').calculator__separator.wavyline
-  .calculator__suptitle В отличие от конкурентов
-  .calculator__title у нас выгодные цены
-  .calculator__subtitle как на кровлю, так и на материалы
-  .calculator__container
-    .calculator__main
-      .calculator__head Экспресс-расчет стоимости кровли:
-      .calculator__container
-        .calculator__left
-          .calculator__label выберите примерную форму кровли:
-          .calculator__forms
-            each name, i in ['односкатная', 'двухскатная', 'вальмовая', 'вальмовая2', 'мансардная']
-              label.calculator__form
-                input(type='radio' name='form' value=name)
-                div
-                  =name
-                  +the_svg('calculator_0' + (i + 1), 'calculator')
+  .calculator__main
+    .calculator__head Экспресс-расчет стоимости кровли:
+    .calculator__container
+      .calculator__left
+        .calculator__label выберите примерную форму кровли:
+        .calculator__forms
+          each name, i in ['односкатная', 'двухскатная', 'вальмовая', 'вальмовая2', 'мансардная']
+            label.calculator__form
+              input(type='radio' name='form' value=name)
+              div
+                =name
+                +the_svg('calculator_0' + (i + 1), 'calculator')
 
-        .calculator__right
-          .calculator__s
-            .calculator__label укажите площадь кровли, м2:
-            input.slider.calculator__sSlider(type='range' value=150 min=50 max=500)
-            .calculator__sValue
-              input.calculator__sInput(type=text value=100)
-              .calculator__sSup м#[sup 2]
-          .calculator__covers
-            .calculator__label выберите кровельное покрытие:
-            each name, i in ['металлочерепица', 'гибкая черепица', 'натуральная черепица']
-              label.calculator__cover
-                input(type='radio' name='cover' value=name)
-                div=name
+      .calculator__right
+        .calculator__s
+          .calculator__label укажите площадь кровли, м2:
+          input.slider.calculator__sSlider(type='range' value=150 min=50 max=500)
+          .calculator__sValue
+            input.calculator__sInput(type=text value=100)
+            .calculator__sSup м#[sup 2]
+        .calculator__covers
+          .calculator__label выберите кровельное покрытие:
+          each name, i in ['металлочерепица', 'гибкая черепица', 'натуральная черепица']
+            label.calculator__cover
+              input(type='radio' name='cover' value=name)
+              div=name
 
-    .calculator__aside
-      .calculator__details
-        .calculator__sumLabel кровельное покрытие#[br] и гидроизоляция:
-        .calculator__sum.calculator__sum--cover 103 000 руб.
-        .calculator__sumLabel комплектующие:
-        ul.calculator__complect
-          li утепление и пароизоляция
-          li снегозадержание
-          li водосточная система
-          li подшивка свесов
-        .calculator__sum.calculator__sum--complect 121 000 руб.
-      .calculator__total
-        .calculator__sumLabel полная комплектация:
-        .calculator__sum.calculator__sum--total 224 000 руб.
-      .calculator__button
-        button.btn.btn--leftTop Заказать смету
+  .calculator__aside
+    .calculator__details
+      .calculator__sumLabel кровельное покрытие#[br] и гидроизоляция:
+      .calculator__sum.calculator__sum--cover 103 000 руб.
+      .calculator__sumLabel комплектующие:
+      ul.calculator__complect
+        li утепление и пароизоляция
+        li снегозадержание
+        li водосточная система
+        li подшивка свесов
+      .calculator__sum.calculator__sum--complect 121 000 руб.
+    .calculator__total
+      .calculator__sumLabel полная комплектация:
+      .calculator__sum.calculator__sum--total 224 000 руб.
+    .calculator__button
+      button.btn.btn--leftTop Заказать смету

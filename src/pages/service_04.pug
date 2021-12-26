@@ -1,0 +1,9 @@
+extends ../pug/_layout
+include ../modules/service/service
+include ../modules/serviceHead/serviceHead
+
+block body
+  +service(['Оплата онлайн'], 3)
+    +serviceHead('Оплата онлайн', 'Воспользуйтесь сервисом «Оплата онлайн» когда Вам необходимо быстро и безопасно оплатить выбранный товар.  Получите электронный кассовый и товарный чек на указанный e-mail или номер телефона.', require('src/modules/serviceHead/img/service_04.png'))
+    include ../modules/paymentForm/paymentForm
+    include ../modules/paymentInfo/paymentInfo

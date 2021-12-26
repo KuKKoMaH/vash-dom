@@ -1,0 +1,133 @@
+.service {
+  $this: &;
+
+  background: $gray-light;
+  padding-bottom: 60px;
+  @include mobile() {
+    padding-bottom: 40px;
+  }
+
+  &__content {
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__container {
+    position: relative;
+    border: 1px solid $gray;
+    background: $white;
+    @include mobile() {
+      margin-top: 58px;
+    }
+  }
+
+
+  &__nav {
+    position: absolute;
+    top: 270px;
+    height: 50px;
+    width: 59px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile() {
+      top: auto;
+      bottom: 100%;
+      margin-bottom: 1px;
+    }
+
+    &, &:after {
+      background: $green-dark;
+      @include anim();
+    }
+
+    &:hover {
+      &, &:after {
+        background: $green;
+      }
+    }
+
+    &--prev {
+      @include skew('left', 'top', 7deg);
+      right: 100%;
+      margin-right: 48px;
+
+      svg {
+        transform: rotate(180deg);
+      }
+
+      @include mobile() {
+        right: 50%;
+        margin-right: 1px;
+        @include skewTransform('left', 'bottom', 14deg);
+      }
+    }
+
+    &--next {
+      @include skew('right', 'bottom', 7deg);
+      left: 100%;
+      margin-left: 48px;
+      @include mobile() {
+        left: 50%;
+        margin-left: 1px;
+        @include skewTransform('right', 'bottom', 14deg);
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: $white;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__tab {
+    flex-grow: 1;
+    height: 79px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    line-height: (21/15);
+    @include book();
+    @include ls();
+    text-decoration: none;
+    border: 1px solid $gray;
+    //margin: -1px;
+    @include anim();
+    margin-top: -1px;
+    margin-right: -1px;
+
+    &:first-child {
+      margin-left: -1px;
+    }
+
+    &:hover {
+      z-index: 1;
+      border-color: $green-dark;
+    }
+
+    &--active {
+      background: $green-dark;
+      color: $white;
+      position: relative;
+      z-index: 1;
+      border: 0;
+      //margin: 0;
+      @include green-shadow-filter();
+      @include skew('bottom', 'left', 4.5deg) {
+        background: $green-dark;
+      }
+    }
+  }
+}

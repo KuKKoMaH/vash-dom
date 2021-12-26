@@ -1,0 +1,72 @@
+.paymentInfo {
+  $this: &;
+
+  &__block1 {
+    padding: 57px 60px 60px;
+    border-bottom: 1px solid $gray;
+    @include mobile() {
+      padding: 25px 28px 28px;
+    }
+  }
+
+  &__block2 {
+    padding: 60px 60px 57px;
+    @include mobile() {
+      padding: 31px 28px 25px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    line-height: (19/18);
+    @include ls();
+    @include demi();
+    margin-bottom: 30px;
+    @include mobile() {
+      line-height: (22/16);
+      margin-bottom: 19px;
+    }
+  }
+
+  &__text {
+    line-height: (26/18);
+    @include ls();
+    color: $gray-dark;
+    margin-bottom: 33px;
+    @include mobile() {
+      line-height: (22/16);
+      margin-bottom: 25px;
+    }
+  }
+
+  &__cards {
+    display: block;
+    @include mobile() {
+      width: 160px;
+      height: auto;
+    }
+  }
+
+  &__note {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: (19/15);
+    @include ls();
+    margin-top: 52px;
+    @include mobile() {
+      font-size: 12px;
+      line-height: (18/12);
+      align-items: flex-start;
+      margin-top: 22px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: $yellow;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+  }
+}

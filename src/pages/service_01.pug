@@ -1,0 +1,8 @@
+extends ../pug/_layout
+include ../modules/service/service
+include ../modules/serviceHead/serviceHead
+
+block body
+  +service(['Замер и доставка образцов'], 0)
+    +serviceHead('Замер и<br/> доставка образцов', 'Выбирайте из сотен образцов у себя дома или в офисе.<br/>Наш инженер – строитель произведет точные замеры и даст рекомендации по выбору кровельных и фасадных материалов, необходимых комплектующих.', require('src/modules/serviceHead/img/service_01.png'))
+    include ../modules/deliveryBullets/deliveryBullets

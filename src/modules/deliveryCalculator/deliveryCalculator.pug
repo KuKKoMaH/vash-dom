@@ -1,0 +1,56 @@
+.deliveryCalculator
+  .deliveryCalculator__block
+    .deliveryCalculator__title Калькулятор доставки:
+    form.deliveryCalculator__search
+      input.deliveryCalculator__searchInput
+      button.deliveryCalculator__searchButton: +the_svg('search')
+    .deliveryCalculator__note #[b Первый способ:] введите адрес доставки в поле и нажмите «поиск»
+    .deliveryCalculator__note #[b Второй способ:] найдите место доставки на карте и щелкните по нему дважды мышкой
+  .deliveryCalculator__container
+    .deliveryCalculator__info
+      .deliveryCalculator__sup стоимость доставки по адресу
+      .deliveryCalculator__address Пенза, ул. Ленина, 51
+      .deliveryCalculator__tariff
+        .deliveryCalculator__label до 4 м., до 1,5 т.
+        .deliveryCalculator__value 500 руб.
+      .deliveryCalculator__tariff
+        .deliveryCalculator__label до 5 м., до 1,7 т.
+        .deliveryCalculator__value 600 руб.
+      .deliveryCalculator__tariff
+        .deliveryCalculator__label до 6 м., до 4 т.
+        .deliveryCalculator__value 1 800 руб.
+      .deliveryCalculator__tariff
+        .deliveryCalculator__label до 7,4 м., до 3,5 т.
+        .deliveryCalculator__value 1 900 руб.
+      .deliveryCalculator__tariff
+        .deliveryCalculator__label до 14 м., до 18 т.
+        .deliveryCalculator__value 4 500 руб.
+      .deliveryCalculator__tariff
+        .deliveryCalculator__label Манипулятор (до 6,2 м.)
+        .deliveryCalculator__value по соглас.
+      .deliveryCalculator__tariff
+        .deliveryCalculator__label Манипулятор (до 7,2 м.)
+        .deliveryCalculator__value по соглас.
+      .deliveryCalculator__free
+        +the_svg('note')
+        | Возможна бесплатная доставка
+
+      .deliveryCalculator__manager
+        | Обратитесь за подробной информацией к менеджеру#[br]
+        a(href='tel:+7 (8412) 223-400') +7 (8412) 223-400
+      button.deliveryCalculator__button Заказать обратный звонок
+
+    .deliveryCalculator__map
+  .deliveryCalculator__danger
+    +the_svg('note')
+    | Расчет стоимости доставки до неокрашенных на карте зон рассчитывается#[br] автоматически, и, поэтому, может быть произведен с некоторой погрешностью
+  .deliveryCalculator__block
+    .deliveryCalculator__text
+      p #[b Если Вы заказали бережную доставку «Ваш Дом», #[span можете быть уверены в целостности товара.]]
+      p Наш приоритет - сохранение надлежащего качества и вида транспортируемых строительных материалов и скорость доставки.#[br]Поэтому мы соблюдаем самые строгие стандарты упаковки. Упаковка должна обеспечить сохранность профилированных листов и защитного покрытия от механических повреждений, а также от смещения листов в пакете относительно друг друга.
+      p Для плоских и профилированных листов (оцинкованных или с полимерным покрытием), а также металлочерепицы мы применяем следующие виды упаковки:#[br]
+        | – упаковка деревянными брусками (досками);#[br]
+        | – упаковка деревянными брусками (досками) и защитными картонными или металлическими уголками;#[br]
+        | – упаковка на поддоне с деревянными брусками (досками);#[br]
+        | – упаковка на поддоне с деревянными брусками (досками) и защитными или металлическими картонными уголками.#[br]
+      p #[span Если Вы решили доставлять приобретенные строительные материалы самостоятельно] ознакомьтесь с #[a(href='#') рекомендациями нашего эксперта]. Также вам могут понадобиться важные советы по хранению профлиста.

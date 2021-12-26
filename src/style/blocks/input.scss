@@ -1,4 +1,5 @@
 .input {
+  display: block;
 
   &__label {
     font-size: 15px;
@@ -19,6 +20,12 @@
       border: 1px solid $gray-light;
       border-left: 0;
       @include anim();
+    }
+
+    &--rightTop {
+      @include skewTransform('right', 'top', 13deg) {
+
+      }
     }
 
     &:hover {

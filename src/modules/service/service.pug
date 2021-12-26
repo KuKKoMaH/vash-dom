@@ -1,0 +1,13 @@
+mixin service(chain, active)
+  .service
+    .service__content
+      +breadcrumbs(chain)
+      .service__container
+        a.service__nav.service__nav--prev(href='#'): +the_svg('arrow-right')
+        a.service__nav.service__nav--next(href='#'): +the_svg('arrow-right')
+        .service__tabs
+          each tab, i in ['Замер и доставка образцов', 'Бережная доставка', 'Проверенные монтажники', 'Оплата онлайн']
+            a.service__tab(class=i===active && 'service__tab--active' href='#')=tab
+        if block
+          block
+

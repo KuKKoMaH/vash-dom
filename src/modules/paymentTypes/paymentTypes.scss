@@ -1,0 +1,67 @@
+.paymentTypes {
+  $this: &;
+
+  padding: 53px 58px 52px;
+  border-bottom: 1px solid $gray;
+  @include mobile() {
+    padding: 24px 28px 23px;
+  }
+
+  &__title {
+    line-height: (26/18);
+    margin-bottom: 10px;
+    font-weight: bold;
+    @include ls();
+    @include mobile() {
+      font-size: 16px;
+      line-height: (22/16);
+      margin-bottom: 22px;
+    }
+
+  }
+
+  &__types {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+    @include mobile() {
+      margin-bottom: 13px;
+    }
+
+    a {
+      font-size: 15px;
+      line-height: (18/15);
+      @include ls();
+      color: $green-dark;
+      border-bottom: 1px dotted $green-dark;
+      text-decoration: none;
+      margin-right: 24px;
+      @include anim();
+      @include mobile() {
+        font-size: 14px;
+        line-height: (18/14);
+        margin-right: 13px;
+        margin-bottom: 12px;
+      }
+
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  &__text {
+    line-height: (26/18);
+    @include ls();
+    @include mobile() {
+      line-height: (22/16);
+    }
+
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
