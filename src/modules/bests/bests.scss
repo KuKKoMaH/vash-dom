@@ -80,7 +80,7 @@
     //width: 100%;
     margin: 0 -10px;
     @include mobile() {
-    margin: 0 -5px;
+      margin: 0 -5px;
     }
   }
 
@@ -110,17 +110,16 @@
     flex-wrap: wrap;
     @include mobile() {
       max-width: 500px;
-      margin: 0 auto;
+      margin: 20px auto 0;
     }
   }
 
   &__item {
-    padding: 46px 10px 0 10px;
+    padding: 20px 10px 0;
     width: (100% / 6);
     @include mobile() {
       width: 50%;
-      padding-left: 5px;
-      padding-right: 5px;
+      padding: 10px 5px 0;
     }
 
     &--big {

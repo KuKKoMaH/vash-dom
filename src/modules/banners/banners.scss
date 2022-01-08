@@ -56,8 +56,7 @@
     background: $green-dark;
     overflow: hidden;
     color: $white;
-    clip-path: polygon(0 0, 100% 20px, 100% 100%, 0% 100%);
-
+    @include skewClipPath('top', 'left', 20px);
     @include mobile() {
       padding: 39px 90px 30px 30px;
     }
@@ -111,6 +110,7 @@
   &__address {
     margin-top: auto;
     display: flex;
+    text-decoration: none;
 
     svg {
       width: 18px;

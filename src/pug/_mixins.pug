@@ -15,8 +15,30 @@ mixin the_card(imgIndex, big, bigMobile)
 
 mixin breadcrumbs(items)
   .breadcrumbs
-    .c
-      ul
-        li: a(href='#') Главная
-        each i in items
-          li: a(href='#')= i
+    ul
+      li: a(href='#') Главная
+      each i in items
+        li: a(href='#')= i
+
+mixin infoPage(title, breadcrumbs, badge, showRelated)
+  .infoPage
+    .infoPage__content
+      +breadcrumbs(breadcrumbs)
+      .infoPage__container
+        if(badge)
+          .infoPage__badge=badge
+        +the_svg('wavyline').wavyline
+        h1.infoPage__title=title
+        //.infoPage__img: img(src=require('src/modules/infoPage/img/img.jpg'))
+        .infoPage__gallery
+          .infoPage__imgs
+            .infoPage__img: img(src=require('src/modules/infoPage/img/img.jpg'))
+            .infoPage__img: img(src=require('src/modules/infoPage/img/img.jpg'))
+        .infoPage__text.content
+          if block
+            block
+      if(showRelated)
+        .infoPage__related
+          include ../modules/related/related
+
+

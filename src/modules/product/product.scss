@@ -1,0 +1,522 @@
+.product {
+  $this: &;
+  background: $gray-light;
+  padding-bottom: 60px;
+  @include mobile() {
+    padding-bottom: 39px;
+  }
+
+  &__container {
+    position: relative;
+    border: 1px solid $gray;
+    background: $white;
+    margin-right: 310px;
+    @include mobile() {
+      margin: 0;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    padding: 52px 59px 59px;
+    border-bottom: 1px solid $gray;
+    @include mobile() {
+      padding: 0 0 30px;
+      flex-direction: column;
+    }
+  }
+
+  &__aside {
+    width: 450px;
+    margin-right: 37px;
+    position: relative;
+    @include mobile() {
+      width: 100%;
+      margin-right: 0;
+      padding: 30px 0 22px;
+    }
+  }
+
+  &__badges {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__badge {
+    position: relative;
+    display: block;
+    background: $green-dark;
+    color: $white;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1;
+    @include ls();
+    min-width: 48px;
+    padding: 2px 4px 3px;
+    z-index: 1;
+    margin-bottom: 5px;
+
+    @include skew('right', 'bottom', 15deg) {
+      background: $green-dark;
+    }
+    @include mobile() {
+      font-size: 12px;
+      height: 16px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--danger {
+      background: $red;
+
+      &:after {
+        background: $red;
+      }
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__slides {
+    display: flex;
+  }
+
+  &__slide {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 290px;
+    @include mobile() {
+      max-height: 132px;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__thumbs {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    @include mobile() {
+      margin-top: 10px;
+      padding: 0px 29px;
+    }
+  }
+
+  &__thumb {
+    width: 25%;
+    height: 72px;
+    border: 1px solid transparent;
+    @include anim();
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile() {
+      height: 35px;
+    }
+
+    &--active {
+      border-color: $green-dark;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    @include mobile() {
+      padding: 0 28px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: (34/30);
+    font-weight: normal;
+    @include ls();
+    @include demi();
+    margin-bottom: 30px;
+    hyphens: none;
+    @include mobile() {
+      font-size: 24px;
+      line-height: (30/24);
+      margin-bottom: 7px;
+    }
+  }
+
+  &__buy {
+    display: none;
+    @include mobile() {
+      display: block;
+      margin-bottom: 31px;
+    }
+  }
+
+  &__price {
+    font-size: 20px;
+    line-height: (36/20);
+    @include demi();
+    color: $green-dark;
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  &__priceOld {
+    font-size: 12px;
+    line-height: 1;
+    color: $red;
+    text-decoration: line-through;
+    margin-top: -2px;
+  }
+
+  &__cheap {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: (18/15);
+    @include ls();
+    border-bottom: 1px dotted $green-dark;
+    @include anim();
+    @include mobile() {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $green-dark;
+    }
+  }
+
+  &__info {
+    margin-bottom: 38px;
+    @include mobile() {
+      margin: 0 -28px;
+      padding: 28px 29px 30px;
+      border-top: 1px solid $gray;
+    }
+
+    &--active {
+      #{$this}__infoRest {
+        max-height: none;
+      }
+
+      #{$this}__infoButton {
+        .active {
+          display: block;
+        }
+
+        .inactive {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__infoTitle {
+    line-height: (18/18);
+    @include ls();
+    color: $green-dark;
+    margin-bottom: 10px;
+    @include book();
+    @include mobile() {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__infoPreview {
+
+  }
+
+  &__infoRest {
+    overflow: hidden;
+    max-height: 0;
+    @include anim();
+  }
+
+  &__infoItem {
+    display: flex;
+    align-items: flex-end;
+    font-size: 15px;
+    line-height: (22/15);
+    @include ls();
+    margin-bottom: 10px;
+    @include mobile() {
+      font-size: 14px;
+      line-height: (19/14);
+      margin-bottom: 5px;
+    }
+
+    &:after {
+      content: '';
+      height: 100%;
+      border-bottom: 1px dotted $gray-dark;
+      flex: 1;
+      order: 1;
+      margin: 6px 5px;
+      @include mobile() {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__infoLabel {
+    color: $gray-dark;
+  }
+
+  &__infoValue {
+    @include book();
+    margin-left: auto;
+    order: 2;
+    flex-shrink: 0;
+  }
+
+  &__infoButton {
+    font-size: 15px;
+    line-height: (18/15);
+    @include ls();
+    border-bottom: 1px dotted $green-dark;
+    @include mobile() {
+      font-size: 14px;
+      line-height: (18/14);
+      margin-top: 17px;
+    }
+
+    .active {
+      display: none;
+    }
+  }
+
+  &__moreButton {
+    margin-right: 10px;
+
+    svg {
+      transform: rotate(-90deg);
+      color: $green-dark;
+    }
+  }
+
+  &__block {
+    position: relative;
+    border-bottom: 1px solid $gray;
+    padding: 36px 0 35px;
+    @include anim();
+    will-change: padding;
+    @include mobile() {
+      padding: 25px 0 23px;
+    }
+
+    &--main {
+      #{$this}__blockTitle {
+        font-family: "Futura New", sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: (36/24);
+        @include ls();
+        @include mobile() {
+          font-size: 18px;
+          line-height: (26/18);
+          margin-right: 20px;
+        }
+      }
+
+      #{$this}__blockContent {
+        margin-left: 0;
+      }
+    }
+
+    &--active {
+      padding: 56px 0 60px;
+      @include mobile() {
+        padding: 25px 0 23px;
+      }
+
+      &#{$this}__block--main {
+        padding: 49px 0 24px;
+        @include mobile() {
+          padding: 25px 0 23px;
+        }
+      }
+
+      #{$this}__blockCollapse {
+        top: 49px;
+        @include mobile() {
+          top: 19px;
+        }
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      #{$this}__blockContent {
+        max-height: none;
+      }
+    }
+
+  }
+
+  &__blockCollapse {
+    position: absolute;
+    right: 49px;
+    top: 29px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include anim();
+    @include mobile() {
+      right: 18px;
+      top: 18px;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+      color: $gray-dark;
+      @include anim();
+      @include mobile() {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  &__blockTitle {
+    display: flex;
+    align-items: flex-start;
+    font-size: 18px;
+    line-height: (19/18);
+    @include demi();
+    padding: 0 59px;
+    @include mobile() {
+      padding: 0 29px;
+      font-size: 16px;
+      line-height: (22/16);
+      margin-right: 20px;
+    }
+  }
+
+  &__blockContent {
+    overflow: hidden;
+    max-height: 0;
+    @include anim(.25s);
+    margin-left: 50px;
+    padding: 0 59px;
+    @include mobile() {
+      padding: 0 29px;
+      margin-left: 0;
+    }
+
+    &--wide {
+      padding-left: 0;
+      margin-bottom: -36px;
+    }
+
+    > *:first-child {
+      margin-top: 27px;
+      @include mobile() {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__blockCounter {
+    color: $green-dark;
+    width: 50px;
+    flex-shrink: 0;
+    @include mobile() {
+      width: 30px;
+    }
+  }
+
+  &__checkbox {
+    margin-bottom: 12px;
+    @include mobile() {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__note {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: (19/15);
+    @include ls();
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: $red;
+      margin-right: 10px;
+    }
+  }
+
+  &__table {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 -59px;
+    padding: 17px 59px 0;
+    @include mobile() {
+      margin: 0 -29px;
+      padding: 15px 29px 0;
+    }
+  }
+
+  &__tableName {
+    min-width: 200px;
+  }
+
+
+  &__tablePrice {
+    min-width: 150px;
+    text-align: center;
+  }
+
+  &__tableCounter {
+    width: 0;
+    text-align: center;
+  }
+
+  &__tableHelp {
+    min-width: 200px;
+  }
+
+  &__footer {
+    display: flex;
+    padding: 40px 59px 39px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    @include mobile() {
+      flex-direction: column;
+      padding: 30px 42px 29px 29px;
+      gap: 10px
+    }
+  }
+}

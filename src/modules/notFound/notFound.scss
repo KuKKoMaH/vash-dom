@@ -1,0 +1,82 @@
+.notFound {
+  $this: &;
+
+  position: relative;
+  overflow: hidden;
+  background: $gray-light;
+
+  &__bg {
+    position: absolute;
+    left: 50%;
+    margin-left: 69px;
+    bottom: 0;
+    pointer-events: none;
+    @include mobile() {
+      transform: scale(0.54);
+      transform-origin: 50% 100%;
+      margin-left: -108px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    right: 50%;
+    margin-right: 37px;
+    bottom: -52px;
+    pointer-events: none;
+    @include mobile() {
+      transform: scale(0.54);
+      transform-origin: 50% 100%;
+      margin-right: -57px;
+      bottom: -113px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 900px;
+    padding: 0 20px;
+    min-height: 559px;
+    margin: 0 auto;
+    @include mobile(){
+      min-height: 310px;
+    }
+  }
+
+  &__suptitle {
+    font-size: 24px;
+    line-height: 1;
+    @include mobile(){
+      font-size: 18px;
+    }
+  }
+
+  &__title {
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 23px;
+    font-weight: bold;
+    @include ls-m();
+    @include mobile(){
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__btn {
+    margin-top: 59px;
+    @include mobile(){
+      margin-top: 39px;
+    }
+    svg {
+      width: 10px;
+      height: 10px;
+      color: $green-dark;
+      margin-right: 5px;
+      transform: rotate(90deg);
+    }
+  }
+}

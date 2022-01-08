@@ -98,3 +98,25 @@ $('.file').each(( i, el ) => {
     $name.text(files.length ? files[0].name : originalText);
   });
 });
+
+const updateCounterValue = ( e, change ) => {
+  const updateValue = ( v ) => {
+    let value = +v;
+    if (Number.isNaN(value)) value = 0;
+    value += change;
+    if (value < 0) value = 0;
+    return value;
+  };
+  e.preventDefault();
+  e.stopPropagation();
+  const $counter = $(e.delegateTarget).parents('.counter');
+  const $value = $counter.find('.counter__value');
+  const valueEl = $value[0];
+  if (valueEl.tagName === 'INPUT') {
+    valueEl.value = updateValue(valueEl.value);
+  } else {
+    valueEl.innerText = updateValue(valueEl.innerText);
+  }
+};
+$('.counter__button--minus').on('click', ( e ) => updateCounterValue(e, -1));
+$('.counter__button--plus').on('click', ( e ) => updateCounterValue(e, 1));

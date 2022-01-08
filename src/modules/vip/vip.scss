@@ -1,0 +1,200 @@
+.vip {
+  $this: &;
+
+  &__title {
+    margin: 22px 0 54px;
+    @include mobile() {
+      margin: 13px 0 36px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    line-height: (48/36);
+    margin: 48px 0 51px;
+    @include mobile() {
+      font-size: 24px;
+      line-height: (30/24);
+      margin: 33px 0 41px;
+    }
+  }
+
+  &__category {
+    border-bottom: 1px solid $gray;
+    padding-bottom: 60px;
+    @include mobile() {
+      padding-bottom: 40px;
+    }
+
+    &--2 {
+      padding-bottom: 52px;
+      @include mobile() {
+        padding-bottom: 35px;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 0 -10px -61px;
+    @include mobile() {
+      margin: 0;
+      flex-direction: column;
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item {
+    width: 33.3333%;
+    padding: 0 10px;
+    margin-bottom: 61px;
+
+    @include mobile() {
+      padding: 0;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    @at-root {
+      a#{&} {
+        &:hover {
+          #{$this}__name {
+            color: $green-dark;
+          }
+
+          #{$this}__button {
+            border-color: $green-dark;
+
+            &:after {
+              border-color: $green-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  &__image {
+    width: 100%;
+    padding: 24px 20px 20px 20px;
+    background: $gray-light;
+    @include skewClipPath('top', 'left', 66px);
+    margin-bottom: 26px;
+    position: relative;
+    @include mobile() {
+      @include skewClipPath('top', 'left', 44px);
+      padding: 17px 15px 15px 15px;
+      margin-bottom: 21px;
+    }
+
+    div {
+      @include green-shadow-filter();
+
+      div {
+        height: 292px;
+        @include skewClipPath('top', 'left', 60px);
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include mobile() {
+          @include skewClipPath('top', 'left', 39px);
+          height: 192px;
+        }
+      }
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    line-height: (23/24);
+    @include ls();
+    @include demi();
+    text-transform: uppercase;
+    @include anim();
+
+    @include mobile() {
+      font-size: 20px;
+      line-height: (23/20);
+      margin-bottom: 14px;
+    }
+  }
+
+  &__button {
+    margin-top: 22px;
+    position: relative;
+    border: 1px solid $gray;
+    border-right: 0;
+    z-index: 1;
+    height: 50px;
+    padding: 0 20px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    @include ls();
+    @include anim();
+    @include skew('right', 'top', 15deg, 1px) {
+      border: 1px solid $gray;
+      border-left: 0;
+      @include anim();
+    }
+    @include mobile() {
+      margin-top: 1px;
+      font-size: 14px;
+      padding: 0 21px 0 24px;
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+      color: $green-dark;
+      transform: rotate(-90deg);
+      margin-left: 10px;
+      @include mobile() {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  &__label {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    font-weight: (18/15);
+    @include ls();
+    @include mobile() {
+      font-size: 14px;
+      line-height: (18/14);
+      margin-top: -2px;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
+      flex-shrink: 0;
+      color: $green-dark;
+      @include mobile() {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

@@ -82,6 +82,7 @@
     flex-wrap: wrap;
 
     a {
+      text-decoration: none;
       margin: 0 5px 5px 0;
       border: 1px solid $gray;
       font-size: 13px;
@@ -208,6 +209,7 @@
     }
 
     a {
+      text-decoration: none;
       font-size: 16px;
       @include ls();
 
@@ -222,7 +224,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     @include mobile() {
       flex-direction: column;
       align-items: flex-start;
@@ -256,7 +258,7 @@
 
   &__item {
     width: 25%;
-    padding: 35px 10px 10px 10px;
+    padding: 10px;
     @include mobile() {
       width: 50%;
       padding: 25px 5px 10px 5px;

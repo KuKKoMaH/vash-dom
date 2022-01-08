@@ -1,0 +1,151 @@
+.brands {
+  $this: &;
+  padding: 55px 30px 30px;
+  max-width: (1080px+60px);
+  margin: 0 auto;
+  @include mobile() {
+    max-width: 500px;
+    padding: 36px 20px 40px;
+  }
+
+  &__title {
+    @include demi();
+    letter-spacing: 0;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: -9px;
+    @include mobile() {
+      text-align: center;
+      margin-bottom: -15px;
+      font-size: 24px;
+    }
+  }
+
+  &__top {
+    position: relative;
+    @include mobile() {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 86px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile() {
+      top: 166px;
+    }
+
+    &--prev {
+      right: 100%;
+      margin-right: 10px;
+      @include mobile() {
+        right: 50%;
+        margin-right: 13px;
+      }
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--next {
+      left: 100%;
+      margin-left: 13px;
+      @include mobile() {
+        left: 50%;
+        margin-left: 13px;
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: $green-dark;
+    }
+  }
+
+  &__slider {
+    overflow: hidden;
+
+    &--logos {
+      margin: 0 -20px -11px;
+      padding: 0 10px;
+    }
+
+    &--texts {
+      margin-bottom: 52px;
+      @include mobile() {
+        margin-top: 34px;
+      }
+    }
+  }
+
+  &__slides {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    width: 20%;
+    flex-shrink: 0;
+    padding: 45px 10px;
+    @include mobile() {
+      width: 50%;
+      padding: 45px 5px;
+    }
+
+    &--active {
+      #{$this}__card {
+        @include green-shadow-filter();
+        border-color: $green-dark;
+
+        &:after {
+          border-color: $green-dark;
+        }
+      }
+    }
+  }
+
+  &__card {
+    border: 1px solid $gray-light;
+    border-top: 0;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 93px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    @include anim();
+
+    @include skew('top', 'left', 7deg, 1px) {
+      border: 1px solid $gray-light;
+      border-bottom: 0;
+      background: $white;
+      @include anim();
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    flex-shrink: 0;
+    color: $gray-dark;
+
+    b {
+      @include book();
+      color: $black;
+    }
+  }
+}

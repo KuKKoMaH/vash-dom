@@ -3,6 +3,7 @@ const $header = $('.header');
 const searchClass = 'header--search';
 const catalogClass = 'header--catalog';
 const menuClass = 'header--menu';
+const cartClass = 'header--cart';
 
 const onClickOutside = ( event ) => {
   const $target = $(event.target);
@@ -12,6 +13,7 @@ const onClickOutside = ( event ) => {
     closeSearch();
     closeCatalog();
     closeMenu();
+    closeCart();
   }
 };
 
@@ -21,6 +23,7 @@ const openSearch = () => {
   $header.addClass(searchClass);
   closeMenu();
   closeCatalog();
+  closeCart();
   $body.on('click', onClickOutside);
   setTimeout(() => $('.header__search input').focus(), 100);
 };
@@ -36,6 +39,7 @@ const openCatalog = () => {
   $header.addClass(catalogClass);
   closeSearch();
   closeMenu();
+  closeCart();
   $body.on('click', onClickOutside);
 };
 const closeCatalog = () => {
@@ -50,6 +54,7 @@ const openMenu = () => {
   $header.addClass(menuClass);
   closeSearch();
   closeCatalog();
+  closeCart();
   $body.on('click', onClickOutside);
 };
 const closeMenu = () => {
@@ -77,3 +82,24 @@ $('.header__menuButton').on('click', () => {
 });
 
 $('.search__close').on('click', closeSearch);
+
+let isCartOpen = false;
+const openCart = () => {
+  isCartOpen = true;
+  $header.addClass(cartClass);
+  closeSearch();
+  closeMenu();
+  closeCatalog();
+  $body.on('click', onClickOutside);
+};
+const closeCart = () => {
+  isCartOpen = false;
+  $header.removeClass(cartClass);
+  $body.off('click', onClickOutside);
+};
+$('.header__cart--top').on('click', ( e ) => {
+  e.preventDefault();
+  isCartOpen
+    ? closeCart()
+    : openCart();
+});

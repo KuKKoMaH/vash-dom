@@ -24,8 +24,12 @@ h3, .h3 {
   font-size: 30px;
 }
 
-h4, .h4, h5, .h5, h6, .h6 {
+h4, .h4, h5, .h5 {
   font-size: 24px;
+}
+
+h6, .h6 {
+  font-size: 18px;
 }
 
 b, strong {
@@ -80,4 +84,58 @@ ol {
 
 del, s {
   text-decoration: line-through;
+}
+
+table {
+  width: 100%;
+
+  th {
+    font-size: 13px;
+    line-height: (15/13);
+    @include ls();
+    font-weight: 300;
+    background: $gray-light;
+    height: 49px;
+  }
+
+  th, td {
+    border: 1px solid $gray;
+    //border-right: 0;
+    //border-left: 0;
+    padding: 9px 25px;
+    vertical-align: middle;
+
+    //&:first-child {
+    //  border-left: 1px solid $gray;
+    //}
+    //
+    //&:last-child {
+    //  border-right: 1px solid $gray;
+    //}
+  }
+
+  td {
+    font-size: 15px;
+    height: 49px;
+
+  }
+
+  .w0 {
+    width: 0;
+  }
+}
+
+blockquote {
+  background: $green-dark;
+  color: $white;
+  @include demi();
+  @include ls();
+  line-height: (26/18);
+  padding: 33px 38px 33px;
+  margin: 2em 0;
+  @include mobile() {
+    font-size: 16px;
+    line-height: (22/16);
+    padding: 20px 24px 19px;
+  }
 }

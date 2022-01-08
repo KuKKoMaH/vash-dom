@@ -1,0 +1,126 @@
+mixin checkoutStep(index, title, active, final, edit)
+  .checkoutStep(class=active && 'checkoutStep--active')
+    .checkoutStep__head
+      .checkoutStep__number: div=index
+      .checkoutStep__title=title
+    if(final)
+      .checkoutStep__confirm: button.btn.btn--leftBottom Оформить заказ
+    if(block)
+      block
+    if(edit)
+      button.checkoutStep__edit Изменить
+
+mixin step1Form()
+  .checkoutStep__content
+    .checkoutStep__row
+      label.input
+        .input__label Ваше ФИО
+        .input__input.input__input--rightTop: input(type='text')
+    .checkoutStep__row
+      label.input
+        .input__label Ваш контактный телефон
+        .input__input.input__input--rightTop: input(type='tel')
+      label.input
+        .input__label Резервный телефон (необязательно)
+        .input__input.input__input--rightTop: input(type='tel')
+    .checkoutStep__row
+      label.input
+        .input__label Ваш e-mail
+        .input__input.input__input--rightTop: input(type='email')
+      .checkoutStep__placeholder
+    .checkoutStep__footer
+      button.btn.btn--rightTop Перейти к доставке
+      .checkoutStep__error
+        +the_svg('note')
+        | Необходимо заполнить все обязательные поля
+
+mixin step2Form()
+  .checkoutStep__content
+    .checkoutStep__row
+      label.input
+        .input__label Город
+        .input__input.input__input--rightTop: input(type='text')
+    .checkoutStep__row
+      label.input
+        .input__label Улица
+        .input__input.input__input--rightTop: input(type='text')
+      .checkoutStep__address
+        .checkoutStep__narrow
+          label.input
+            .input__label Дом
+            .input__input.input__input--rightTop: input(type='text')
+        .checkoutStep__narrow
+          label.input
+            .input__label Квартира
+            .input__input.input__input--rightTop: input(type='text')
+        .checkoutStep__narrow
+          label.input
+            .input__label Корпус
+            .input__input.input__input--rightTop: input(type='text')
+
+    .checkoutStep__radios
+      label.checkbox
+        input(type='radio' name='1' value='delivery')
+        span До подъезда
+      label.checkbox
+        input(type='radio' name='2' value='delivery')
+        span Подъем на этаж
+
+    .checkoutStep__info
+      .checkoutStep__label Стоимость доставки (ориентировочно)
+      .checkoutStep__value: span 15 000 руб.
+    .checkoutStep__info
+      .checkoutStep__label Примерный срок доставки
+      .checkoutStep__value: span 8 дней
+
+    .checkoutStep__footer
+      button.btn.btn--rightTop Перейти к выбору способа оплаты
+
+mixin step3Form()
+  .checkoutStep__content
+    .checkoutStep__radios
+      label.checkbox
+        input(type='radio' name='1' value='pay')
+        span Оплата наличными
+      label.checkbox
+        input(type='radio' name='2' value='pay')
+        span Оплата онлайн
+      label.checkbox
+        input(type='radio' name='2' value='pay')
+        span Оплата картой при получении
+
+    .checkoutStep__footer
+      button.btn.btn--rightTop Перейти к подтверждению заказа
+
+mixin step1Info()
+  .checkoutStep__content
+    .checkoutStep__info
+      .checkoutStep__label Ваше ФИО
+      .checkoutStep__value: span Михайлович Николаев Андрей Михайлович Николаев Андрей Михайлович Николаев Андрей Михайлович Николаев Андрей Михайлович
+    .checkoutStep__info
+      .checkoutStep__label Ваши контактный телефон
+      .checkoutStep__value: span +7 (495) 566-99-88
+    .checkoutStep__info
+      .checkoutStep__label Ваш e-mail
+      .checkoutStep__value: span pochta@gmail.com
+
+mixin step2Info()
+  .checkoutStep__content
+    .checkoutStep__info
+      .checkoutStep__label Адрес
+      .checkoutStep__value: span Москва, Ленина, 56-41
+    .checkoutStep__info
+      .checkoutStep__label Вид доставки
+      .checkoutStep__value: span Подъем на этаж
+    .checkoutStep__info
+      .checkoutStep__label Стоимость доставки (ориентировочно)
+      .checkoutStep__value: span 15 000 руб.
+    .checkoutStep__info
+      .checkoutStep__label Примерный срок доставки
+      .checkoutStep__value: span 8 дней
+
+mixin step3Info()
+  .checkoutStep__content
+    .checkoutStep__info
+      .checkoutStep__label Вид
+      .checkoutStep__value: span Оплата наличными

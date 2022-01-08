@@ -12,6 +12,7 @@ export default ( selector, props, initOptions ) => {
   }, initOptions);
 
   const $wrapper = $(selector);
+  let lastSlider = null;
   if ($wrapper.length) {
     $wrapper.each(( i, el ) => {
       let slider = null;
@@ -21,7 +22,7 @@ export default ( selector, props, initOptions ) => {
         if (slider) return;
         const finalProps = typeof props === 'function' ? props($el) : props;
         if (!finalProps) return;
-        slider = new Swiper(el, typeof props === 'function' ? props($el) : props);
+        lastSlider = slider = new Swiper(el, typeof props === 'function' ? props($el) : props);
         $el.data('swiper', slider);
         if (initOptions.afterInit) initOptions.afterInit(slider, $el);
       };
@@ -43,4 +44,9 @@ export default ( selector, props, initOptions ) => {
       });
     });
   }
+  return {
+    getInstance() {
+      return lastSlider;
+    },
+  };
 }

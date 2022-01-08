@@ -1,0 +1,53 @@
+.vip
+  .vip__category
+    .c
+      h1.h2.vip__title Каталог VIP-материалов
+      .vip__items
+        .vip__item
+          a.vip__card(href='#')
+            .vip__image: div: div(style='background-image: url(' + require('src/modules/categories/img/category_01.jpg') + ')')
+            .vip__name Гибкая черепица
+            .vip__button
+              | Подробнее
+              +the_svg('chevrone-down')
+        .vip__item
+          a.vip__card(href='#')
+            .vip__image: div: div(style='background-image: url(' + require('src/modules/categories/img/category_02.jpg') + ')')
+            .vip__name Керамическая черепица
+            .vip__button
+              | Подробнее
+              +the_svg('chevrone-down')
+        .vip__item
+          a.vip__card(href='#')
+            .vip__image: div: div(style='background-image: url(' + require('src/modules/categories/img/category_03.jpg') + ')')
+            .vip__name Прочее
+            .vip__button
+              | Подробнее
+              +the_svg('chevrone-down')
+
+  .vip__category.vip__category--2
+    .c
+      h2.vip__subtitle Архитекторы элитных поселков рекомендуют!
+
+      .vip__items
+        .vip__item
+          .vip__card
+            .vip__image: div: div(style='background-image: url(' + require('src/modules/categories/img/category_01.jpg') + ')')
+            .vip__name Черепица 1 (премиум)
+            .vip__label
+              +the_svg('pin')
+              | поселок «Дубрава
+        .vip__item
+          .vip__card
+            .vip__image: div: div(style='background-image: url(' + require('src/modules/categories/img/category_02.jpg') + ')')
+            .vip__name Черепица 2 (премиум)
+            .vip__label
+              +the_svg('pin')
+              | поселок «Дубрава
+        .vip__item
+          .vip__card
+            .vip__image: div: div(style='background-image: url(' + require('src/modules/categories/img/category_03.jpg') + ')')
+            .vip__name Черепица 3 (премиум)
+            .vip__label
+              +the_svg('pin')
+              | поселок «Дубрава

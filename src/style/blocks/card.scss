@@ -3,32 +3,35 @@
 
   position: relative;
   display: block;
-  border: 1px solid $gray;
+  //border: 1px solid $gray;
   border-top: 0;
-  background: $white;
+  //background: $white;
   height: 100%;
-  padding: 20px 0 0;
+  padding: 70px 0 0;
   z-index: 1;
+  text-decoration: none;
   @include anim();
-  @include skew('top', 'left', 7deg, 1px) {
-    background: $white;
-    border: 1px solid $gray;
-    border-bottom: 0;
+
+  @include skewBorder('top', 'left', 25px, $gray, $white);
+@include mobile() {
+  @include skewBorder('top', 'left', 17px, $gray, $white);
+}
+
+  &:before {
     @include anim();
   }
 
   &:hover {
     text-decoration: none;
-    border-color: $green;
 
-    &:after {
-      border-color: $green;
+    &:before {
+      background: $green;
     }
   }
 
   &__badge {
     position: absolute;
-    top: 0;
+    top: 26px;
     left: 0;
     background: $green-dark;
     color: $white;
@@ -53,7 +56,7 @@
   &__image {
     position: relative;
     width: 160px;
-    max-width: 100%;
+    max-width: calc(100% - 4px);
     margin: 0 auto 18px;
 
     &:before {
@@ -149,12 +152,11 @@
   }
 
   @mixin big() {
-    border-color: $yellow;
-    padding: 38px 0 0 10px;
+    padding: 66px 0 10px 10px;
     display: flex;
 
-    @include skewTransform('top', 'left', 3.5deg) {
-      border-color: $yellow;
+    &:before {
+      background: $yellow;
     }
 
     #{$this}__image {
@@ -169,6 +171,9 @@
       width: 180px;
       flex: 1;
       //padding-left: 248px;
+    }
+    @include mobile() {
+      padding-top: 37px;
     }
   }
 

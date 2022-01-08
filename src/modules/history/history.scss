@@ -84,13 +84,13 @@
   &__img {
     padding: 10px;
     background: $white;
-    clip-path: polygon(0 0, 100% 16px, 100% 100%, 0% 100%);
+    @include skewClipPath('top', 'left', 16px);
   }
 
   &__slider {
     position: relative;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 16px, 100% 100%, 0% 100%);
+    @include skewClipPath('top', 'left', 16px);
   }
 
   &__slides {

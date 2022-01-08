@@ -50,11 +50,11 @@
     width: 100%;
     padding: 24px 20px 20px 20px;
     background: $gray-light;
-    clip-path: polygon(0 0, 100% 66px, 100% 100%, 0% 100%);
+    @include skewClipPath('top', 'left', 66px);
     margin-bottom: 26px;
     position: relative;
     @include mobile() {
-      clip-path: polygon(0 0, 100% 44px, 100% 100%, 0% 100%);
+      @include skewClipPath('top', 'left', 44px);
       padding: 17px 15px 15px 15px;
       margin-bottom: 21px;
     }
@@ -64,12 +64,12 @@
 
       div {
         height: 292px;
-        clip-path: polygon(0 0, 100% 60px, 100% 100%, 0% 100%);
+        @include skewClipPath('top', 'left', 60px);
         background-position: 50% 50%;
         background-size: cover;
         background-repeat: no-repeat;
         @include mobile() {
-          clip-path: polygon(0 0, 100% 39px, 100% 100%, 0% 100%);
+          @include skewClipPath('top', 'left', 39px);
           height: 192px;
         }
       }
@@ -83,6 +83,7 @@
     @include demi();
     margin-bottom: 21px;
     text-transform: uppercase;
+    text-decoration: none;
 
     &:hover {
       text-decoration: none;
@@ -102,6 +103,7 @@
     line-height: 1;
     @include ls();
     @include link();
+    text-decoration: none;
     @include mobile() {
       font-size: 15px;
       line-height: (18/15);

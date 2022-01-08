@@ -21,11 +21,14 @@ header.header
         +the_svg('hamburger').active
         +the_svg('close').inactive
 
-      a.header__cart.header__cart--top(href='#')
-        +the_svg('cart')(class='header__cartIcon')
-        .header__cartLabel Корзина
-        .header__cartValue 2 560 руб.
-        .header__cartCounter 2
+      .header__cartContainer
+        a.header__cart.header__cart--top(href='#')
+          +the_svg('cart')(class='header__cartIcon')
+          .header__cartLabel Корзина
+          .header__cartValue 2 560 руб.
+          .header__cartCounter 2
+        .header__cartPopup
+          include ../cartPopup/cartPopup
 
     .header__bottom
       button.header__catalogButton
@@ -37,6 +40,7 @@ header.header
       a.header__cart.header__cart--bottom(href='#')
         +the_svg('cart')(class='header__cartIcon')
         .header__cartCounter 2
+
 
       .header__main
         .header__search

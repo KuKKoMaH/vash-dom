@@ -1,0 +1,102 @@
+.stars {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 -15px;
+  position: relative;
+  z-index: 1;
+  @include mobile() {
+    margin: 0;
+  }
+  &__item {
+    margin: 0;
+    padding: 15px;
+    position: relative;
+    min-width: 160px;
+    width: 20%;
+
+    @include mobile() {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      min-height: 50px;
+      margin-bottom: 22px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    background: $white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    @include green-shadow();
+    @include mobile() {
+      margin: 0 24px 0 10px;
+      flex-shrink: 0;
+    }
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+    }
+
+    &:before {
+      width: 50px;
+      height: 50px;
+      top: -10px;
+      left: -10px;
+      background: $gray-light;
+      z-index: -1;
+      @include mobile() {
+      }
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      color: $green;
+      @include mobile() {
+      }
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: (21/15);
+    text-align: center;
+    @include ls();
+    @include mobile() {
+      text-align: left;
+      font-size: 16px;
+      line-height: (22/16);
+    }
+
+    b {
+      @include demi();
+      font-weight: normal;
+    }
+
+    span {
+      color: $green-dark;
+      @include demi();
+      font-weight: normal;
+    }
+
+    @include mobile() {
+      width: 100%;
+      font-size: 16px;
+      line-height: (22/16);
+    }
+  }
+
+}

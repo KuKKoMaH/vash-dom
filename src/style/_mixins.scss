@@ -94,6 +94,66 @@
   }
 }
 
+@mixin skewClipPath($position, $skew, $size) {
+  @if ($position == 'right') {
+    @if ($skew == 'bottom') {
+      clip-path: polygon(0 0, calc(100% - #{$size}) 0, 100% 100%, 0% 100%);
+    }
+    @if ($skew == 'top') {
+      clip-path: polygon(0 0, 100% 0, calc(100% - #{$size}) 100%, 0% 100%);
+    }
+  }
+  @if ($position == 'left') {
+    @if ($skew == 'bottom') {
+      clip-path: polygon(#{$size} 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    @if ($skew == 'top') {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, #{$size} 100%);
+    }
+  }
+  @if ($position == 'top') {
+    @if ($skew == 'left') {
+      clip-path: polygon(0 0, 100% #{$size}, 100% 100%, 0 100%);
+    }
+    @if ($skew == 'right') {
+      clip-path: polygon(0 #{$size}, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  @if ($position == 'bottom') {
+    @if ($skew == 'left') {
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - #{$size}), 0 100%);
+    }
+    @if ($skew == 'right') {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - #{#{$size}}));
+    }
+  }
+}
+
+@mixin skewBorder($position, $skew, $size, $borderColor, $backgroundColor) {
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    @include skewClipPath($position, $skew, $size);
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $borderColor;
+  }
+
+  &:after {
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background: $backgroundColor;
+  }
+}
+
 @mixin placeholder($color) {
   &::-webkit-input-placeholder {
     color: $color;

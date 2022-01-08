@@ -1,0 +1,27 @@
+.cartPopup
+  .cartPopup__list
+    each i in [1,2,3,4,5]
+      .cartPopup__item
+        .cartPopup__image
+          .cartPopup__badge -20%
+          img(src=require('src/img/catalog/' + i + '.jpg'))
+        .cartPopup__card
+          .cartPopup__name Название какого-либо товара который есть
+          .cartPopup__price 240 #[span руб.]
+          .cartPopup__priceOld 310 руб.
+          .cartPopup__footer
+            .cartPopup__counter
+              .counter
+                button.counter__button.counter__button--minus &ndash;
+                .counter__value 0
+                button.counter__button.counter__button--plus +
+            .cartPopup__remove
+              button.cartPopup__removeBtn: +the_svg('close')
+
+
+  .cartPopup__sup
+    .cartPopup__total
+      .cartPopup__label Всего
+      .cartPopup__value: span 5 ед.
+    a.btn.btn--leftTop Оформить заказ
+

@@ -1,9 +1,9 @@
 .breadcrumbs {
   $this: &;
 
-  padding: 20px 0;
+  padding: 23px 0;
   @include mobile() {
-    padding: 10px 0;
+    padding: 14px 0;
   }
 
   ul, li {
@@ -22,10 +22,12 @@
   li {
     padding: 5px;
     font-size: 13px;
+    line-height: 1;
     @include ls();
     @include mobile() {
+      padding: 4px 5px;
       font-size: 10px;
-      line-height: (19/10);
+      line-height: 1;
     }
 
     &:after {
@@ -34,6 +36,15 @@
       @include mobile() {
         margin: 0 0 0 7px;
       }
+    }
+  }
+
+  a {
+    color: $gray-dark;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

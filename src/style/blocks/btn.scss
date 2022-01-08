@@ -8,18 +8,27 @@
   text-align: center;
   cursor: pointer;
   @include anim();
-  padding: 0 25px 0 30px;
+  padding: 0 40px 0 30px;
   height: 50px;
   //padding: 16px 25px 16px 30px;
   @include book();
   font-size: 15px;
   line-height: 1.2;
   color: $black;
-  background: $yellow;
   z-index: 1;
+  //background: $yellow;
+  text-decoration: none;
 
-  @include skew('right', 'bottom', 15deg) {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: $yellow;
+    z-index: -1;
+    @include skewClipPath('right', 'bottom', 13px);
   }
 
   &:focus {
@@ -42,37 +51,6 @@
 
     &:after {
       background: $gray-light;
-    }
-  }
-
-  &--leftBottom, &--leftTop {
-    padding-left: 25px;
-    padding-right: 30px;
-    border-right: 0 !important;
-  }
-
-  &--leftBottom {
-    @include skewTransform('left', 'bottom', 15deg) {
-      background: $yellow;
-    }
-  }
-
-  &--leftTop {
-    @include skewTransform('left', 'top', 15deg) {
-      background: $yellow;
-    }
-  }
-
-  &--rightBottom {
-    @include skewTransform('right', 'bottom', 15deg) {
-      background: $yellow;
-      border-left: 0 !important;
-    }
-  }
-  &--rightTop {
-    @include skewTransform('right', 'top', 15deg) {
-      background: $yellow;
-      border-left: 0 !important;
     }
   }
 
@@ -99,12 +77,12 @@
   }
 
   &--white {
-    background: $white;
-    color: $green-dark;
-
-    &:after {
+    &:before {
       background: $white;
+
     }
+
+    color: $green-dark;
 
     &:hover {
       filter: drop-shadow(0 11px 20px rgba($white, .35));
@@ -112,21 +90,88 @@
   }
 
   &--outline {
-    background: $white;
-    border: 1px solid $gray;
-
-    @include skew('right', 'bottom', 15deg, 1px) {
-      background: $white;
+    &:before {
+      background: $gray;
     }
 
     &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 1px;
+      left: 1px;
+      right: 1px;
+      bottom: 1px;
       background: $white;
-      border: 1px solid $gray;
+      @include skewClipPath('right', 'bottom', 13px);
     }
 
     &:hover {
 
     }
+  }
+
+  &--leftBottom, &--leftTop {
+    padding-left: 35px;
+    padding-right: 30px;
+    border-right: 0 !important;
+  }
+
+  &--leftBottom {
+    &:before, &:after {
+      @include skewClipPath('left', 'bottom', 13px);
+    }
+  }
+
+  &--leftTop {
+    &:before, &:after {
+      @include skewClipPath('left', 'top', 13px);
+    }
+  }
+
+  &--rightBottom {
+    &:before, &:after {
+      @include skewClipPath('right', 'bottom', 13px);
+    }
+  }
+
+  &--rightTop {
+    &:before, &:after {
+      @include skewClipPath('right', 'top', 13px);
+    }
+  }
+
+  @include mobile() {
+    &--smLeftBottom {
+      &:before, &:after {
+        @include skewClipPath('left', 'bottom', 13px);
+      }
+    }
+
+    &--smLeftTop {
+      &:before, &:after {
+        @include skewClipPath('left', 'top', 13px);
+      }
+    }
+
+    &--smRightBottom {
+      &:before, &:after {
+        @include skewClipPath('right', 'bottom', 13px);
+      }
+    }
+
+    &--smRightTop {
+      &:before, &:after {
+        @include skewClipPath('right', 'top', 13px);
+      }
+    }
+
+  }
+
+  svg {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
   }
 }
 

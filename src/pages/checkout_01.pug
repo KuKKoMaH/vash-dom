@@ -1,0 +1,28 @@
+extends ../pug/_layout
+include ../modules/checkout/checkout
+include ../modules/checkoutStep/checkoutStep
+block body
+  +checkout('Оформление заказа')
+    +checkoutStep('01', 'Ваши данные', true, false, false)
+      +step1Form()
+    +checkoutStep('02', 'Доставка', true, false, false)
+      +step2Form()
+    +checkoutStep('03', 'Оплата', true, false, false)
+      +step3Form()
+    +checkoutStep('04', 'Подтверждение заказа', true, true)
+
+    +checkoutStep('01', 'Ваши данные')
+      //+step1Info()
+    +checkoutStep('02', 'Доставка')
+      //+step2Info()
+    +checkoutStep('03', 'Оплата')
+      //+step3Info()
+    +checkoutStep('04', 'Подтверждение заказа')
+
+    +checkoutStep('01', 'Ваши данные', true, false, true)
+      +step1Info()
+    +checkoutStep('02', 'Доставка', true, false,true)
+      +step2Info()
+    +checkoutStep('03', 'Оплата', true,false, true)
+      +step3Info()
+    +checkoutStep('04', 'Подтверждение заказа', true)

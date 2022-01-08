@@ -1,0 +1,4 @@
+.productDescription {
+  $this: &;
+  @include ls();
+}

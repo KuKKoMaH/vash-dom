@@ -1,26 +1,42 @@
 .individual {
   $this: &;
 
-  background: url(./img/individual_bg.jpg) 100px 100% no-repeat;
   padding: 52px 58px 53px;
   border: 1px solid $green-dark;
   margin: 0 -1px;
   display: flex;
+  overflow: hidden;
+  align-items: flex-start;
   @include mobile() {
     padding: 22px 29px 29px;
     flex-direction: column;
     background: transparent;
+    margin: 0;
   }
 
   &__aside {
-    width: 400px;
-    margin-right: 70px;
-    padding-bottom: 50px;
+    position: relative;
+    width: 490px;
+    padding-right: 30px;
     @include mobile() {
       width: 100%;
       margin-right: 0;
       padding-bottom: 17px;
     }
+
+    &:after {
+      content: '';
+      background: url(./img/individual_bg.png) no-repeat;
+      width: 400px;
+      height: 448px;
+      position: absolute;
+      margin-top: 36px;
+      left: 10px;
+      @include mobile() {
+        display: none;
+      }
+    }
+
   }
 
   &__title {
@@ -28,12 +44,15 @@
     line-height: (38/36);
     @include ls-m();
     font-weight: bold;
-    color: $green-dark;
     margin-bottom: 28px;
     @include mobile() {
       font-size: 24px;
       line-height: (28/24);
       margin-bottom: 20px;
+    }
+
+    span {
+      color: $green-dark;
     }
   }
 

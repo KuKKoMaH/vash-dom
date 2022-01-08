@@ -126,6 +126,7 @@
   &__link {
     margin-top: auto;
     font-size: 15px;
+    text-decoration: none;
     @include link();
     @include mobile() {
       margin-top: 10px;

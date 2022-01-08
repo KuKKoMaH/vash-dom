@@ -256,6 +256,7 @@
     text-align: center;
 
     a {
+      text-decoration: none;
       color: $white;
       display: inline-block;
       font-size: 14px;
@@ -283,6 +284,7 @@
   }
 
   &__category {
+    text-decoration: none;
     position: relative;
     flex: 1;
     height: 124px;

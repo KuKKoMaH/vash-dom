@@ -1,0 +1,36 @@
+extends ../pug/_layout
+include ../modules/checkout/checkout
+block body
+  +checkout('Ваш заказ оформлен', 'номер заказа <span>5678/2</span>')
+    .checkoutStep.checkoutStep--final
+      .checkoutStep__text
+        p Таким образом дальнейшее развитие различных форм деятельности играет важную роль в формированиисистемы обучения кадров, соответствует насущным потребностям. Равным образом постоянный количественный рост и сфера.
+      .checkoutStep__info
+        .checkoutStep__label Ваше ФИО
+        .checkoutStep__value: span Михайлович Николаев Андрей Михайлович Николаев Андрей Михайлович Николаев Андрей Михайлович Николаев Андрей Михайлович
+      .checkoutStep__info
+        .checkoutStep__label Ваши контактный телефон
+        .checkoutStep__value: span +7 (495) 566-99-88
+      .checkoutStep__info
+        .checkoutStep__label Ваш e-mail
+        .checkoutStep__value: span pochta@gmail.com
+      .checkoutStep__info
+        .checkoutStep__label Адрес
+        .checkoutStep__value: span Москва, Ленина, 56-41
+      .checkoutStep__info
+        .checkoutStep__label Вид доставки
+        .checkoutStep__value: span Подъем на этаж
+      .checkoutStep__info
+        .checkoutStep__label Стоимость доставки (ориентировочно)
+        .checkoutStep__value: span 15 000 руб.
+      .checkoutStep__info
+        .checkoutStep__label Примерный срок доставки
+        .checkoutStep__value: span 8 дней
+      .checkoutStep__info
+        .checkoutStep__label Вид
+        .checkoutStep__value: span Оплата наличными
+
+      .checkoutStep__back
+        a.btn.btn--outline.btn--rightTop(href='#')
+          +the_svg('chevrone-down')
+          | Продолжить покупки

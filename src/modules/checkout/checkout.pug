@@ -1,0 +1,53 @@
+mixin checkout(title, asideText)
+  .checkout
+    .c
+      +breadcrumbs(['Оформление заказа'])
+      .checkout__container
+        .checkout__aside
+          .checkout__items
+            each i in [1,2,3]
+              .checkout__item
+                .checkout__image
+                  .checkout__badge -20%
+                  img(src=require('src/img/catalog/' + i + '.jpg'))
+                .checkout__card
+                  .checkout__name Название какого-либо товара который есть
+                  .checkout__price 240 #[span руб.]
+                  .checkout__priceOld 310 руб.
+
+          .checkout__back
+            a.btn.btn--outline.btn--rightTop.checkout__backBtn(href='#')
+              +the_svg('chevrone-down')
+              | Продолжить покупки
+
+          .checkout__total
+            button.checkout__showInfo
+              .inactive Подробнее
+              .active Скрыть
+              +the_svg('chevrone-down')
+            .checkout__info
+              .checkout__row
+                .checkout__label всего товаров
+                .checkout__value 5 #[span ед.]
+              .checkout__row
+                .checkout__label общая сумма
+                .checkout__value 25 450 #[span руб.]
+              .checkout__row
+                .checkout__label скидка
+                .checkout__value 2 500 #[span руб.]
+              .checkout__row
+                .checkout__label доставка
+                .checkout__value #[span по запросу]
+            .checkout__row.checkout__row--total
+              .checkout__label итого
+              .checkout__value 23 800 #[span руб.]
+
+        .checkout__head
+          h1.checkout__title=title
+          if(asideText)
+          .checkout__number !{asideText}
+
+        .checkout__body
+          if(block)
+            block
+

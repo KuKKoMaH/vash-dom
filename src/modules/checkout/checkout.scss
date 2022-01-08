@@ -1,0 +1,363 @@
+.checkout {
+  $this: &;
+
+  background: $gray-light;
+  padding-bottom: 60px;
+
+  @include cf();
+
+  &__container {
+    border: 1px solid $gray;
+    background: $white;
+    margin-right: 330px;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    padding: 32px 57px 58px;
+    @include mobile() {
+      order: 1;
+      padding: 22px 26px 23px;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-size: 46px;
+    @include mobile() {
+      font-size: 24px;
+      line-height: (30/24);
+      @include ls();
+    }
+  }
+
+  &__number {
+    margin-left: auto;
+    line-height: (24/18);
+    span {
+      @include demi();
+      color: $green-dark;
+    }
+    @include mobile() {
+      margin: 20px 0 0;
+      width: 100%;
+    }
+  }
+
+  &__aside {
+    float: right;
+    margin-top: -1px;
+    margin-right: -331px;
+    background: $white;
+    margin-left: -1px;
+    width: 331px;
+    flex-shrink: 0;
+    border-top: 1px solid $gray;
+    @include mobile() {
+      float: none;
+      margin: 0;
+      order: 2;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &--active {
+        #{$this}__showInfo {
+          .active {
+            display: block;
+          }
+
+          .inactive {
+            display: none;
+          }
+
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        #{$this}__info {
+          max-height: none;
+        }
+        #{$this}__items {
+          max-height: none;
+        }
+      }
+    }
+  }
+
+  &__body {
+    @include mobile() {
+      order: 3;
+    }
+  }
+
+  &__items {
+    border: 1px solid $gray;
+    border-top: 0;
+    border-bottom: 0;
+    @include mobile() {
+      border: 0;
+      order: 3;
+      max-height: 0;
+      overflow: hidden;
+      @include anim();
+    }
+  }
+
+
+  &__item {
+    padding: 20px 15px 21px 39px;
+    border-bottom: 1px solid $gray;
+    display: flex;
+    align-items: flex-start;
+    @include mobile() {
+      padding: 20px 15px 18px 18px;
+      position: relative;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-right: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    @include mobile() {
+      position: static;
+      margin-right: 20px;
+      margin-top: 4px;
+      width: 70px;
+      height: 70px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    color: $white;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: bold;
+    @include ls();
+    padding: 2px 10px 3px 7px;
+    z-index: 1;
+    background: $green-dark;
+    @include skewClipPath('right', 'bottom', 6px);
+    @include mobile() {
+      bottom: auto;
+      top: 9px;
+      font-size: 12px;
+      padding: 2px 10px 2px 5px;
+    }
+  }
+
+  &__name {
+    font-size: 15px;
+    line-height: (18/15);
+    @include book();
+    margin-bottom: 1px;
+    @include mobile() {
+      font-size: 14px;
+      line-height: (15/14);
+      margin-bottom: 8px;
+    }
+  }
+
+  &__price {
+    @include demi();
+    font-size: 18px;
+    @include ls();
+    color: $green-dark;
+
+    span {
+      font-size: 13px;
+    }
+
+    @include mobile() {
+      font-size: 14px;
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__priceOld {
+    font-size: 13px;
+    line-height: (18/13);
+    @include ls();
+    color: $red;
+    text-decoration: line-through;
+    margin-top: 1px;
+    @include mobile() {
+      font-size: 10px;
+      margin-top: 1px;
+    }
+  }
+
+  &__back {
+    padding: 39px 39px 40px;
+    border: 1px solid $gray;
+    border-top: 0;
+    border-bottom: 0;
+    @include mobile() {
+      order: 1;
+      border: 0;
+      padding: 29px 29px 10px;
+    }
+  }
+
+  &__backBtn {
+    svg {
+      color: $green-dark;
+      transform: rotate(90deg);
+      margin-right: 10px;
+    }
+  }
+
+  &__total {
+    border: 1px solid $yellow;
+    padding: 32px 38px 17px;
+    @include mobile() {
+      padding: 16px 28px 23px;
+      order: 2;
+      border: 0;
+      border-bottom: 1px solid $gray;
+    }
+  }
+
+  &__showInfo {
+    display: none;
+    @include mobile() {
+      display: inline-flex;
+      align-items: center;
+      border-bottom: 1px dotted $green-dark;
+      font-size: 14px;
+      line-height: (18/14);
+      @include ls();
+      margin-bottom: 5px;
+      svg {
+        width: 10px;
+        height: 10px;
+        @include anim();
+        color: $green-dark;
+        margin-left: 10px;
+      }
+
+      .active {
+        display: none;
+      }
+    }
+  }
+
+  &__info {
+    @include mobile() {
+      max-height: 0;
+      overflow: hidden;
+      @include anim();
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    @include ls();
+    margin-bottom: 16px;
+    @include mobile() {
+      font-size: 14px;
+      line-height: (19/14);
+      margin-bottom: 1px;
+    }
+
+    &:after {
+      content: '';
+      height: 100%;
+      border-bottom: 1px dotted $gray-dark;
+      flex: 1;
+      order: 1;
+      margin: 6px 5px;
+      @include mobile() {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    &--total {
+      margin-top: 3px;
+
+      #{$this}__value {
+        color: $green-dark;
+        @include demi();
+        font-size: 30px;
+        line-height: 22px;
+
+        span {
+          font-size: 18px;
+        }
+
+        @include mobile() {
+          font-size: 16px;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+
+      #{$this}__label {
+        color: $black;
+      }
+
+      @include mobile() {
+        margin-top: 1px;
+      }
+    }
+  }
+
+  &__label {
+    color: $gray-dark;
+    font-size: 15px;
+    line-height: (22/15);
+    @include mobile() {
+      font-size: 12px;
+      line-height: (22/12);
+    }
+  }
+
+  &__value {
+    @include book();
+    font-size: 18px;
+    margin-left: auto;
+    order: 2;
+    flex-shrink: 0;
+
+    span {
+      font-size: 13px;
+    }
+
+    @include mobile() {
+      font-size: 12px;
+      line-height: (22/12);
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}

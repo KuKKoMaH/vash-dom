@@ -1,0 +1,225 @@
+.product
+  .c
+    +breadcrumbs(['Каталог', 'Кровля', 'Металлочерепица', 'Название товара'])
+    .product__container
+      .product__head
+        .product__aside
+          .product__badges
+            .product__badge.product__badge--danger хит продаж
+            .product__badge -20%
+          .product__slider
+            .product__slides
+              each i in [1,2,3,4,5]
+                .product__slide
+                  img(src=require('src/img/catalog/' + i + '.jpg'))
+          .product__thumbs
+            each i in [1,2,3,4,5]
+              button.product__thumb(class=i === 1 && 'product__thumb--active')
+                img(src=require('src/img/catalog/' + i + '.jpg'))
+        .product__main
+          h1.product__title Некоторое название товара которое отображается
+          .product__buy
+            .product__price 23 800 #[span руб / м#[sup 2]]
+            .product__priceOld 26 750 #[span руб / м#[sup 2]]
+            button.product__cheap Нашли дешевле?
+
+          .product__info
+            .product__infoTitle Технические характеристики:
+            .product__infoPreview
+              .product__infoItem
+                .product__infoLabel длина
+                .product__infoValue 1000±3 мм
+              .product__infoItem
+                .product__infoLabel рабочая ширина
+                .product__infoValue 2,8±0,2 мм
+              .product__infoItem
+                .product__infoLabel количество метров в упаковке
+                .product__infoValue 3 м2
+            .product__infoRest
+              .product__infoItem
+                .product__infoLabel длина
+                .product__infoValue 1000±3 мм
+              .product__infoItem
+                .product__infoLabel рабочая ширина
+                .product__infoValue 2,8±0,2 мм
+              .product__infoItem
+                .product__infoLabel количество метров в упаковке
+                .product__infoValue 3 м2
+            button.product__infoButton
+              .inactive Подробнее
+              .active Меньше подробностей
+
+          button.btn.btn--rightTop.btn--outline.product__moreButton
+            | Сопутствующие материалы и услуги
+            +the_svg('chevrone-down')
+
+      .product__block.product__block--active.product__block--main
+        button.product__blockCollapse: +the_svg('chevrone-down')
+        button.product__blockTitle Характеристики DÖCKE PIE Гибкая черепица EUROPA МАТРИЦА
+        .product__blockContent
+          include ../productDescription/productDescription
+
+      .product__block.product__block--active
+        button.product__blockCollapse: +the_svg('chevrone-down')
+        button.product__blockTitle
+          .product__blockCounter 01
+          | Нужны ли Вам ДОБОРНЫЕ ЭЛЕМЕНТЫ?
+        .product__blockContent
+          label.checkbox.product__checkbox
+            input(type='radio' name='dobor' value='manager')
+            span Да, пусть цену рассчитает менеджер
+          label.checkbox.product__checkbox
+            input(type='radio' name='dobor' value='own')
+            span Да, хочу посчитать сам цену
+          label.checkbox.product__checkbox
+            input(type='radio' name='dobor' value='no')
+            span Нет, не нужно
+          .product__table
+            table
+              thead
+                tr
+                  th.product__tableName Состав комплекта
+                  th.product__tablePrice Цена без учета#[br]скидки, руб.
+                  th.product__tableCounter Количество
+                  th.product__tableHelp Подсказа по расчету
+              tbody
+                each i in [['Название', '2 500'], ['Что-то', '15 000'], ['Элемент', '400'], ['Продукция', '8 455']]
+                  tr
+                    td.product__tableName=i[0]
+                    td.product__tablePrice=i[1]
+                    td.product__tableCounter
+                      .counter
+                        button.counter__button.counter__button--minus &ndash;
+                        input.counter__value(value='0')
+                        button.counter__button.counter__button--plus +
+                    td.product__tableHelp ...
+
+      .product__block
+        button.product__blockCollapse: +the_svg('chevrone-down')
+        button.product__blockTitle
+          .product__blockCounter 02
+          | Нужна ли Вам ПОДШИВКА КРОВЛИ?
+        .product__blockContent
+          label.checkbox.product__checkbox
+            input(type='radio' name='podshiw' value='manager')
+            span Да, пусть цену рассчитает менеджер
+          label.checkbox.product__checkbox
+            input(type='radio' name='podshiw' value='own')
+            span Да, хочу посчитать сам цену
+          label.checkbox.product__checkbox
+            input(type='radio' name='podshiw' value='no')
+            span Нет, не нужно
+          .product__table
+            table
+              thead
+                tr
+                  th.product__tableName Состав комплекта
+                  th.product__tablePrice Цена без учета#[br]скидки, руб.
+                  th.product__tableCounter Количество
+                  th.product__tableHelp Подсказа по расчету
+              tbody
+                each i in [['Название', '2 500'], ['Что-то', '15 000'], ['Элемент', '400'], ['Продукция', '8 455']]
+                  tr
+                    td.product__tableName=i[0]
+                    td.product__tablePrice=i[1]
+                    td.product__tableCounter
+                      .counter
+                        button.counter__button.counter__button--minus &ndash;
+                        input.counter__value(value='0')
+                        button.counter__button.counter__button--plus +
+                    td.product__tableHelp ...
+
+      .product__block
+        button.product__blockCollapse: +the_svg('chevrone-down')
+        button.product__blockTitle
+          .product__blockCounter 03
+          | Нужен ли вам ВОДОСТОК?
+        .product__blockContent
+          label.checkbox.product__checkbox
+            input(type='radio' name='vodostok' value='manager')
+            span Да, но планирую не сейчас
+          label.checkbox.product__checkbox
+            input(type='radio' name='vodostok' value='own')
+            span Да, планирую установить сразу с кровлей
+          label.checkbox.product__checkbox
+            input(type='radio' name='vodostok' value='no')
+            span Нет, не нужно
+
+      .product__block
+        button.product__blockCollapse: +the_svg('chevrone-down')
+        button.product__blockTitle
+          .product__blockCounter 04
+          | Нужны ли вам СНЕГОСТОПОРЫ?
+        .product__blockContent
+          label.checkbox.product__checkbox
+            input(type='radio' name='sneg' value='manager')
+            span Да, но планирую не сейчас
+          label.checkbox.product__checkbox
+            input(type='radio' name='sneg' value='own')
+            span Да, планирую установить сразу с кровлей
+          label.checkbox.product__checkbox
+            input(type='radio' name='sneg' value='no')
+            span Нет, не нужно
+
+      .product__block
+        button.product__blockCollapse: +the_svg('chevrone-down')
+        button.product__blockTitle
+          .product__blockCounter 05
+          | Будет ли у Вас ТРУБА на крыше?
+        .product__blockContent
+          label.checkbox.product__checkbox
+            input(type='radio' name='truba' value='yes')
+            span Да
+          label.checkbox.product__checkbox
+            input(type='radio' name='truba' value='no')
+            span Нет
+
+      .product__block
+        button.product__blockCollapse: +the_svg('chevrone-down')
+        button.product__blockTitle
+          .product__blockCounter 06
+          | Нужна ли Вам ДОСТАВКА?
+        .product__blockContent
+          label.checkbox.product__checkbox
+            input(type='radio' name='delivery' value='yes')
+            span Да
+          label.checkbox.product__checkbox
+            input(type='radio' name='delivery' value='no')
+            span Нет
+          .product__note
+            +the_svg('note')
+            span Можете самостоятельно сделать расчет доставки в #[a(href='#') нашем калькуляторе]
+
+      .product__block
+        button.product__blockCollapse: +the_svg('chevrone-down')
+        button.product__blockTitle
+          .product__blockCounter 07
+          | Нужен ли Вам МОНТАЖ кровли?
+        .product__blockContent
+          label.checkbox.product__checkbox
+            input(type='radio' name='montaj' value='yes')
+            span Да
+          label.checkbox.product__checkbox
+            input(type='radio' name='montaj' value='no')
+            span Нет
+          .product__note
+            +the_svg('note')
+            span Прочитайте  статью нашего эксперта #[a(href='#') «Топ грубейших ошибок при монтаже кровли»]
+
+      .product__block
+        button.product__blockCollapse: +the_svg('chevrone-down')
+        button.product__blockTitle
+          .product__blockCounter 08
+          | Вы можете купить данный товар в Рассрочку 0%
+        .product__blockContent
+          label.checkbox.product__checkbox
+            input(type='radio' name='rassrochka' value='yes')
+            span Да
+          label.checkbox.product__checkbox
+            input(type='radio' name='rassrochka' value='no')
+            span Нет
+
+      .product__footer
+        button.btn.btn--outline.btn--rightTop Перезвоните мне
+        button.btn.btn--leftTop.btn--smRightTop Отправить на расчет моей сметы
+      include ../productBuy/productBuy

@@ -1,0 +1,198 @@
+.cartPopup {
+  $this: &;
+  color: $black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    flex: 1;
+    overflow: auto;
+  }
+
+  &__item {
+    padding: 20px 15px 26px 39px;
+    border-bottom: 1px solid $gray;
+    display: flex;
+    align-items: flex-start;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    @include mobile() {
+      padding: 20px 15px 18px 18px;
+      position: relative;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-right: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    @include mobile() {
+      position: static;
+      margin-right: 20px;
+      margin-top: 4px;
+      width: 70px;
+      height: 70px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    color: $white;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: bold;
+    @include ls();
+    padding: 2px 10px 3px 7px;
+    z-index: 1;
+    background: $green-dark;
+    @include skewClipPath('right', 'bottom', 6px);
+    @include mobile() {
+      bottom: auto;
+      top: 9px;
+      font-size: 12px;
+      padding: 2px 10px 2px 5px;
+    }
+  }
+
+  &__name {
+    font-size: 15px;
+    line-height: (18/15);
+    @include book();
+    margin-bottom: 1px;
+    @include mobile() {
+      font-size: 14px;
+      line-height: (15/14);
+      margin-bottom: 8px;
+    }
+  }
+
+  &__price {
+    @include demi();
+    font-size: 18px;
+    @include ls();
+    color: $green-dark;
+
+    span {
+      font-size: 13px;
+    }
+
+    @include mobile() {
+      font-size: 14px;
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__priceOld {
+    font-size: 13px;
+    line-height: (18/13);
+    @include ls();
+    color: $red;
+    text-decoration: line-through;
+    margin-top: 1px;
+    @include mobile() {
+      font-size: 10px;
+      margin-top: 1px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  &__remove {
+    margin-left: auto;
+  }
+
+  &__removeBtn {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 12px;
+      height: 12px;
+      color: $red;
+    }
+  }
+
+  &__sup {
+    border-top: 1px solid $gray;
+    display: flex;
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  &__total {
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    font-size: 15px;
+    @include ls();
+
+  }
+
+  &__label {
+    color: $gray-dark;
+    padding-right: .5em;
+  }
+
+  &__value {
+    @include book();
+    text-align: right;
+    margin-left: auto;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+
+    span {
+      background: $white;
+      position: relative;
+      z-index: 1;
+      padding-left: .5em;
+      @include mobile() {
+        padding: 0;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 1em;
+      margin-left: 0;
+      width: 100%;
+      right: 0;
+      height: 0;
+      border-bottom: 0.1em dotted;
+      @include mobile() {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.notFound
+  .notFound__content
+    .notFound__suptitle ooops...
+    .notFound__title error 404
+    +the_svg('wavyline').wavyline
+
+    a.btn.btn--rightTop.btn--outline.notFound__btn
+      +the_svg('chevrone-down')
+      |Назад
+  img.notFound__bg(src=require('src/modules/notFound/img/notFound_bg.png'))
+  img.notFound__decor(src=require('src/modules/notFound/img/notFound_decor.png'))
+
