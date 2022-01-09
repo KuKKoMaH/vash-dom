@@ -153,6 +153,7 @@
     margin-top: -10px;
     color: $green-dark;
     cursor: pointer;
+    z-index: 1;
     @include mobile() {
       top: 100%;
       margin-top: 31px;

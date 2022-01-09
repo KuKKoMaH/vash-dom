@@ -41,8 +41,9 @@
   &__decor1 {
     left: 50%;
     transform: translateX(-50%);
-    top: -36px;
+    top: -35px;
     margin-left: 21px;
+    width: 314px;
     @include mobile() {
       width: 150px;
       height: auto;

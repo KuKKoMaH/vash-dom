@@ -1,16 +1,42 @@
 .services {
   $this: &;
 
+  position: relative;
   background: $gray-light;
   padding: 73px 0 50px;
+  @include mobile() {
+    padding: 35px 0 22px;
+  }
+
+  &--init {
+    #{$this}__slide:nth-child(n + 2) {
+      display: block;
+    }
+  }
 
   &__container {
     display: flex;
+    @include mobile() {
+      flex-direction: column;
+    }
   }
 
   &__aside {
     width: 310px;
     padding: 0 20px;
+    flex-shrink: 0;
+    @include mobile() {
+      max-width: 100%;
+      margin: 0 auto 33px;
+    }
+  }
+
+  &__main {
+    padding-left: 120px;
+    @include mobile() {
+      position: relative;
+      padding: 0;
+    }
   }
 
   &__title {
@@ -19,6 +45,11 @@
     margin-bottom: 47px;
     font-weight: bold;
     @include ls-m();
+    @include mobile() {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 52px;
+    }
   }
 
   &__nav {
@@ -35,6 +66,25 @@
     }
   }
 
+  &__pointer {
+    position: absolute;
+    left: -21px;
+    right: -21px;
+    height: 50px;
+    background: $green-dark;
+    top: 31px;
+    z-index: 1;
+    @include anim();
+    @include green-shadow-filter();
+    @include skew('top', 'left', 3.5deg) {
+      background: $green-dark;
+    }
+  }
+
+  &__heads {
+    position: relative;
+  }
+
   &__head {
     width: 100%;
     @include ls();
@@ -43,13 +93,134 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
+    @include anim();
 
     &:hover {
       color: $green-dark;
     }
 
     &--active {
+      //height: 50px;
       @include book();
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+    @include mobile() {
+      padding: 0;
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 120px;
+      z-index: 1;
+      @include mobile() {
+        display: none;
+      }
+    }
+
+    &:before {
+      top: 0;
+      background: linear-gradient(180deg, $gray-light, rgba($gray-light, 0));
+    }
+
+    &:after {
+      bottom: 0;
+      background: linear-gradient(0deg, $gray-light, rgba($gray-light, 0));
+    }
+  }
+
+  &__slider {
+    max-width: 580px;
+    @include anim(.3s);
+    will-change: height;
+  }
+
+  &__slides {
+    display: flex;
+    flex-direction: column;
+    @include anim(.3s);
+    padding: 0 10px;
+    @include mobile() {
+      padding: 0;
+    }
+  }
+
+  &__slide {
+    padding-bottom: 30px;
+    filter: blur(4px);
+    opacity: .6;
+    @include anim();
+
+    &--active {
+      filter: none;
+      opacity: 1;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &:nth-child(n + 2) {
+      display: none;
+    }
+  }
+
+  &__header {
+    font-size: 30px;
+    line-height: (36/30);
+    @include demi();
+    @include ls();
+    margin-bottom: 16px;
+    @include mobile() {
+      font-size: 24px;
+      line-height: (30/24);
+      margin-bottom: 13px;
+      min-height: 60px;
+      padding-right: 110px;
+    }
+  }
+
+  &__text {
+    line-height: (26/18);
+    @include ls();
+    margin-bottom: 22px;
+    @include mobile() {
+      line-height: (22/16);
+      margin-bottom: 19px;
+    }
+  }
+
+  &__more {
+    @include mobile() {
+      text-align: right;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    left: 50%;
+    margin-left: 359px;
+    top: 180px;
+    pointer-events: none;
+    @include mobile() {
+      width: 96px;
+      top: -6px;
+      left: auto;
+      margin-right: 0;
+      right: 16px;
     }
   }
 }

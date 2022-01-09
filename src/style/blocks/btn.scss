@@ -114,7 +114,6 @@
   &--leftBottom, &--leftTop {
     padding-left: 35px;
     padding-right: 30px;
-    border-right: 0 !important;
   }
 
   &--leftBottom {
@@ -166,6 +165,10 @@
       }
     }
 
+    &--smLeftBottom, &--smLeftTop {
+      padding-left: 35px;
+      padding-right: 30px;
+    }
   }
 
   svg {

@@ -138,6 +138,7 @@
     }
 
     a {
+      text-decoration: none;
       border-bottom: 1px dotted $green-dark;
       @include anim();
       @include mobile() {
