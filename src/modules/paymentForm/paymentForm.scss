@@ -44,10 +44,11 @@
 
   &__note {
     font-size: 13px;
-    line-height: (26/13);
+    line-height: (19/13);
     @include ls();
     margin-top: 14px;
     color: $gray-dark;
+    max-width: 200px;
     @include mobile(){
       font-size: 12px;
       line-height: (18/12);

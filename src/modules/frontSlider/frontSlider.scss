@@ -172,6 +172,10 @@
       color: $green-dark;
       @include anim();
     }
+
+    &:disabled {
+      display: none;
+    }
   }
 
   &__aside {

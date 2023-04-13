@@ -2,24 +2,27 @@
   $this: &;
 
   padding: 23px 0;
+  display: flex;
+  margin: 0 -5px;
   @include mobile() {
     padding: 14px 0;
   }
 
-  ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+  //ul, li {
+  //  margin: 0;
+  //  padding: 0;
+  //  list-style: none;
+  //}
 
-  ul {
+  //ul, > span > span {
+  //  display: flex;
+  //  align-items: center;
+  //  flex-wrap: wrap;
+  //  margin: 0 -5px;
+  //}
+
+  a, span {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 -5px;
-  }
-
-  li {
     padding: 5px;
     font-size: 13px;
     line-height: 1;
@@ -31,8 +34,13 @@
     }
 
     &:after {
-      content: '/';
-      margin: 0 5px 0 14px;
+      content: "";
+      display: block;
+      width: 1px;
+      height: 12px;
+      transform: rotate(32deg);
+      background: #161616;
+      margin: 0 8px 0 18px;
       @include mobile() {
         margin: 0 0 0 7px;
       }
@@ -45,6 +53,10 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &:after {
+      background: $gray-dark;
     }
   }
 }

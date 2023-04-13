@@ -18,6 +18,13 @@
     @include sm();
   }
 
+  &--lg {
+    #{$this}__value, #{$this}__button {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
   &__button {
     width: 38px;
     height: 38px;

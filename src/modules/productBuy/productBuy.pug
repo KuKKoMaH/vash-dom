@@ -1,48 +1,14 @@
 .productBuy
-  .productBuy__block.productBuy__block--prices
-    .productBuy__price 23 800 #[span руб / м#[sup 2]]
+  .productBuy__left
     .productBuy__priceOld 26 750 #[span руб / м#[sup 2]]
-    button.productBuy__cheap Нашли дешевле?
-
-  .productBuy__filters
-    .productBuy__block
-      button.productBuy__blockTitle
-        +the_svg('chevrone-down')
-        | Цвет
-      .productBuy__blockBody
-        each i in ['черный','бирюзовый', 'красный', 'синий', 'желтый']
-          label.checkbox.productBuy__checkbox
-            input(type='radio' name='color' value='black')
-            span=i
-    .productBuy__block
-      button.productBuy__blockTitle
-        +the_svg('chevrone-down')
-        | Цвет
-      .productBuy__blockBody
-        each i in ['черный','бирюзовый', 'красный', 'синий', 'желтый']
-          label.checkbox.productBuy__checkbox
-            input(type='radio' name='color' value='black')
-            span=i
-    .productBuy__block
-      button.productBuy__blockTitle
-        +the_svg('chevrone-down')
-        | Цвет
-      .productBuy__blockBody
-        each i in ['черный','бирюзовый', 'красный', 'синий', 'желтый']
-          label.checkbox.productBuy__checkbox
-            input(type='radio' name='color' value='black')
-            span=i
-
-  .productBuy__add
-    button.productBuy__toggle: +the_svg('chevrone-down')
+    .productBuy__price 23 800 #[span руб / м#[sup 2]]
     .productBuy__counter
-      .counter
+      .counter.counter--lg
         button.counter__button.counter__button--minus &ndash;
         input.counter__value(value='0')
         button.counter__button.counter__button--plus +
 
-    .productBuy__prices
-      .productBuy__price 23 800 #[span руб / м#[sup 2]]
-      .productBuy__priceOld 26 750 #[span руб / м#[sup 2]]
-
-    .productBuy__button: button.btn.btn--leftTop.btn--smLeftBottom.btn--smMobile В корзину
+  .productBuy__right
+    button.productBuy__cheap Нашли дешевле?
+    .productBuy__total 600 рублей
+    .productBuy__button: button.btn.btn--rightTop.btn--smLeftBottom.btn--smMobile Добавить в корзину

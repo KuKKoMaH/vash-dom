@@ -53,7 +53,20 @@
       @include anim();
     }
 
+    &.wpcf7-not-valid {
+      border-color: $red;
 
+      &:after {
+        border-color: $red;
+      }
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: $red;
   }
 
   //input, textarea {

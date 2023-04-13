@@ -7,7 +7,7 @@
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
-  <link href="style.css?1641735302338" rel="stylesheet"></head>
+  <link href="style.css?1681333843287" rel="stylesheet"></head>
   <body onunload="">
     <header class="header">
       <div class="c">
@@ -222,7 +222,8 @@
                     </svg>
                   </button>
                 </div>
-                <div class="search__results"><a class="search__row" href="#">
+                <div class="search__results">
+                  <div class="search__row">
                     <div class="search__tag">-20%</div>
                     <div class="search__image"><img src="img/img_catalog_1.jpg"></div>
                     <div class="search__info">
@@ -247,7 +248,9 @@
                       <svg>
                         <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
                       </svg>
-                    </div></a><a class="search__row" href="#">
+                    </div><a class="search__link" href="#"></a>
+                  </div>
+                  <div class="search__row">
                     <div class="search__tag">-20%</div>
                     <div class="search__image"><img src="img/img_catalog_1.jpg"></div>
                     <div class="search__info">
@@ -272,24 +275,83 @@
                       <svg>
                         <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
                       </svg>
-                    </div></a>
+                    </div><a class="search__link" href="#"></a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="header__menu">
-              <ul>
-                <li><a href="#">Производство</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Рекомендации эксперта</a></li>
-                <li><a href="#">Дилерам и строителям</a></li>
-                <li><a href="#">VIP материалы</a></li>
-              </ul>
-              <div class="header__locationBottom">
-                <svg class="header__locationBottomIcon">
-                  <use xlink:href="img/sprite.svg#geo-usage"></use>
-                </svg>
-                <div class="header__locationBottomLabel">3 магазина</div>
-                <div class="header__locationBottomValue">пн-вс с 8.00 до 19.00</div>
+              <div class="header__menuContainer">
+                <ul>
+                  <li><a href="#">Производство</a></li>
+                  <li><a href="#">Услуги</a>
+                    <div class="header__submenu">
+                      <button class="header__back">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                        </svg>МЕНЮ
+                      </button>
+                      <div class="header__submenuContent">
+                        <div class="header__title">Услуги</div>
+                        <ul>
+                          <li><a href="#">Замер и доставка образцов</a></li>
+                          <li><a href="#">Бережная доставка (отгрузка)</a></li>
+                          <li><a href="#">Оплата онлайн</a></li>
+                          <li><a href="#">Проверенные монтажники (профессиональный монтаж)</a></li>
+                          <li><a href="#">Калькулятор стоимости материалов для кровли</a></li>
+                          <li><a href="#">Заказать расчет</a></li>
+                          <li><a href="#">Возврат товара</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li><a href="#">Рекомендации эксперта</a>
+                    <div class="header__submenu">
+                      <button class="header__back">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                        </svg>МЕНЮ
+                      </button>
+                      <div class="header__submenuContent">
+                        <div class="header__title">Рекомендации эксперта</div>
+                        <div class="header__cards"><a class="header__card" href="#">
+                            <div class="header__head">Лайф-хак: подбираем кровлю без потери времени и денег</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">Цена кровли ниже средней на 10%?</div>
+                            <div class="header__text">Будьте внимательны	к качеству и стоимости комплектующих.</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">Не дайте себя обмануть!</div>
+                            <div class="header__text">Измеряем толщину профлиста правильно</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">Что нужно знать о кровельных материалах</div>
+                            <div class="header__text">Преимущества и недостатки при выборе материала</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">5 главных правил для перевозки кровли без повреждений</div>
+                            <div class="header__text">Особенности, о которых мало кто рассказывает</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li><a href="#">Дилерам и строителям</a></li>
+                  <li><a href="#">VIP материалы</a></li>
+                </ul>
+                <div class="header__locationBottom">
+                  <svg class="header__locationBottomIcon">
+                    <use xlink:href="img/sprite.svg#geo-usage"></use>
+                  </svg>
+                  <div class="header__locationBottomLabel">3 магазина</div>
+                  <div class="header__locationBottomValue">пн-вс с 8.00 до 19.00</div>
+                </div>
               </div>
             </div>
           </div>
@@ -395,17 +457,9 @@
       </div>
     </header>
     <div class="product">
-      <div class="c">
-        <div class="breadcrumbs">
-          <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Кровля</a></li>
-            <li><a href="#">Металлочерепица</a></li>
-            <li><a href="#">Название товара</a></li>
-          </ul>
-        </div>
-        <div class="product__container">
+      <div class="product__container">
+        <div class="breadcrumbs"><span><span><a href="http://new.vashdom-pnz.ru/">Главная</a><span>Каталог</span><span>Кровля</span><span>Металлочерепица</span><span>Название товара</span></span></span></div>
+        <div class="product__content">
           <div class="product__head">
             <div class="product__aside">
               <div class="product__badges">
@@ -428,16 +482,45 @@
                 <button class="product__thumb"><img src="img/img_catalog_4.jpg"></button>
                 <button class="product__thumb"><img src="img/img_catalog_5.jpg"></button>
               </div>
+              <div class="product__buttons">
+                <div class="product__button"><a href="#">Онлайн калькулятор</a></div>
+                <div class="product__button"><a href="#">Калькулятор доставки</a></div>
+              </div>
             </div>
             <div class="product__main">
               <h1 class="product__title">Некоторое название товара которое отображается</h1>
-              <div class="product__buy">
-                <div class="product__price">23 800 <span>руб / м<sup>2</sup></span></div>
-                <div class="product__priceOld">26 750 <span>руб / м<sup>2</sup></span></div>
-                <button class="product__cheap">Нашли дешевле?</button>
+              <div class="productBuy">
+                <div class="productBuy__left">
+                  <div class="productBuy__priceOld">26 750 <span>руб / м<sup>2</sup></span></div>
+                  <div class="productBuy__price">23 800 <span>руб / м<sup>2</sup></span></div>
+                  <div class="productBuy__counter">
+                    <div class="counter counter--lg">
+                      <button class="counter__button counter__button--minus">&ndash;</button>
+                      <input class="counter__value" value="0">
+                      <button class="counter__button counter__button--plus">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="productBuy__right">
+                  <button class="productBuy__cheap">Нашли дешевле?</button>
+                  <div class="productBuy__total">600 рублей</div>
+                  <div class="productBuy__button">
+                    <button class="btn btn--rightTop btn--smLeftBottom btn--smMobile">Добавить в корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="product__coat">
+                <div class="product__coatTitle">Характеристики покрытия:</div>
+                <div class="product__coatSelect">
+                  <select class="select">
+                    <option value="Satin1">Satin1</option>
+                    <option value="Satin2">Satin2</option>
+                    <option value="Satin3">Satin3</option>
+                    <option value="Satin4">Satin4</option>
+                  </select>
+                </div>
               </div>
               <div class="product__info">
-                <div class="product__infoTitle">Технические характеристики:</div>
                 <div class="product__infoPreview">
                   <div class="product__infoItem">
                     <div class="product__infoLabel">длина</div>
@@ -471,22 +554,242 @@
                   <div class="active">Меньше подробностей</div>
                 </button>
               </div>
-              <button class="btn btn--rightTop btn--outline product__moreButton">Сопутствующие материалы и услуги
-                <svg>
-                  <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                </svg>
-              </button>
+              <div class="product__filters">
+                <div class="product__filter">
+                  <div class="product__filterLabel">Цвет</div>
+                  <div class="product__filterSelect">
+                    <select class="select">
+                      <option value="RAL 9005" data-data="{&quot;color&quot;: &quot;#db0d0d&quot;}">RAL 9005</option>
+                      <option value="RAL 9005" data-data="{&quot;color&quot;: &quot;#db0d0d&quot;}">RAL 1234</option>
+                      <option value="RAL 90051" data-data="{&quot;color&quot;: &quot;#db0d0d&quot;}">RAL 345</option>
+                      <option value="RAL 90052" data-data="{&quot;color&quot;: &quot;#db0d0d&quot;}">RAL 345152</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="product__block product__block--active product__block--main">
-            <button class="product__blockCollapse">
-              <svg>
-                <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-              </svg>
-            </button>
-            <button class="product__blockTitle">Характеристики DÖCKE PIE Гибкая черепица EUROPA МАТРИЦА</button>
-            <div class="product__blockContent">
+          <div class="product__headers">
+            <button class="product__header product__header--active">Сопутствующие материалы и услуги</button>
+            <button class="product__header">Характеристики GRAND LINE металлочерепица Kvinta Uno</button>
+          </div>
+          <div class="product__bodies">
+            <div class="product__body product__body--active">
+              <div class="product__block">
+                <div class="product__blockTitle">
+                  <div class="product__blockCounter">01</div>Нужны ДОБОРНЫЕ ЭЛЕМЕНТЫ?
+                </div>
+                <div class="product__options">
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="dobor" value="yes"><span>Да</span>
+                  </label>
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="dobor" value="no"><span>Нет</span>
+                  </label>
+                </div>
+                <button class="product__toggle"><span class="product__toggleContent">
+                    <div class="inactive">Посмотреть/скорректировать состав стандартного комплекта</div>
+                    <div class="active">Скрыть состав стандартного комплекта</div>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                    </svg></span></button>
+                <div class="product__table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th class="product__tableName">Состав комплекта</th>
+                        <th class="product__tablePrice">Цена без учета<br>скидки, руб.</th>
+                        <th class="product__tableCounter">Количество</th>
+                        <th class="product__tableHelp">Подсказа по расчету</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="product__tableName">Название</td>
+                        <td class="product__tablePrice">2 500</td>
+                        <td class="product__tableCounter">
+                          <div class="counter">
+                            <button class="counter__button counter__button--minus">&ndash;</button>
+                            <input class="counter__value" value="0">
+                            <button class="counter__button counter__button--plus">+</button>
+                          </div>
+                        </td>
+                        <td class="product__tableHelp">...</td>
+                      </tr>
+                      <tr>
+                        <td class="product__tableName">Что-то</td>
+                        <td class="product__tablePrice">15 000</td>
+                        <td class="product__tableCounter">
+                          <div class="counter">
+                            <button class="counter__button counter__button--minus">&ndash;</button>
+                            <input class="counter__value" value="0">
+                            <button class="counter__button counter__button--plus">+</button>
+                          </div>
+                        </td>
+                        <td class="product__tableHelp">...</td>
+                      </tr>
+                      <tr>
+                        <td class="product__tableName">Элемент</td>
+                        <td class="product__tablePrice">400</td>
+                        <td class="product__tableCounter">
+                          <div class="counter">
+                            <button class="counter__button counter__button--minus">&ndash;</button>
+                            <input class="counter__value" value="0">
+                            <button class="counter__button counter__button--plus">+</button>
+                          </div>
+                        </td>
+                        <td class="product__tableHelp">...</td>
+                      </tr>
+                      <tr>
+                        <td class="product__tableName">Продукция</td>
+                        <td class="product__tablePrice">8 455</td>
+                        <td class="product__tableCounter">
+                          <div class="counter">
+                            <button class="counter__button counter__button--minus">&ndash;</button>
+                            <input class="counter__value" value="0">
+                            <button class="counter__button counter__button--plus">+</button>
+                          </div>
+                        </td>
+                        <td class="product__tableHelp">...</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="product__block">
+                <div class="product__blockTitle">
+                  <div class="product__blockCounter">02</div>Нужна ПОДШИВКА КРОВЛИ?
+                </div>
+                <div class="product__options">
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="dobor" value="yes"><span>Да</span>
+                  </label>
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="dobor" value="no"><span>Нет</span>
+                  </label>
+                </div>
+                <button class="product__toggle"><span class="product__toggleContent">
+                    <div class="inactive">Посмотреть/скорректировать состав стандартного комплекта</div>
+                    <div class="active">Скрыть состав стандартного комплекта</div>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                    </svg></span></button>
+                <div class="product__table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th class="product__tableName">Состав комплекта</th>
+                        <th class="product__tablePrice">Цена без учета<br>скидки, руб.</th>
+                        <th class="product__tableCounter">Количество</th>
+                        <th class="product__tableHelp">Подсказа по расчету</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="product__tableName">Название</td>
+                        <td class="product__tablePrice">2 500</td>
+                        <td class="product__tableCounter">
+                          <div class="counter">
+                            <button class="counter__button counter__button--minus">&ndash;</button>
+                            <input class="counter__value" value="0">
+                            <button class="counter__button counter__button--plus">+</button>
+                          </div>
+                        </td>
+                        <td class="product__tableHelp">...</td>
+                      </tr>
+                      <tr>
+                        <td class="product__tableName">Что-то</td>
+                        <td class="product__tablePrice">15 000</td>
+                        <td class="product__tableCounter">
+                          <div class="counter">
+                            <button class="counter__button counter__button--minus">&ndash;</button>
+                            <input class="counter__value" value="0">
+                            <button class="counter__button counter__button--plus">+</button>
+                          </div>
+                        </td>
+                        <td class="product__tableHelp">...</td>
+                      </tr>
+                      <tr>
+                        <td class="product__tableName">Элемент</td>
+                        <td class="product__tablePrice">400</td>
+                        <td class="product__tableCounter">
+                          <div class="counter">
+                            <button class="counter__button counter__button--minus">&ndash;</button>
+                            <input class="counter__value" value="0">
+                            <button class="counter__button counter__button--plus">+</button>
+                          </div>
+                        </td>
+                        <td class="product__tableHelp">...</td>
+                      </tr>
+                      <tr>
+                        <td class="product__tableName">Продукция</td>
+                        <td class="product__tablePrice">8 455</td>
+                        <td class="product__tableCounter">
+                          <div class="counter">
+                            <button class="counter__button counter__button--minus">&ndash;</button>
+                            <input class="counter__value" value="0">
+                            <button class="counter__button counter__button--plus">+</button>
+                          </div>
+                        </td>
+                        <td class="product__tableHelp">...</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="product__block">
+                <div class="product__blockTitle">
+                  <div class="product__blockCounter">03</div>Нужен дополнительные элементы?
+                </div>
+                <div class="product__options">
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="vodostok" value="manager"><span>Снегодержатели</span>
+                  </label>
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="vodostok" value="own"><span>Водосточная система</span>
+                  </label>
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="vodostok" value="no"><span>Нет</span>
+                  </label>
+                </div>
+              </div>
+              <div class="product__block">
+                <div class="product__blockTitle">
+                  <div class="product__blockCounter">04</div>Нужны дополнительные услуги?
+                </div>
+                <div class="product__options">
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="delivery" value="yes"><span>Да</span>
+                  </label>
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="delivery" value="no"><span>Монтаж</span>
+                  </label>
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="delivery" value="no"><span>Рассрочка 0%</span>
+                  </label>
+                  <label class="checkbox product__checkbox">
+                    <input type="radio" name="delivery" value="no"><span>Нет</span>
+                  </label>
+                </div>
+                <div class="product__note">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#note-usage"></use>
+                  </svg><span>Можете самостоятельно сделать расчет доставки в <a href="#">нашем калькуляторе</a></span>
+                </div>
+                <div class="product__note">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#note-usage"></use>
+                  </svg><span>Прочитайте  статью нашего эксперта <a href="#">«Топ грубейших ошибок при монтаже кровли».</a></span>
+                </div>
+              </div>
+              <div class="product__footer">
+                <button class="btn btn--rightTop">Добавить в корзину</button>
+                <button class="btn btn--outline btn--leftTop btn--smRightTop">Отправить на экспресс-расчет сметы</button>
+              </div>
+            </div>
+            <div class="product__body">
               <div class="productDescription content">
+                <h3>Описание VILPE SK Tuote Вентиль KTV-Huopa</h3>
                 <p>Гибкая битумная черепица Döcke PIE EUROPA выполнена в виде плоского листа из пропитанного окисленным битумом стеклохолста с фигурными вырезами по одному из краёв. Верхняя поверхность черепицы - покрытие из прикатанного к битуму микса различных гранулятов: базальт, антрацит. Нижняя поверхность черепицы покрыта посыпкой из мелкозернистого песка, атакже транспортировочными плёнками.</p>
                 <p>Эта чрепица предназначена для покрытия скатных крыш зданий и сооружений с уклоном от 12 до 90 градусов.</p>
                 <h6>Достоинства продукции DOCKE:</h6>
@@ -532,402 +835,6 @@
                     <div class="stars__text">Простота ухода</div>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-          <div class="product__block product__block--active">
-            <button class="product__blockCollapse">
-              <svg>
-                <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-              </svg>
-            </button>
-            <button class="product__blockTitle">
-              <div class="product__blockCounter">01</div>Нужны ли Вам ДОБОРНЫЕ ЭЛЕМЕНТЫ?
-            </button>
-            <div class="product__blockContent">
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="dobor" value="manager"><span>Да, пусть цену рассчитает менеджер</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="dobor" value="own"><span>Да, хочу посчитать сам цену</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="dobor" value="no"><span>Нет, не нужно</span>
-              </label>
-              <div class="product__table">
-                <table>
-                  <thead>
-                    <tr>
-                      <th class="product__tableName">Состав комплекта</th>
-                      <th class="product__tablePrice">Цена без учета<br>скидки, руб.</th>
-                      <th class="product__tableCounter">Количество</th>
-                      <th class="product__tableHelp">Подсказа по расчету</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="product__tableName">Название</td>
-                      <td class="product__tablePrice">2 500</td>
-                      <td class="product__tableCounter">
-                        <div class="counter">
-                          <button class="counter__button counter__button--minus">&ndash;</button>
-                          <input class="counter__value" value="0">
-                          <button class="counter__button counter__button--plus">+</button>
-                        </div>
-                      </td>
-                      <td class="product__tableHelp">...</td>
-                    </tr>
-                    <tr>
-                      <td class="product__tableName">Что-то</td>
-                      <td class="product__tablePrice">15 000</td>
-                      <td class="product__tableCounter">
-                        <div class="counter">
-                          <button class="counter__button counter__button--minus">&ndash;</button>
-                          <input class="counter__value" value="0">
-                          <button class="counter__button counter__button--plus">+</button>
-                        </div>
-                      </td>
-                      <td class="product__tableHelp">...</td>
-                    </tr>
-                    <tr>
-                      <td class="product__tableName">Элемент</td>
-                      <td class="product__tablePrice">400</td>
-                      <td class="product__tableCounter">
-                        <div class="counter">
-                          <button class="counter__button counter__button--minus">&ndash;</button>
-                          <input class="counter__value" value="0">
-                          <button class="counter__button counter__button--plus">+</button>
-                        </div>
-                      </td>
-                      <td class="product__tableHelp">...</td>
-                    </tr>
-                    <tr>
-                      <td class="product__tableName">Продукция</td>
-                      <td class="product__tablePrice">8 455</td>
-                      <td class="product__tableCounter">
-                        <div class="counter">
-                          <button class="counter__button counter__button--minus">&ndash;</button>
-                          <input class="counter__value" value="0">
-                          <button class="counter__button counter__button--plus">+</button>
-                        </div>
-                      </td>
-                      <td class="product__tableHelp">...</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="product__block">
-            <button class="product__blockCollapse">
-              <svg>
-                <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-              </svg>
-            </button>
-            <button class="product__blockTitle">
-              <div class="product__blockCounter">02</div>Нужна ли Вам ПОДШИВКА КРОВЛИ?
-            </button>
-            <div class="product__blockContent">
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="podshiw" value="manager"><span>Да, пусть цену рассчитает менеджер</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="podshiw" value="own"><span>Да, хочу посчитать сам цену</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="podshiw" value="no"><span>Нет, не нужно</span>
-              </label>
-              <div class="product__table">
-                <table>
-                  <thead>
-                    <tr>
-                      <th class="product__tableName">Состав комплекта</th>
-                      <th class="product__tablePrice">Цена без учета<br>скидки, руб.</th>
-                      <th class="product__tableCounter">Количество</th>
-                      <th class="product__tableHelp">Подсказа по расчету</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="product__tableName">Название</td>
-                      <td class="product__tablePrice">2 500</td>
-                      <td class="product__tableCounter">
-                        <div class="counter">
-                          <button class="counter__button counter__button--minus">&ndash;</button>
-                          <input class="counter__value" value="0">
-                          <button class="counter__button counter__button--plus">+</button>
-                        </div>
-                      </td>
-                      <td class="product__tableHelp">...</td>
-                    </tr>
-                    <tr>
-                      <td class="product__tableName">Что-то</td>
-                      <td class="product__tablePrice">15 000</td>
-                      <td class="product__tableCounter">
-                        <div class="counter">
-                          <button class="counter__button counter__button--minus">&ndash;</button>
-                          <input class="counter__value" value="0">
-                          <button class="counter__button counter__button--plus">+</button>
-                        </div>
-                      </td>
-                      <td class="product__tableHelp">...</td>
-                    </tr>
-                    <tr>
-                      <td class="product__tableName">Элемент</td>
-                      <td class="product__tablePrice">400</td>
-                      <td class="product__tableCounter">
-                        <div class="counter">
-                          <button class="counter__button counter__button--minus">&ndash;</button>
-                          <input class="counter__value" value="0">
-                          <button class="counter__button counter__button--plus">+</button>
-                        </div>
-                      </td>
-                      <td class="product__tableHelp">...</td>
-                    </tr>
-                    <tr>
-                      <td class="product__tableName">Продукция</td>
-                      <td class="product__tablePrice">8 455</td>
-                      <td class="product__tableCounter">
-                        <div class="counter">
-                          <button class="counter__button counter__button--minus">&ndash;</button>
-                          <input class="counter__value" value="0">
-                          <button class="counter__button counter__button--plus">+</button>
-                        </div>
-                      </td>
-                      <td class="product__tableHelp">...</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="product__block">
-            <button class="product__blockCollapse">
-              <svg>
-                <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-              </svg>
-            </button>
-            <button class="product__blockTitle">
-              <div class="product__blockCounter">03</div>Нужен ли вам ВОДОСТОК?
-            </button>
-            <div class="product__blockContent">
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="vodostok" value="manager"><span>Да, но планирую не сейчас</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="vodostok" value="own"><span>Да, планирую установить сразу с кровлей</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="vodostok" value="no"><span>Нет, не нужно</span>
-              </label>
-            </div>
-          </div>
-          <div class="product__block">
-            <button class="product__blockCollapse">
-              <svg>
-                <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-              </svg>
-            </button>
-            <button class="product__blockTitle">
-              <div class="product__blockCounter">04</div>Нужны ли вам СНЕГОСТОПОРЫ?
-            </button>
-            <div class="product__blockContent">
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="sneg" value="manager"><span>Да, но планирую не сейчас</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="sneg" value="own"><span>Да, планирую установить сразу с кровлей</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="sneg" value="no"><span>Нет, не нужно</span>
-              </label>
-            </div>
-          </div>
-          <div class="product__block">
-            <button class="product__blockCollapse">
-              <svg>
-                <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-              </svg>
-            </button>
-            <button class="product__blockTitle">
-              <div class="product__blockCounter">05</div>Будет ли у Вас ТРУБА на крыше?
-            </button>
-            <div class="product__blockContent">
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="truba" value="yes"><span>Да</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="truba" value="no"><span>Нет</span>
-              </label>
-            </div>
-          </div>
-          <div class="product__block">
-            <button class="product__blockCollapse">
-              <svg>
-                <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-              </svg>
-            </button>
-            <button class="product__blockTitle">
-              <div class="product__blockCounter">06</div>Нужна ли Вам ДОСТАВКА?
-            </button>
-            <div class="product__blockContent">
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="delivery" value="yes"><span>Да</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="delivery" value="no"><span>Нет</span>
-              </label>
-              <div class="product__note">
-                <svg>
-                  <use xlink:href="img/sprite.svg#note-usage"></use>
-                </svg><span>Можете самостоятельно сделать расчет доставки в <a href="#">нашем калькуляторе</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="product__block">
-            <button class="product__blockCollapse">
-              <svg>
-                <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-              </svg>
-            </button>
-            <button class="product__blockTitle">
-              <div class="product__blockCounter">07</div>Нужен ли Вам МОНТАЖ кровли?
-            </button>
-            <div class="product__blockContent">
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="montaj" value="yes"><span>Да</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="montaj" value="no"><span>Нет</span>
-              </label>
-              <div class="product__note">
-                <svg>
-                  <use xlink:href="img/sprite.svg#note-usage"></use>
-                </svg><span>Прочитайте  статью нашего эксперта <a href="#">«Топ грубейших ошибок при монтаже кровли»</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="product__block">
-            <button class="product__blockCollapse">
-              <svg>
-                <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-              </svg>
-            </button>
-            <button class="product__blockTitle">
-              <div class="product__blockCounter">08</div>Вы можете купить данный товар в Рассрочку 0%
-            </button>
-            <div class="product__blockContent">
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="rassrochka" value="yes"><span>Да</span>
-              </label>
-              <label class="checkbox product__checkbox">
-                <input type="radio" name="rassrochka" value="no"><span>Нет</span>
-              </label>
-            </div>
-          </div>
-          <div class="product__footer">
-            <button class="btn btn--outline btn--rightTop">Перезвоните мне</button>
-            <button class="btn btn--leftTop btn--smRightTop">Отправить на расчет моей сметы</button>
-          </div>
-          <div class="productBuy">
-            <div class="productBuy__block productBuy__block--prices">
-              <div class="productBuy__price">23 800 <span>руб / м<sup>2</sup></span></div>
-              <div class="productBuy__priceOld">26 750 <span>руб / м<sup>2</sup></span></div>
-              <button class="productBuy__cheap">Нашли дешевле?</button>
-            </div>
-            <div class="productBuy__filters">
-              <div class="productBuy__block">
-                <button class="productBuy__blockTitle">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                  </svg>Цвет
-                </button>
-                <div class="productBuy__blockBody">
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>черный</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>бирюзовый</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>красный</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>синий</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>желтый</span>
-                  </label>
-                </div>
-              </div>
-              <div class="productBuy__block">
-                <button class="productBuy__blockTitle">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                  </svg>Цвет
-                </button>
-                <div class="productBuy__blockBody">
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>черный</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>бирюзовый</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>красный</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>синий</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>желтый</span>
-                  </label>
-                </div>
-              </div>
-              <div class="productBuy__block">
-                <button class="productBuy__blockTitle">
-                  <svg>
-                    <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                  </svg>Цвет
-                </button>
-                <div class="productBuy__blockBody">
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>черный</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>бирюзовый</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>красный</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>синий</span>
-                  </label>
-                  <label class="checkbox productBuy__checkbox">
-                    <input type="radio" name="color" value="black"><span>желтый</span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="productBuy__add">
-              <button class="productBuy__toggle">
-                <svg>
-                  <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                </svg>
-              </button>
-              <div class="productBuy__counter">
-                <div class="counter">
-                  <button class="counter__button counter__button--minus">&ndash;</button>
-                  <input class="counter__value" value="0">
-                  <button class="counter__button counter__button--plus">+</button>
-                </div>
-              </div>
-              <div class="productBuy__prices">
-                <div class="productBuy__price">23 800 <span>руб / м<sup>2</sup></span></div>
-                <div class="productBuy__priceOld">26 750 <span>руб / м<sup>2</sup></span></div>
-              </div>
-              <div class="productBuy__button">
-                <button class="btn btn--leftTop btn--smLeftBottom btn--smMobile">В корзину</button>
               </div>
             </div>
           </div>
@@ -1007,29 +914,35 @@
         <div class="popup__container" role="dialog" aria-modal="true">
           <!--button.popup__close(data-micromodal-close): +the_svg('close')-->
           <div class="popup__form">
-            <div class="form">
-              <div class="form__title">ВЫЗВАТЬ ЗАМЕРЩИКА</div>
-              <div class="form__content">
-                <div class="form__input">
-                  <div class="input">
-                    <input placeholder="Ваше имя">
-                  </div>
-                </div>
-                <div class="form__input">
-                  <div class="input">
-                    <input placeholder="Телефон" type="tel">
-                  </div>
-                </div>
-                <div class="form__confirm">
-                  <label class="checkbox">
-                    <input type="checkbox"><span>Я согласен с обработкой <a href="#">персональных данных</a></span>
+            <form>
+              <div class="form">
+                <div class="form__title">Обратный звонок</div>
+                <div class="form__text">Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке дальнейших направлений развития. Задача организации.</div>
+                <div class="form__content">
+                  <label class="input">
+                    <div class="input__label">Имя</div>
+                    <label class="input__input input__input--rightTop">
+                      <input>
+                    </label>
                   </label>
+                  <label class="input">
+                    <div class="input__label">Ваш телефон</div>
+                    <div class="input__input input__input--rightTop">
+                      <input type="tel">
+                    </div>
+                  </label>
+                  <div class="file">
+                    <input type="file">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#file-usage"></use>
+                    </svg><span class="file__name">Прикрепите файл</span>
+                  </div>
                 </div>
                 <div class="form__button">
-                  <button class="btn btn--black">ОТПРАВИТЬ</button>
+                  <button class="btn btn--black btn--rightTop">Получить точный расчет кровли</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
           <!--.popup__iframe-->
           <!--iframe(allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)-->

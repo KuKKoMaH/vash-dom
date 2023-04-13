@@ -13,9 +13,9 @@
   @include anim();
 
   @include skewBorder('top', 'left', 25px, $gray, $white);
-@include mobile() {
-  @include skewBorder('top', 'left', 17px, $gray, $white);
-}
+  @include mobile() {
+    @include skewBorder('top', 'left', 17px, $gray, $white);
+  }
 
   &:before {
     @include anim();
@@ -115,6 +115,23 @@
     //-webkit-line-clamp: 2;
     //line-clamp: 2;
     //-webkit-box-orient: vertical;
+  }
+
+  &__params {
+    margin-bottom: 18px;
+  }
+
+  &__param {
+    font-size: 15px;
+    line-height: 1.2;
+    @include ls();
+    @include mobile(){
+      font-size: 10px;
+    }
+
+    span {
+      color: $gray-dark;
+    }
   }
 
   &__price {

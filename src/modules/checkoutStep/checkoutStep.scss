@@ -88,6 +88,8 @@
     right: 58px;
     font-size: 15px;
     line-height: (18/15);
+    z-index: 1;
+    text-decoration: none;
     @include ls();
     border-bottom: 1px dotted $green-dark;
     @include anim();

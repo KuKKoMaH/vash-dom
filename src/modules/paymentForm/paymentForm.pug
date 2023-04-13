@@ -11,7 +11,9 @@
       .input__label Номер телефона *
       label.input__input.input__input--rightTop: input(type='tel')
     label.input.paymentForm__input.paymentForm__input--narrow
-      .input__label Сумма оплаты, руб. *
+      .input__label Сумма оплаты, руб. *z
       label.input__input.input__input--rightTop: input
-
-  .paymentForm__note * - поля, отмеченные звездочкой, обязательно для заполнения
+    .input.paymentForm__input.paymentForm__input--narrow
+      .input__label
+        .paymentForm__note * - поля, отмеченные звездочкой, обязательно для заполнения
+      button.btn.btn--rightTop Оплатить

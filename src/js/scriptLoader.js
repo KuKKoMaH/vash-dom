@@ -15,4 +15,5 @@ function scriptLoader(url, onload) {
   t.parentNode.insertBefore(s, t);
 }
 
+window.scriptLoader = scriptLoader;
 module.exports = scriptLoader;

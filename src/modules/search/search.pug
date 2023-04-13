@@ -6,7 +6,7 @@
 
   .search__results
     each i in [1,2]
-      a.search__row(href='#')
+      .search__row
         .search__tag -20%
         .search__image
           img(src=require('src/img/catalog/1.jpg'))
@@ -23,3 +23,4 @@
             button.counter__button.counter__button--plus +
         .search__cart: button.btn.btn--leftBottom.btn--sm В корзину
         .search__arrow: +the_svg('chevrone-down')
+        a.search__link(href='#')

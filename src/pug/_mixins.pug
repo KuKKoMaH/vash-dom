@@ -9,16 +9,21 @@ mixin the_card(imgIndex, big, bigMobile)
     .card__content
       .card__category какой-то раздел
       .card__name Какой-то товар продается PRO
+      .card__params
+        .card__param #[span цвет:] RAL 4488RAL 4488RAL 4488
+        .card__param #[span покрытие:] Металлик
+        .card__param #[span толщина: ] 0,8 мм
       .card__price #[span 380 руб.]/м#[sup 2]
       .card__priceOld 788 руб./м#[sup 2]
       .card__button: button.btn.btn--leftBottom.btn--smMobile В корзину
 
 mixin breadcrumbs(items)
   .breadcrumbs
-    ul
-      li: a(href='#') Главная
-      each i in items
-        li: a(href='#')= i
+    span
+      span
+        a(href="http://new.vashdom-pnz.ru/") Главная
+        each i in items
+          span=i
 
 mixin infoPage(title, breadcrumbs, badge, showRelated)
   .infoPage

@@ -1,217 +1,71 @@
 .productBuy {
-  $this: &;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  margin-top: -1px;
-  width: 311px;
-  background: $white;
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  align-items: flex-end;
+
   @include mobile() {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
+    flex-direction: column;
+  }
 
-    &--active {
-      #{$this}__toggle {
-        svg {
-          transform: none;
-        }
-      }
-
-      #{$this}__filters {
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: all;
-        z-index: 1;
-      }
+  &__left, &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile() {
+      width: 100%;
     }
   }
 
-  &__prices {
+  &__right {
     @include mobile() {
-      display: none;
+      margin-top: 29px;
     }
   }
 
   &__price {
     font-size: 24px;
-    line-height: (36/24);
-    @include demi();
-    color: $green-dark;
-
-    span {
-      font-size: 18px;
+    line-height: 1;
+    margin-bottom: 11px;
+    @include mobile() {
+      font-size: 20px;
     }
   }
 
   &__priceOld {
     font-size: 15px;
     line-height: 1;
+    margin-bottom: 7px;
     color: $red;
     text-decoration: line-through;
-    margin-top: -2px;
-  }
-
-  &__cheap {
-    margin-top: 20px;
-    margin-bottom: 8px;
-    font-size: 15px;
-    line-height: (18/15);
-    @include ls();
-    border-bottom: 1px dotted $green-dark;
-    @include anim();
-
-    &:hover {
-      color: $green-dark;
-    }
-  }
-
-  &__filters {
     @include mobile() {
-      background: $white;
-      position: fixed;
-      top: 0;
-      bottom: 71px;
-      left: 0;
-      width: 100%;
-      transform: translateY(20px);
-      z-index: -1;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      @include anim();
-      overflow: auto;
-    }
-  }
-
-  &__block {
-    border: 1px solid $gray;
-    position: relative;
-    border-bottom: 0;
-    padding: 19px 60px 22px;
-    @include anim();
-    will-change: padding;
-    @include mobile() {
-      padding: 24px 20px 22px;
-      border: 0;
-      border-bottom: 1px solid $gray;
-    }
-
-    &--prices {
-      @include mobile() {
-        display: none;
-      }
-    }
-
-    &--active {
-      padding: 25px 60px 29px;
-      @include mobile() {
-        padding: 24px 20px 22px;
-      }
-
-      #{$this}__blockBody {
-        max-height: none;
-      }
-
-      #{$this}__blockTitle {
-        svg {
-          transform: rotate(180deg);
-        }
-      }
-    }
-  }
-
-  &__blockTitle {
-    display: flex;
-    align-items: center;
-    font-size: 15px;
-    line-height: (18/15);
-    @include ls();
-    @include demi();
-    cursor: pointer;
-
-    svg {
-      width: 9px;
-      height: 9px;
-      margin-right: 10px;
-      flex-shrink: 0;
-      @include anim();
-    }
-  }
-
-  &__blockBody {
-    overflow: hidden;
-    max-height: 0;
-    @include anim();
-
-    > *:first-child {
-      margin-top: 21px;
-    }
-  }
-
-  &__checkbox {
-    margin-bottom: 12px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &__add {
-    padding: 19px 60px 22px;
-    border: 1px solid $yellow;
-    @include mobile() {
-      padding: 0 10px;
-      height: 71px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border: 0;
-      border-top: 1px solid $gray;
-      @include green-shadow();
-    }
-  }
-
-  &__toggle {
-    display: none;
-    @include mobile() {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 34px;
-      height: 34px;
-      color: $green-dark;
-      svg {
-        width: 10px;
-        height: 10px;
-        transform: rotate(180deg);
-        @include anim();
-      }
+      font-size: 12px;
+      margin-bottom: 10px;
     }
   }
 
   &__counter {
-    margin-top: 12px;
-    margin-bottom: 19px;
+  }
+
+  &__cheap {
+    border-bottom: 1px dotted $green-dark;
+    font-size: 15px;
+    line-height: 1;
+    @include ls();
+    margin-bottom: 14px;
     @include mobile() {
-      margin: 0;
+      font-size: 14px;
     }
   }
 
-  &__button {
-    position: absolute;
-    right: -1px;
-    top: 100%;
+  &__total {
+    @include demi();
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 11px;
+    color: $green-dark;
     @include mobile() {
-      flex-shrink: 0;
-      position: relative;
-      top: auto;
-      right: auto;
+      font-size: 20px;
     }
   }
 }

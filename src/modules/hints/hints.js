@@ -13,6 +13,6 @@ initSlider('.hints__slider', ( $el ) => ({
   // },
   // touchEventsTarget: 'wrapper',
   slidesPerView: 1,
-  spaceBetween:  0,
+  spaceBetween:  20,
   autoHeight:    true,
 }));

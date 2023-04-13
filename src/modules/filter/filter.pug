@@ -1,12 +1,12 @@
 .filter
   .filter__head
     .filter__c
-      button.filter__close: +the_svg('close')
+      button.filter__close(onclick="closeFilter()"): +the_svg('close')
       | Фильтры
 
   .filter__container
     .filter__item
-      button.filter__title
+      button.filter__title(onclick="collapseFilter(event)")
         +the_svg('chevrone-down')
         | Цена, руб.
       .filter__body
@@ -31,7 +31,7 @@
               span
                 =i[0]
                 span.filter__color(style='color: ' + i[1])
-          button.flatBtn.filter__button
+          button.flatBtn.filter__button(onclick="toggleFilter(event)")
             .inactive Все 12
             .active Скрыть
 
@@ -127,3 +127,5 @@
       button.btn.btn--rightBottom.btn--outline.btn--sm Сбросить
       button.btn.btn--leftBottom.btn--sm Сохранить
 
+  script.
+    initPriceFilter()

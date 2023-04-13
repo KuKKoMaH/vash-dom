@@ -74,7 +74,7 @@
       display: none;
     }
 
-    div {
+    span {
       height: 60px;
       display: flex;
       align-items: center;
@@ -110,7 +110,7 @@
       }
     }
 
-    input:checked + div {
+    input:checked + span {
       border-color: $green-dark;
       color: $black;
 
@@ -187,7 +187,7 @@
       display: none;
     }
 
-    div {
+    span {
       height: 40px;
       display: flex;
       align-items: center;
@@ -202,12 +202,12 @@
       }
     }
 
-    input:checked + div {
+    input:checked + span {
       border-color: $green-dark;
       color: $black;
     }
 
-    &:hover div {
+    &:hover span {
       color: $black;
     }
   }
@@ -259,7 +259,7 @@
       margin-top: 6px;
     }
 
-    &--cover {
+    &--base {
       margin-bottom: 32px;
       @include mobile() {
         margin-bottom: 20px;

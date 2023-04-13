@@ -7,7 +7,7 @@
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
-  <link href="style.css?1641735302338" rel="stylesheet"></head>
+  <link href="style.css?1681333843287" rel="stylesheet"></head>
   <body onunload="">
     <header class="header">
       <div class="c">
@@ -222,7 +222,8 @@
                     </svg>
                   </button>
                 </div>
-                <div class="search__results"><a class="search__row" href="#">
+                <div class="search__results">
+                  <div class="search__row">
                     <div class="search__tag">-20%</div>
                     <div class="search__image"><img src="img/img_catalog_1.jpg"></div>
                     <div class="search__info">
@@ -247,7 +248,9 @@
                       <svg>
                         <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
                       </svg>
-                    </div></a><a class="search__row" href="#">
+                    </div><a class="search__link" href="#"></a>
+                  </div>
+                  <div class="search__row">
                     <div class="search__tag">-20%</div>
                     <div class="search__image"><img src="img/img_catalog_1.jpg"></div>
                     <div class="search__info">
@@ -272,24 +275,83 @@
                       <svg>
                         <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
                       </svg>
-                    </div></a>
+                    </div><a class="search__link" href="#"></a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="header__menu">
-              <ul>
-                <li><a href="#">Производство</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Рекомендации эксперта</a></li>
-                <li><a href="#">Дилерам и строителям</a></li>
-                <li><a href="#">VIP материалы</a></li>
-              </ul>
-              <div class="header__locationBottom">
-                <svg class="header__locationBottomIcon">
-                  <use xlink:href="img/sprite.svg#geo-usage"></use>
-                </svg>
-                <div class="header__locationBottomLabel">3 магазина</div>
-                <div class="header__locationBottomValue">пн-вс с 8.00 до 19.00</div>
+              <div class="header__menuContainer">
+                <ul>
+                  <li><a href="#">Производство</a></li>
+                  <li><a href="#">Услуги</a>
+                    <div class="header__submenu">
+                      <button class="header__back">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                        </svg>МЕНЮ
+                      </button>
+                      <div class="header__submenuContent">
+                        <div class="header__title">Услуги</div>
+                        <ul>
+                          <li><a href="#">Замер и доставка образцов</a></li>
+                          <li><a href="#">Бережная доставка (отгрузка)</a></li>
+                          <li><a href="#">Оплата онлайн</a></li>
+                          <li><a href="#">Проверенные монтажники (профессиональный монтаж)</a></li>
+                          <li><a href="#">Калькулятор стоимости материалов для кровли</a></li>
+                          <li><a href="#">Заказать расчет</a></li>
+                          <li><a href="#">Возврат товара</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li><a href="#">Рекомендации эксперта</a>
+                    <div class="header__submenu">
+                      <button class="header__back">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                        </svg>МЕНЮ
+                      </button>
+                      <div class="header__submenuContent">
+                        <div class="header__title">Рекомендации эксперта</div>
+                        <div class="header__cards"><a class="header__card" href="#">
+                            <div class="header__head">Лайф-хак: подбираем кровлю без потери времени и денег</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">Цена кровли ниже средней на 10%?</div>
+                            <div class="header__text">Будьте внимательны	к качеству и стоимости комплектующих.</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">Не дайте себя обмануть!</div>
+                            <div class="header__text">Измеряем толщину профлиста правильно</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">Что нужно знать о кровельных материалах</div>
+                            <div class="header__text">Преимущества и недостатки при выборе материала</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">5 главных правил для перевозки кровли без повреждений</div>
+                            <div class="header__text">Особенности, о которых мало кто рассказывает</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li><a href="#">Дилерам и строителям</a></li>
+                  <li><a href="#">VIP материалы</a></li>
+                </ul>
+                <div class="header__locationBottom">
+                  <svg class="header__locationBottomIcon">
+                    <use xlink:href="img/sprite.svg#geo-usage"></use>
+                  </svg>
+                  <div class="header__locationBottomLabel">3 магазина</div>
+                  <div class="header__locationBottomValue">пн-вс с 8.00 до 19.00</div>
+                </div>
               </div>
             </div>
           </div>
@@ -396,12 +458,7 @@
     </header>
     <div class="checkout">
       <div class="c">
-        <div class="breadcrumbs">
-          <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Оформление заказа</a></li>
-          </ul>
-        </div>
+        <div class="breadcrumbs"><span><span><a href="http://new.vashdom-pnz.ru/">Главная</a><span>Оформление заказа</span></span></span></div>
         <div class="checkout__container">
           <div class="checkout__aside">
             <div class="checkout__items">
@@ -595,29 +652,35 @@
         <div class="popup__container" role="dialog" aria-modal="true">
           <!--button.popup__close(data-micromodal-close): +the_svg('close')-->
           <div class="popup__form">
-            <div class="form">
-              <div class="form__title">ВЫЗВАТЬ ЗАМЕРЩИКА</div>
-              <div class="form__content">
-                <div class="form__input">
-                  <div class="input">
-                    <input placeholder="Ваше имя">
-                  </div>
-                </div>
-                <div class="form__input">
-                  <div class="input">
-                    <input placeholder="Телефон" type="tel">
-                  </div>
-                </div>
-                <div class="form__confirm">
-                  <label class="checkbox">
-                    <input type="checkbox"><span>Я согласен с обработкой <a href="#">персональных данных</a></span>
+            <form>
+              <div class="form">
+                <div class="form__title">Обратный звонок</div>
+                <div class="form__text">Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке дальнейших направлений развития. Задача организации.</div>
+                <div class="form__content">
+                  <label class="input">
+                    <div class="input__label">Имя</div>
+                    <label class="input__input input__input--rightTop">
+                      <input>
+                    </label>
                   </label>
+                  <label class="input">
+                    <div class="input__label">Ваш телефон</div>
+                    <div class="input__input input__input--rightTop">
+                      <input type="tel">
+                    </div>
+                  </label>
+                  <div class="file">
+                    <input type="file">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#file-usage"></use>
+                    </svg><span class="file__name">Прикрепите файл</span>
+                  </div>
                 </div>
                 <div class="form__button">
-                  <button class="btn btn--black">ОТПРАВИТЬ</button>
+                  <button class="btn btn--black btn--rightTop">Получить точный расчет кровли</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
           <!--.popup__iframe-->
           <!--iframe(allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)-->

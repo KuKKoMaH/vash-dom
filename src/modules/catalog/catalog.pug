@@ -16,55 +16,40 @@
 
     .catalog__container
       .catalog__aside
-        .catalog__menu.catalog__menu--active
-          button.catalog__category
-            +the_svg('chevrone-down')
-            |Кровля
-          ul.catalog__subcategories
-            li: a(href='#').active Металлочерепица
-            li: a(href='#') Кровельный профнастил
-            li: a(href='#') Гибкая черепица
-            li: a(href='#') Натуральная черепица
-            li: a(href='#') Сэндвич-панели
-            li: a(href='#') Композитная кровля
-            li: a(href='#') Фальцевая кровля
-        include ../filter/filter
         .catalog__menu
-          button.catalog__category
-            +the_svg('chevrone-down')
-            | Фасады
-          ul.catalog__subcategories
-            li: a(href='#') Стеновой профнастил
-            li: a(href='#') Сэндвич-панели
-            li: a(href='#') Фиброцементный сайдинг
-            li: a(href='#') ЭкоБрус
+          .catalog__category Кровля
+          a.catalog__subcategory.catalog__subcategory--active(href='#') Металлочерепица
+          include ../filter/filter
+          a.catalog__subcategory(href='#') Кровельный профнастил
+          a.catalog__subcategory(href='#') Гибкая черепица
+          a.catalog__subcategory(href='#') Натуральная черепица
+          a.catalog__subcategory(href='#') Сэндвич-панели
+          a.catalog__subcategory(href='#') Композитная кровля
+          a.catalog__subcategory(href='#') Фальцевая кровля
         .catalog__menu
-          button.catalog__category
-            +the_svg('chevrone-down')
-            | Заборы
-          ul.catalog__subcategories
-            li: a(href='#') Металлический штакетник
-            li: a(href='#') Модульные ограждения
-            li: a(href='#') Профильная труба для забора
-            li: a(href='#') Профнастил для забора
-            li: a(href='#') Сварные ограждения
+          .catalog__category Фасады
+          a.catalog__subcategory(href='#') Стеновой профнастил
+          a.catalog__subcategory(href='#') Сэндвич-панели
+          a.catalog__subcategory(href='#') Фиброцементный сайдинг
+          a.catalog__subcategory(href='#') ЭкоБрус
         .catalog__menu
-          button.catalog__category
-            +the_svg('chevrone-down')
-            | Сопутствующие материалы
-          ul.catalog__subcategories
-            li: a(href='#') Вентиляция и проходные элементы
-            li: a(href='#') Водосточные системы
-            li: a(href='#') Дымники
-            li: a(href='#') Мансардные окна
-            li: a(href='#') Снегозадержатели
-            li: a(href='#') Чердачные лестницы
+          .catalog__category Заборы
+          a.catalog__subcategory(href='#') Металлический штакетник
+          a.catalog__subcategory(href='#') Модульные ограждения
+          a.catalog__subcategory(href='#') Профильная труба для забора
+          a.catalog__subcategory(href='#') Профнастил для забора
+          a.catalog__subcategory(href='#') Сварные ограждения
         .catalog__menu
-          button.catalog__category
-            +the_svg('chevrone-down')
-            | Прочее
-          ul.catalog__subcategories
-            li: a(href='#') Влагостойкая фанера OSB
+          .catalog__category Сопутствующие материалы
+          a.catalog__subcategory(href='#') Вентиляция и проходные элементы
+          a.catalog__subcategory(href='#') Водосточные системы
+          a.catalog__subcategory(href='#') Дымники
+          a.catalog__subcategory(href='#') Мансардные окна
+          a.catalog__subcategory(href='#') Снегозадержатели
+          a.catalog__subcategory(href='#') Чердачные лестницы
+        .catalog__menu
+          .catalog__category Прочее
+          a.catalog__subcategory(href='#') Влагостойкая фанера OSB
 
       .catalog__main
         .catalog__head

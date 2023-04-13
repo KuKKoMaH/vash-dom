@@ -1,4 +1,5 @@
 import initSlider from "src/js/initSlider";
+import initTabs   from "src/js/initTabs";
 
 const $thumbs = $('.product__thumb');
 const thumbActiveClass = 'product__thumb--active';
@@ -35,7 +36,7 @@ const updateHeight = () => {
 
 };
 updateHeight();
-$(window).on('resize', updateHeight);
+// $(window).on('resize', updateHeight);
 
 $('.product__infoButton').on('click', () => {
   $infoRest.css('max-height', $infoRest[0].scrollHeight);
@@ -52,19 +53,32 @@ $('.product__infoButton').on('click', () => {
   collapsed = !collapsed;
 });
 
-$('.product__blockCollapse, .product__blockTitle').on('click', ( e ) => {
+$('.product__toggle').on('click', ( e ) => {
   const $el = $(e.delegateTarget);
   const $block = $el.parents('.product__block');
-  const $content = $block.find('.product__blockContent');
-  $content.css('max-height', $content[0].scrollHeight);
-  if ($block.hasClass('product__block--active')) {
-    requestAnimationFrame(() => {
-      $content.css('max-height', '');
-    });
-  } else {
-    $content.one('transitionend', () => {
-      $content.css('max-height', '');
-    });
-  }
   $block.toggleClass('product__block--active');
 });
+
+initTabs({
+  $headers:          $('.product__header'),
+  $bodies:           $('.product__body'),
+  headerActiveClass: 'product__header--active',
+  bodyActiveClass:   'product__body--active',
+});
+
+// $('.product__blockCollapse, .product__blockTitle').on('click', ( e ) => {
+//   const $el = $(e.delegateTarget);
+//   const $block = $el.parents('.product__block');
+//   const $content = $block.find('.product__blockContent');
+//   $content.css('max-height', $content[0].scrollHeight);
+//   if ($block.hasClass('product__block--active')) {
+//     requestAnimationFrame(() => {
+//       $content.css('max-height', '');
+//     });
+//   } else {
+//     $content.one('transitionend', () => {
+//       $content.css('max-height', '');
+//     });
+//   }
+//   $block.toggleClass('product__block--active');
+// });

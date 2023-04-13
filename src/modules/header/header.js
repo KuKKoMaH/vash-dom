@@ -1,11 +1,14 @@
+import Breakpoints from 'breakpoints-js';
+
 const $body = $('body');
 const $header = $('.header');
 const searchClass = 'header--search';
 const catalogClass = 'header--catalog';
 const menuClass = 'header--menu';
+const submenuClass = 'header--submenu';
 const cartClass = 'header--cart';
 
-const onClickOutside = ( event ) => {
+const onClickOutside = (event) => {
   const $target = $(event.target);
   if (!$target.closest($header).length) {
     event.preventDefault();
@@ -83,6 +86,8 @@ $('.header__menuButton').on('click', () => {
 
 $('.search__close').on('click', closeSearch);
 
+// ====================================
+
 let isCartOpen = false;
 const openCart = () => {
   isCartOpen = true;
@@ -97,9 +102,25 @@ const closeCart = () => {
   $header.removeClass(cartClass);
   $body.off('click', onClickOutside);
 };
-$('.header__cart--top').on('click', ( e ) => {
+$('.header__cart--top').on('click', (e) => {
   e.preventDefault();
   isCartOpen
     ? closeCart()
     : openCart();
+});
+
+// ====================================
+
+
+$('.header__menu li:has(.header__submenu) a').on('click', (e) => {
+  if (Breakpoints.is('sm')) {
+    e.preventDefault();
+    $header.addClass(submenuClass);
+    $('.header__menu li').removeClass('active');
+    $(e.delegateTarget).parents('li').addClass('active');
+  }
+});
+
+$('.header__back').on('click', () => {
+  $header.removeClass(submenuClass);
 });

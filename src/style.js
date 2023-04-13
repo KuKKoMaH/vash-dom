@@ -20,8 +20,8 @@ import "./style/fonts.scss";
 import "./style/common.scss";
 import "./style/typography.scss";
 
-// import './modules/photoswipe/photoswipe.scss';
-// import './modules/photoswipe/default-skin.scss';
+import './modules/photoswipe/photoswipe.scss';
+import './modules/photoswipe/default-skin.scss';
 
 import './modules/popup/popup.scss';
 import './modules/header/header.scss';
@@ -69,3 +69,4 @@ import './modules/cart/cart.scss';
 import './modules/checkout/checkout.scss';
 import './modules/checkoutStep/checkoutStep.scss';
 import './modules/cartPopup/cartPopup.scss';
+import './modules/form/form.scss';

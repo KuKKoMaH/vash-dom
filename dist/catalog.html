@@ -7,7 +7,7 @@
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
     <!--link(rel="shortcut icon" href="/favicon.ico")-->
-  <link href="style.css?1641735302338" rel="stylesheet"></head>
+  <link href="style.css?1681333843287" rel="stylesheet"></head>
   <body onunload="">
     <header class="header">
       <div class="c">
@@ -222,7 +222,8 @@
                     </svg>
                   </button>
                 </div>
-                <div class="search__results"><a class="search__row" href="#">
+                <div class="search__results">
+                  <div class="search__row">
                     <div class="search__tag">-20%</div>
                     <div class="search__image"><img src="img/img_catalog_1.jpg"></div>
                     <div class="search__info">
@@ -247,7 +248,9 @@
                       <svg>
                         <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
                       </svg>
-                    </div></a><a class="search__row" href="#">
+                    </div><a class="search__link" href="#"></a>
+                  </div>
+                  <div class="search__row">
                     <div class="search__tag">-20%</div>
                     <div class="search__image"><img src="img/img_catalog_1.jpg"></div>
                     <div class="search__info">
@@ -272,24 +275,83 @@
                       <svg>
                         <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
                       </svg>
-                    </div></a>
+                    </div><a class="search__link" href="#"></a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="header__menu">
-              <ul>
-                <li><a href="#">Производство</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Рекомендации эксперта</a></li>
-                <li><a href="#">Дилерам и строителям</a></li>
-                <li><a href="#">VIP материалы</a></li>
-              </ul>
-              <div class="header__locationBottom">
-                <svg class="header__locationBottomIcon">
-                  <use xlink:href="img/sprite.svg#geo-usage"></use>
-                </svg>
-                <div class="header__locationBottomLabel">3 магазина</div>
-                <div class="header__locationBottomValue">пн-вс с 8.00 до 19.00</div>
+              <div class="header__menuContainer">
+                <ul>
+                  <li><a href="#">Производство</a></li>
+                  <li><a href="#">Услуги</a>
+                    <div class="header__submenu">
+                      <button class="header__back">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                        </svg>МЕНЮ
+                      </button>
+                      <div class="header__submenuContent">
+                        <div class="header__title">Услуги</div>
+                        <ul>
+                          <li><a href="#">Замер и доставка образцов</a></li>
+                          <li><a href="#">Бережная доставка (отгрузка)</a></li>
+                          <li><a href="#">Оплата онлайн</a></li>
+                          <li><a href="#">Проверенные монтажники (профессиональный монтаж)</a></li>
+                          <li><a href="#">Калькулятор стоимости материалов для кровли</a></li>
+                          <li><a href="#">Заказать расчет</a></li>
+                          <li><a href="#">Возврат товара</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li><a href="#">Рекомендации эксперта</a>
+                    <div class="header__submenu">
+                      <button class="header__back">
+                        <svg>
+                          <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                        </svg>МЕНЮ
+                      </button>
+                      <div class="header__submenuContent">
+                        <div class="header__title">Рекомендации эксперта</div>
+                        <div class="header__cards"><a class="header__card" href="#">
+                            <div class="header__head">Лайф-хак: подбираем кровлю без потери времени и денег</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">Цена кровли ниже средней на 10%?</div>
+                            <div class="header__text">Будьте внимательны	к качеству и стоимости комплектующих.</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">Не дайте себя обмануть!</div>
+                            <div class="header__text">Измеряем толщину профлиста правильно</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">Что нужно знать о кровельных материалах</div>
+                            <div class="header__text">Преимущества и недостатки при выборе материала</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a><a class="header__card" href="#">
+                            <div class="header__head">5 главных правил для перевозки кровли без повреждений</div>
+                            <div class="header__text">Особенности, о которых мало кто рассказывает</div>
+                            <svg>
+                              <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                            </svg></a></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li><a href="#">Дилерам и строителям</a></li>
+                  <li><a href="#">VIP материалы</a></li>
+                </ul>
+                <div class="header__locationBottom">
+                  <svg class="header__locationBottomIcon">
+                    <use xlink:href="img/sprite.svg#geo-usage"></use>
+                  </svg>
+                  <div class="header__locationBottomLabel">3 магазина</div>
+                  <div class="header__locationBottomValue">пн-вс с 8.00 до 19.00</div>
+                </div>
               </div>
             </div>
           </div>
@@ -396,14 +458,7 @@
     </header>
     <div class="catalog">
       <div class="c catalog__body">
-        <div class="breadcrumbs">
-          <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Кровля</a></li>
-            <li><a href="#">Металлочерепица</a></li>
-          </ul>
-        </div>
+        <div class="breadcrumbs"><span><span><a href="http://new.vashdom-pnz.ru/">Главная</a><span>Каталог</span><span>Кровля</span><span>Металлочерепица</span></span></span></div>
         <div class="catalog__search">
           <button class="catalog__filterButton">
             <svg>
@@ -422,330 +477,278 @@
         </div>
         <div class="catalog__container">
           <div class="catalog__aside">
-            <div class="catalog__menu catalog__menu--active">
-              <button class="catalog__category">
-                <svg>
-                  <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                </svg>Кровля
-              </button>
-              <ul class="catalog__subcategories">
-                <li><a class="active" href="#">Металлочерепица</a></li>
-                <li><a href="#">Кровельный профнастил</a></li>
-                <li><a href="#">Гибкая черепица</a></li>
-                <li><a href="#">Натуральная черепица</a></li>
-                <li><a href="#">Сэндвич-панели</a></li>
-                <li><a href="#">Композитная кровля</a></li>
-                <li><a href="#">Фальцевая кровля</a></li>
-              </ul>
-            </div>
-            <div class="filter">
-              <div class="filter__head">
-                <div class="filter__c">
-                  <button class="filter__close">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#close-usage"></use>
-                    </svg>
-                  </button>Фильтры
+            <div class="catalog__menu">
+              <div class="catalog__category">Кровля</div><a class="catalog__subcategory catalog__subcategory--active" href="#">Металлочерепица</a>
+              <div class="filter">
+                <div class="filter__head">
+                  <div class="filter__c">
+                    <button class="filter__close" onclick="closeFilter()">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#close-usage"></use>
+                      </svg>
+                    </button>Фильтры
+                  </div>
                 </div>
-              </div>
-              <div class="filter__container">
-                <div class="filter__item">
-                  <button class="filter__title">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                    </svg>Цена, руб.
-                  </button>
-                  <div class="filter__body">
-                    <div class="slider filter__priceSlider" data-min="250" data-max="1000" data-value="[300,500]"></div>
-                    <div class="filter__prices">
-                      <div class="filter__price">
-                        <div class="filter__priceLabel">от</div>
-                        <input class="filter__priceInput filter__priceInput--from" value="300">
-                      </div>
-                      <div class="filter__price">
-                        <div class="filter__priceLabel">до</div>
-                        <input class="filter__priceInput filter__priceInput--to" value="500">
+                <div class="filter__container">
+                  <div class="filter__item">
+                    <button class="filter__title" onclick="collapseFilter(event)">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>Цена, руб.
+                    </button>
+                    <div class="filter__body">
+                      <div class="slider filter__priceSlider" data-min="250" data-max="1000" data-value="[300,500]"></div>
+                      <div class="filter__prices">
+                        <div class="filter__price">
+                          <div class="filter__priceLabel">от</div>
+                          <input class="filter__priceInput filter__priceInput--from" value="300">
+                        </div>
+                        <div class="filter__price">
+                          <div class="filter__priceLabel">до</div>
+                          <input class="filter__priceInput filter__priceInput--to" value="500">
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="filter__item">
-                  <button class="filter__title">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                    </svg>Цвет
-                  </button>
-                  <div class="filter__body">
-                    <div class="filter__checkboxes">
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>черный<span class="filter__color" style="color: #000"></span></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>бирюзовый<span class="filter__color" style="color: #2bc3a5"></span></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>красный<span class="filter__color" style="color: #db0d0d"></span></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>синий<span class="filter__color" style="color: #0949a8"></span></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>желтый<span class="filter__color" style="color: #eddc22"></span></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>черный<span class="filter__color" style="color: #000"></span></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>бирюзовый<span class="filter__color" style="color: #2bc3a5"></span></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>красный<span class="filter__color" style="color: #db0d0d"></span></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>синий<span class="filter__color" style="color: #0949a8"></span></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>желтый<span class="filter__color" style="color: #eddc22"></span></span>
-                      </label>
-                      <button class="flatBtn filter__button">
-                        <div class="inactive">Все 12</div>
-                        <div class="active">Скрыть</div>
-                      </button>
+                  <div class="filter__item">
+                    <button class="filter__title">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>Цвет
+                    </button>
+                    <div class="filter__body">
+                      <div class="filter__checkboxes">
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>черный<span class="filter__color" style="color: #000"></span></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>бирюзовый<span class="filter__color" style="color: #2bc3a5"></span></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>красный<span class="filter__color" style="color: #db0d0d"></span></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>синий<span class="filter__color" style="color: #0949a8"></span></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>желтый<span class="filter__color" style="color: #eddc22"></span></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>черный<span class="filter__color" style="color: #000"></span></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>бирюзовый<span class="filter__color" style="color: #2bc3a5"></span></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>красный<span class="filter__color" style="color: #db0d0d"></span></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>синий<span class="filter__color" style="color: #0949a8"></span></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>желтый<span class="filter__color" style="color: #eddc22"></span></span>
+                        </label>
+                        <button class="flatBtn filter__button" onclick="toggleFilter(event)">
+                          <div class="inactive">Все 12</div>
+                          <div class="active">Скрыть</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <button class="filter__title">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>Толщина
+                    </button>
+                    <div class="filter__body">
+                      <div class="filter__checkboxes">
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>0.45</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>0.5</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <button class="filter__title">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>Гарантия от сквозной коррозии:
+                    </button>
+                    <div class="filter__body">
+                      <div class="filter__checkboxes">
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>50 лет</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>40 лет</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>30 лет</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>25 лет</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>20 лет</span>
+                        </label>
+                        <button class="flatBtn filter__button">
+                          <div class="inactive">Все 9</div>
+                          <div class="active">Скрыть</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <button class="filter__title">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>Производитель:
+                    </button>
+                    <div class="filter__body">
+                      <div class="filter__checkboxes">
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>GRAND LINE</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>ВАШ ДОМ</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <button class="filter__title">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>Тип покрытия:
+                    </button>
+                    <div class="filter__body">
+                      <div class="filter__checkboxes">
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>глянцевый (классическое решение)</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>матовый (все более и более популярно)</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <button class="filter__title">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>Покрытие
+                    </button>
+                    <div class="filter__body">
+                      <div class="filter__checkboxes">
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>коралл</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>стальной бархат</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>стальной шёлк</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>satin®</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>quarzit</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>quarzit lite</span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>velur®</span>
+                        </label>
+                        <button class="flatBtn filter__button">
+                          <div class="inactive">Все 9</div>
+                          <div class="active">Скрыть</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <button class="filter__title">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>Маркировка
+                    </button>
+                    <div class="filter__body">
+                      <div class="filter__checkboxes">
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>GL-10R<img src="img/modules_filter_img_mark_01.png"></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>GL-20R<img src="img/modules_filter_img_mark_02.png"></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>GL-21R<img src="img/modules_filter_img_mark_03.png"></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>GL-35R<img src="img/modules_filter_img_mark_04.png"></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>GL-60R<img src="img/modules_filter_img_mark_05.png"></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span>GL-75R<img src="img/modules_filter_img_mark_06.png"></span>
+                        </label>
+                        <button class="flatBtn filter__button">Скрыть</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item">
+                    <button class="filter__title">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
+                      </svg>Форма нарезки
+                    </button>
+                    <div class="filter__body">
+                      <div class="filter__checkboxes">
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span><img src="img/modules_filter_img_form_01.png"></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span><img src="img/modules_filter_img_form_02.png"></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span><img src="img/modules_filter_img_form_03.png"></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span><img src="img/modules_filter_img_form_04.png"></span>
+                        </label>
+                        <label class="checkbox filter__checkbox">
+                          <input type="checkbox"><span><img src="img/modules_filter_img_form_05.png"></span>
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="filter__item">
-                  <button class="filter__title">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                    </svg>Толщина
-                  </button>
-                  <div class="filter__body">
-                    <div class="filter__checkboxes">
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>0.45</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>0.5</span>
-                      </label>
-                    </div>
+                <div class="filter__footer">
+                  <div class="filter__c">
+                    <button class="btn btn--rightBottom btn--outline btn--sm">Сбросить</button>
+                    <button class="btn btn--leftBottom btn--sm">Сохранить</button>
                   </div>
                 </div>
-                <div class="filter__item">
-                  <button class="filter__title">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                    </svg>Гарантия от сквозной коррозии:
-                  </button>
-                  <div class="filter__body">
-                    <div class="filter__checkboxes">
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>50 лет</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>40 лет</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>30 лет</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>25 лет</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>20 лет</span>
-                      </label>
-                      <button class="flatBtn filter__button">
-                        <div class="inactive">Все 9</div>
-                        <div class="active">Скрыть</div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter__item">
-                  <button class="filter__title">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                    </svg>Производитель:
-                  </button>
-                  <div class="filter__body">
-                    <div class="filter__checkboxes">
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>GRAND LINE</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>ВАШ ДОМ</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter__item">
-                  <button class="filter__title">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                    </svg>Тип покрытия:
-                  </button>
-                  <div class="filter__body">
-                    <div class="filter__checkboxes">
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>глянцевый (классическое решение)</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>матовый (все более и более популярно)</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter__item">
-                  <button class="filter__title">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                    </svg>Покрытие
-                  </button>
-                  <div class="filter__body">
-                    <div class="filter__checkboxes">
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>коралл</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>стальной бархат</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>стальной шёлк</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>satin®</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>quarzit</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>quarzit lite</span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>velur®</span>
-                      </label>
-                      <button class="flatBtn filter__button">
-                        <div class="inactive">Все 9</div>
-                        <div class="active">Скрыть</div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter__item">
-                  <button class="filter__title">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                    </svg>Маркировка
-                  </button>
-                  <div class="filter__body">
-                    <div class="filter__checkboxes">
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>GL-10R<img src="img/modules_filter_img_mark_01.png"></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>GL-20R<img src="img/modules_filter_img_mark_02.png"></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>GL-21R<img src="img/modules_filter_img_mark_03.png"></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>GL-35R<img src="img/modules_filter_img_mark_04.png"></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>GL-60R<img src="img/modules_filter_img_mark_05.png"></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span>GL-75R<img src="img/modules_filter_img_mark_06.png"></span>
-                      </label>
-                      <button class="flatBtn filter__button">Скрыть</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter__item">
-                  <button class="filter__title">
-                    <svg>
-                      <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                    </svg>Форма нарезки
-                  </button>
-                  <div class="filter__body">
-                    <div class="filter__checkboxes">
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span><img src="img/modules_filter_img_form_01.png"></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span><img src="img/modules_filter_img_form_02.png"></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span><img src="img/modules_filter_img_form_03.png"></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span><img src="img/modules_filter_img_form_04.png"></span>
-                      </label>
-                      <label class="checkbox filter__checkbox">
-                        <input type="checkbox"><span><img src="img/modules_filter_img_form_05.png"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filter__footer">
-                <div class="filter__c">
-                  <button class="btn btn--rightBottom btn--outline btn--sm">Сбросить</button>
-                  <button class="btn btn--leftBottom btn--sm">Сохранить</button>
-                </div>
-              </div>
+                <script>initPriceFilter()</script>
+              </div><a class="catalog__subcategory" href="#">Кровельный профнастил</a><a class="catalog__subcategory" href="#">Гибкая черепица</a><a class="catalog__subcategory" href="#">Натуральная черепица</a><a class="catalog__subcategory" href="#">Сэндвич-панели</a><a class="catalog__subcategory" href="#">Композитная кровля</a><a class="catalog__subcategory" href="#">Фальцевая кровля</a>
             </div>
             <div class="catalog__menu">
-              <button class="catalog__category">
-                <svg>
-                  <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                </svg>Фасады
-              </button>
-              <ul class="catalog__subcategories">
-                <li><a href="#">Стеновой профнастил</a></li>
-                <li><a href="#">Сэндвич-панели</a></li>
-                <li><a href="#">Фиброцементный сайдинг</a></li>
-                <li><a href="#">ЭкоБрус</a></li>
-              </ul>
+              <div class="catalog__category">Фасады</div><a class="catalog__subcategory" href="#">Стеновой профнастил</a><a class="catalog__subcategory" href="#">Сэндвич-панели</a><a class="catalog__subcategory" href="#">Фиброцементный сайдинг</a><a class="catalog__subcategory" href="#">ЭкоБрус</a>
             </div>
             <div class="catalog__menu">
-              <button class="catalog__category">
-                <svg>
-                  <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                </svg>Заборы
-              </button>
-              <ul class="catalog__subcategories">
-                <li><a href="#">Металлический штакетник</a></li>
-                <li><a href="#">Модульные ограждения</a></li>
-                <li><a href="#">Профильная труба для забора</a></li>
-                <li><a href="#">Профнастил для забора</a></li>
-                <li><a href="#">Сварные ограждения</a></li>
-              </ul>
+              <div class="catalog__category">Заборы</div><a class="catalog__subcategory" href="#">Металлический штакетник</a><a class="catalog__subcategory" href="#">Модульные ограждения</a><a class="catalog__subcategory" href="#">Профильная труба для забора</a><a class="catalog__subcategory" href="#">Профнастил для забора</a><a class="catalog__subcategory" href="#">Сварные ограждения</a>
             </div>
             <div class="catalog__menu">
-              <button class="catalog__category">
-                <svg>
-                  <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                </svg>Сопутствующие материалы
-              </button>
-              <ul class="catalog__subcategories">
-                <li><a href="#">Вентиляция и проходные элементы</a></li>
-                <li><a href="#">Водосточные системы</a></li>
-                <li><a href="#">Дымники</a></li>
-                <li><a href="#">Мансардные окна</a></li>
-                <li><a href="#">Снегозадержатели</a></li>
-                <li><a href="#">Чердачные лестницы</a></li>
-              </ul>
+              <div class="catalog__category">Сопутствующие материалы</div><a class="catalog__subcategory" href="#">Вентиляция и проходные элементы</a><a class="catalog__subcategory" href="#">Водосточные системы</a><a class="catalog__subcategory" href="#">Дымники</a><a class="catalog__subcategory" href="#">Мансардные окна</a><a class="catalog__subcategory" href="#">Снегозадержатели</a><a class="catalog__subcategory" href="#">Чердачные лестницы</a>
             </div>
             <div class="catalog__menu">
-              <button class="catalog__category">
-                <svg>
-                  <use xlink:href="img/sprite.svg#chevrone-down-usage"></use>
-                </svg>Прочее
-              </button>
-              <ul class="catalog__subcategories">
-                <li><a href="#">Влагостойкая фанера OSB</a></li>
-              </ul>
+              <div class="catalog__category">Прочее</div><a class="catalog__subcategory" href="#">Влагостойкая фанера OSB</a>
             </div>
           </div>
           <div class="catalog__main">
@@ -765,6 +768,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -778,6 +786,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -791,6 +804,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -804,6 +822,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -817,6 +840,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -830,6 +858,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -843,6 +876,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -856,6 +894,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -869,6 +912,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -882,6 +930,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -895,6 +948,11 @@
                   <div class="card__content">
                     <div class="card__category">какой-то раздел</div>
                     <div class="card__name">Какой-то товар продается PRO</div>
+                    <div class="card__params">
+                      <div class="card__param"><span>цвет:</span> RAL 4488RAL 4488RAL 4488</div>
+                      <div class="card__param"><span>покрытие:</span> Металлик</div>
+                      <div class="card__param"><span>толщина: </span> 0,8 мм</div>
+                    </div>
                     <div class="card__price"><span>380 руб.</span>/м<sup>2</sup></div>
                     <div class="card__priceOld">788 руб./м<sup>2</sup></div>
                     <div class="card__button">
@@ -999,29 +1057,35 @@
         <div class="popup__container" role="dialog" aria-modal="true">
           <!--button.popup__close(data-micromodal-close): +the_svg('close')-->
           <div class="popup__form">
-            <div class="form">
-              <div class="form__title">ВЫЗВАТЬ ЗАМЕРЩИКА</div>
-              <div class="form__content">
-                <div class="form__input">
-                  <div class="input">
-                    <input placeholder="Ваше имя">
-                  </div>
-                </div>
-                <div class="form__input">
-                  <div class="input">
-                    <input placeholder="Телефон" type="tel">
-                  </div>
-                </div>
-                <div class="form__confirm">
-                  <label class="checkbox">
-                    <input type="checkbox"><span>Я согласен с обработкой <a href="#">персональных данных</a></span>
+            <form>
+              <div class="form">
+                <div class="form__title">Обратный звонок</div>
+                <div class="form__text">Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке дальнейших направлений развития. Задача организации.</div>
+                <div class="form__content">
+                  <label class="input">
+                    <div class="input__label">Имя</div>
+                    <label class="input__input input__input--rightTop">
+                      <input>
+                    </label>
                   </label>
+                  <label class="input">
+                    <div class="input__label">Ваш телефон</div>
+                    <div class="input__input input__input--rightTop">
+                      <input type="tel">
+                    </div>
+                  </label>
+                  <div class="file">
+                    <input type="file">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#file-usage"></use>
+                    </svg><span class="file__name">Прикрепите файл</span>
+                  </div>
                 </div>
                 <div class="form__button">
-                  <button class="btn btn--black">ОТПРАВИТЬ</button>
+                  <button class="btn btn--black btn--rightTop">Получить точный расчет кровли</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
           <!--.popup__iframe-->
           <!--iframe(allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)-->

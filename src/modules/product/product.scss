@@ -7,10 +7,17 @@
   }
 
   &__container {
+    max-width: 1080px;
+    margin: 0 auto;
+    @include mobile() {
+      padding: 0 20px;
+    }
+  }
+
+  &__content {
     position: relative;
     border: 1px solid $gray;
     background: $white;
-    margin-right: 310px;
     @include mobile() {
       margin: 0;
     }
@@ -145,6 +152,48 @@
     }
   }
 
+  &__buttons {
+    display: flex;
+    align-items: center;
+    margin: 20px -5px 0;
+    @include mobile() {
+      flex-direction: column;
+      margin: 20px 29px 0;
+    }
+  }
+
+  &__button {
+    flex: 1;
+    margin: 0 5px;
+    @include mobile() {
+      width: 100%;
+      margin: 5px 0 0 0;
+    }
+
+    a, button {
+      border: 1px solid $gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      @include ls();
+      text-decoration: none;
+      height: 50px;
+      @include anim();
+      @include mobile() {
+        height: 40px;
+      }
+
+      &:hover {
+        border-color: $green;
+      }
+
+      &:active {
+        border-color: $green-dark;
+      }
+    }
+  }
+
   &__main {
     flex: 1;
     @include mobile() {
@@ -158,64 +207,48 @@
     font-weight: normal;
     @include ls();
     @include demi();
-    margin-bottom: 30px;
+    margin-bottom: 31px;
     hyphens: none;
     @include mobile() {
       font-size: 24px;
       line-height: (30/24);
-      margin-bottom: 7px;
+      margin-bottom: 22px;
     }
   }
 
-  &__buy {
-    display: none;
+  &__coat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
     @include mobile() {
-      display: block;
-      margin-bottom: 31px;
+      flex-direction: column;
+      margin-bottom: 27px;
     }
   }
 
-  &__price {
-    font-size: 20px;
-    line-height: (36/20);
-    @include demi();
-    color: $green-dark;
-
-    span {
-      font-size: 14px;
-    }
-  }
-
-  &__priceOld {
-    font-size: 12px;
-    line-height: 1;
-    color: $red;
-    text-decoration: line-through;
-    margin-top: -2px;
-  }
-
-  &__cheap {
-    margin-top: 20px;
-    font-size: 15px;
-    line-height: (18/15);
+  &__coatTitle {
+    @include book();
     @include ls();
-    border-bottom: 1px dotted $green-dark;
-    @include anim();
+    margin-right: 10px;
     @include mobile() {
-      font-size: 14px;
+      width: 100%;
+      font-size: 16px;
+      margin: 0 0 9px;
     }
+  }
 
-    &:hover {
-      color: $green-dark;
+  &__coatSelect {
+    flex: 1;
+    @include mobile() {
+      width: 100%;
     }
   }
 
   &__info {
-    margin-bottom: 38px;
     @include mobile() {
-      margin: 0 -28px;
-      padding: 28px 29px 30px;
-      border-top: 1px solid $gray;
+      //margin: 0 -28px;
+      //padding: 22px 29px 30px;
+      //border-top: 1px solid $gray;
     }
 
     &--active {
@@ -232,17 +265,6 @@
           display: none;
         }
       }
-    }
-  }
-
-  &__infoTitle {
-    line-height: (18/18);
-    @include ls();
-    color: $green-dark;
-    margin-bottom: 10px;
-    @include book();
-    @include mobile() {
-      margin-bottom: 19px;
     }
   }
 
@@ -302,7 +324,7 @@
     @include mobile() {
       font-size: 14px;
       line-height: (18/14);
-      margin-top: 17px;
+      margin-top: -6px;
     }
 
     .active {
@@ -310,142 +332,157 @@
     }
   }
 
-  &__moreButton {
-    margin-right: 10px;
+  &__filters {
+    margin-top: 34px;
+    display: flex;
+    @include mobile() {
+      flex-direction: column;
+      margin-top: 27px;
+    }
+  }
 
-    svg {
-      transform: rotate(-90deg);
-      color: $green-dark;
+  &__filter {
+    min-width: 170px;
+    @include mobile() {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__filterLabel {
+    @include demi();
+    @include ls();
+    font-size: 15px;
+    margin-bottom: 2px;
+    @include mobile() {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__filterSelect {
+    flex: 1;
+    width: 100%;
+  }
+
+  &__headers {
+    display: flex;
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &__header {
+    position: relative;
+    margin-top: -1px;
+    margin-right: -1px;
+    border: 1px solid $gray;
+    flex: 1;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    @include ls();
+    @include anim();
+    @include mobile() {
+      font-size: 14px;
+      min-height: 50px;
+      height: auto;
+      flex: auto;
+      margin-left: -1px;
+    }
+
+    &:first-child {
+      margin-left: -1px;
+    }
+
+    &:hover {
+      border-color: $green;
+    }
+
+    &--active {
+      border-color: $green-dark;
+      z-index: 1;
+    }
+  }
+
+  &__bodies {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include anim();
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    visibility: hidden;
+
+    &--active {
+      opacity: 1;
+      z-index: 1;
+      visibility: visible;
+      position: static;
+      pointer-events: all;
+
     }
   }
 
   &__block {
     position: relative;
     border-bottom: 1px solid $gray;
-    padding: 36px 0 35px;
+    padding: 36px 110px 35px;
     @include anim();
     will-change: padding;
     @include mobile() {
-      padding: 25px 0 23px;
-    }
-
-    &--main {
-      #{$this}__blockTitle {
-        font-family: "Futura New", sans-serif;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: (36/24);
-        @include ls();
-        @include mobile() {
-          font-size: 18px;
-          line-height: (26/18);
-          margin-right: 20px;
-        }
-      }
-
-      #{$this}__blockContent {
-        margin-left: 0;
-      }
+      padding: 25px 15px 23px 58px;
     }
 
     &--active {
-      padding: 56px 0 60px;
-      @include mobile() {
-        padding: 25px 0 23px;
+      #{$this}__table {
+        display: flex;
       }
 
-      &#{$this}__block--main {
-        padding: 49px 0 24px;
-        @include mobile() {
-          padding: 25px 0 23px;
+      #{$this}__toggle {
+        .inactive {
+          display: none;
         }
-      }
 
-      #{$this}__blockCollapse {
-        top: 49px;
-        @include mobile() {
-          top: 19px;
+        .active {
+          display: inline;
         }
 
         svg {
           transform: rotate(180deg);
         }
       }
-
-      #{$this}__blockContent {
-        max-height: none;
-      }
-    }
-
-  }
-
-  &__blockCollapse {
-    position: absolute;
-    right: 49px;
-    top: 29px;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include anim();
-    @include mobile() {
-      right: 18px;
-      top: 18px;
-    }
-
-    svg {
-      width: 12px;
-      height: 12px;
-      color: $gray-dark;
-      @include anim();
-      @include mobile() {
-        width: 10px;
-        height: 10px;
-      }
     }
   }
 
   &__blockTitle {
+    position: relative;
     display: flex;
     align-items: flex-start;
     font-size: 18px;
     line-height: (19/18);
     @include demi();
-    padding: 0 59px;
     @include mobile() {
-      padding: 0 29px;
       font-size: 16px;
       line-height: (22/16);
       margin-right: 20px;
     }
   }
 
-  &__blockContent {
-    overflow: hidden;
-    max-height: 0;
-    @include anim(.25s);
-    margin-left: 50px;
-    padding: 0 59px;
-    @include mobile() {
-      padding: 0 29px;
-      margin-left: 0;
-    }
-
-    &--wide {
-      padding-left: 0;
-      margin-bottom: -36px;
-    }
-
-    > *:first-child {
-      margin-top: 27px;
-      @include mobile() {
-        margin-top: 24px;
-      }
-    }
-  }
-
   &__blockCounter {
+    position: absolute;
+    right: 100%;
+    top: 0;
     color: $green-dark;
     width: 50px;
     flex-shrink: 0;
@@ -454,10 +491,19 @@
     }
   }
 
-  &__checkbox {
-    margin-bottom: 12px;
+  &__options {
+    display: flex;
+    margin-top: 26px;
     @include mobile() {
-      margin-bottom: 16px;
+      display: block;
+      margin-top: 14px;
+    }
+  }
+
+  &__checkbox {
+    margin-right: 30px;
+    @include mobile() {
+      margin: 12px 0 0 0;
     }
   }
 
@@ -466,6 +512,7 @@
     align-items: center;
     font-size: 15px;
     line-height: (19/15);
+    margin-top: 21px;
     @include ls();
 
     svg {
@@ -473,18 +520,53 @@
       height: 16px;
       color: $red;
       margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    a {
+      text-decoration: none;
+      border-bottom: 1px dotted $green-dark;
+      color: $green-dark;
     }
   }
 
+  &__toggle {
+    margin-top: 22px;
+
+    .inactive, .active {
+      display: inline;
+    }
+
+    .active {
+      display: none;
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+      color: $green-dark;
+      margin-left: 5px;
+      display: inline-block;
+    }
+  }
+
+  &__toggleContent {
+    font-size: 15px;
+    line-height: (18/14);
+    @include ls();
+    border-bottom: 1px dotted $green-dark;
+  }
+
   &__table {
+    display: none;
     overflow: auto;
-    display: flex;
+    //display: flex;
     flex-direction: column;
     margin: 0 -59px;
     padding: 17px 59px 0;
     @include mobile() {
-      margin: 0 -29px;
-      padding: 15px 29px 0;
+      margin: 0 -15px 0 -58px;
+      padding: 15px 15px 0 58px;
     }
   }
 
@@ -515,8 +597,13 @@
     z-index: 1;
     @include mobile() {
       flex-direction: column;
-      padding: 30px 42px 29px 29px;
+      padding: 30px 29px 29px 29px;
       gap: 10px
     }
+  }
+
+  &__characteristics {
+    max-width: 550px;
+    margin-bottom: 1em;
   }
 }

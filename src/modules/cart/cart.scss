@@ -12,27 +12,12 @@
     border: 1px solid $gray;
   }
 
-  &__head {
-    padding: 31px 59px 33px 57px;
-    display: flex;
-    align-items: center;
-    @include mobile() {
-      padding: 24px 26px 25px 26px;
-    }
-  }
-
   &__title {
+    padding: 31px 59px 33px 57px;
     font-size: 46px;
     @include mobile() {
       font-size: 32px;
-    }
-  }
-
-  &__sort {
-    margin-left: auto;
-    width: 260px;
-    @include mobile() {
-      display: none;
+      padding: 24px 26px 25px 26px;
     }
   }
 
@@ -334,6 +319,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
     @include mobile() {
       align-items: flex-start;
     }

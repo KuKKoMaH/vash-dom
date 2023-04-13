@@ -1,4 +1,9 @@
+import 'jquery';
+import 'selectize';
+import './js/scriptLoader';
+import './js/breakpoints';
 import './js/init';
+import './js/initGallery';
 import './style';
 import './sprites';
 
@@ -49,3 +54,4 @@ import './modules/cart/cart.js';
 import './modules/checkout/checkout.js';
 import './modules/checkoutStep/checkoutStep.js';
 import './modules/cartPopup/cartPopup.js';
+

@@ -35,54 +35,55 @@ const $wrapper = $('.services__slides');
 const $heads = $('.services__head');
 const $slides = $('.services__slide');
 const $pointer = $('.services__pointer');
+if ($slider.length) {
+  const activeHeadClass = 'services__head--active';
+  const activeSlideClass = 'services__slide--active';
 
-const activeHeadClass = 'services__head--active';
-const activeSlideClass = 'services__slide--active';
+  let slidesHeight = null;
+  let slidesHeightDeprecated = false;
+  const getSlidesHeight = () => {
+    if (!slidesHeight || slidesHeightDeprecated) {
+      slidesHeight = $slides.map(( i, el ) => el.clientHeight);
+      slidesHeightDeprecated = false;
+    }
+    return slidesHeight;
+  };
 
-let slidesHeight = null;
-let slidesHeightDeprecated = false;
-const getSlidesHeight = () => {
-  if (!slidesHeight || slidesHeightDeprecated) {
-    slidesHeight = $slides.map(( i, el ) => el.clientHeight);
-    slidesHeightDeprecated = false;
-  }
-  return slidesHeight;
-};
+  const updateHeight = ( el ) => {
+    $slider.height(el.clientHeight);
+  };
 
-const updateHeight = ( el ) => {
-  $slider.height(el.clientHeight);
-};
+  $heads.on('click', ( e ) => {
+    const $el = $(e.delegateTarget);
+    const index = $el.index();
+    const slidesHeight = getSlidesHeight();
+    let offset = 0;
+    for (let i = 0; i < index; i++) {
+      offset += slidesHeight[i];
+    }
+    updateHeight($slides[index]);
 
-$heads.on('click', ( e ) => {
-  const $el = $(e.delegateTarget);
-  const index = $el.index();
-  const slidesHeight = getSlidesHeight();
-  let offset = 0;
-  for (let i = 0; i < index; i++) {
-    offset += slidesHeight[i];
-  }
-  updateHeight($slides[index]);
+    $slides
+      .removeClass(activeSlideClass)
+      .eq(index)
+      .addClass(activeSlideClass);
+    $wrapper.css('transform', `translateY(-${offset}px)`);
 
-  $slides
-    .removeClass(activeSlideClass)
-    .eq(index)
-    .addClass(activeSlideClass);
-  $wrapper.css('transform', `translateY(-${offset}px)`);
-
-  $heads
-    .removeClass(activeHeadClass)
-    .eq(index)
-    .addClass(activeHeadClass);
-  $pointer.css('transform', `translateY(${$el[0].offsetTop}px)`);
-});
-
-window.addEventListener("load", () => {
-  updateHeight($slides[0]);
-  $('.services').addClass('services--init');
-});
-window.addEventListener("resize", () => {
-  slidesHeightDeprecated = true;
-  requestAnimationFrame(() => {
-    updateHeight($('.' + activeSlideClass)[0]);
+    $heads
+      .removeClass(activeHeadClass)
+      .eq(index)
+      .addClass(activeHeadClass);
+    $pointer.css('transform', `translateY(${$el[0].offsetTop}px)`);
   });
-});
+
+  window.addEventListener("load", () => {
+    updateHeight($slides[0]);
+    $('.services').addClass('services--init');
+  });
+  window.addEventListener("resize", () => {
+    slidesHeightDeprecated = true;
+    requestAnimationFrame(() => {
+      updateHeight($('.' + activeSlideClass)[0]);
+    });
+  });
+}

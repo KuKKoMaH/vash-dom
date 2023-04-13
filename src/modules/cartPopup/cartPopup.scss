@@ -52,6 +52,10 @@
     }
   }
 
+  &__card {
+    flex: 1;
+  }
+
   &__badge {
     position: absolute;
     left: 0;

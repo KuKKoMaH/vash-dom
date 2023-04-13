@@ -1,6 +1,22 @@
 .filter {
   $this: &;
 
+
+  border-top: 1px solid $gray;
+  margin: 21px 0;
+  @include mobile() {
+    margin: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+
+    #{$this}__item:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
   @include mobile() {
     position: fixed;
     top: 0;
@@ -15,8 +31,7 @@
     pointer-events: none;
     visibility: hidden;
 
-    @include anim(.2s);
-
+    transition: opacity .2s ease-in;
 
     &--active {
       z-index: 10;
@@ -61,6 +76,9 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+    @include mobile() {
+      padding: 0 24px;
+    }
   }
 
   &__close {
@@ -131,8 +149,7 @@
   &__body {
     margin-top: 16px;
     margin-bottom: 4px;
-    overflow: hidden;
-
+    //overflow: hidden;
   }
 
   &__priceSlider {
@@ -228,7 +245,7 @@
   }
 
   &__color {
-    display: block;
+    display: inline-block;
     width: 20px;
     height: 15px;
     position: relative;

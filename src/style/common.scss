@@ -81,9 +81,10 @@ img[data-srcset] {
 }
 
 .content {
-  h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 1em;
   }
+
   > *:first-child {
     margin-top: 0;
   }
@@ -98,4 +99,17 @@ img[data-srcset] {
   color: $green;
   width: 75px;
   height: 14px;
+}
+
+.color {
+  display: block;
+  width: 20px;
+  height: 15px;
+  position: relative;
+  margin-left: auto;
+  z-index: 1;
+  background: currentColor;
+  @include skew('bottom', 'left', 5deg) {
+    background: currentColor;
+  }
 }

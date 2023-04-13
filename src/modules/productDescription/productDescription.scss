@@ -1,4 +1,8 @@
 .productDescription {
   $this: &;
   @include ls();
+  padding: 30px 60px;
+  @include mobile() {
+    padding: 17px 25px;
+  }
 }
