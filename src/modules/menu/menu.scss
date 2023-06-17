@@ -85,6 +85,7 @@
       column-count: 4;
       column-fill: balance;
       column-gap: 0;
+      margin: 0 -5px;
 
       @include mobile() {
         display: flex;
@@ -94,7 +95,7 @@
       & > li {
         page-break-inside: avoid;
         break-inside: avoid;
-        padding: 25px 0px;
+        padding: 25px 5px;
         @include mobile() {
           display: none;
           padding: 24px 23px;

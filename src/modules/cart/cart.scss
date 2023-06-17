@@ -228,11 +228,11 @@
 
   &__price {
     @include demi();
-    font-size: 18px;
+    font-size: 13px;
     @include ls();
 
     span {
-      font-size: 13px;
+      font-size: 18px;
     }
 
     &--total {
@@ -240,15 +240,15 @@
     }
 
     &--final {
-      font-size: 30px;
       line-height: 1;
+      font-size: 18px;
       color: $green-dark;
       @include mobile() {
         margin-top: 2px;
       }
 
       span {
-        font-size: 18px;
+        font-size: 30px;
       }
     }
   }

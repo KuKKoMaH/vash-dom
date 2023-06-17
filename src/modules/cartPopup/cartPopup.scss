@@ -89,6 +89,11 @@
     }
   }
 
+  &__color {
+    font-size: 12px;
+    color: $gray-dark;
+  }
+
   &__price {
     @include demi();
     font-size: 18px;

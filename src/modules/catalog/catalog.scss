@@ -204,6 +204,10 @@
     @include mobile() {
       display: none;
     }
+
+    &--active {
+      color: $green-dark;
+    }
   }
 
   &__head {
