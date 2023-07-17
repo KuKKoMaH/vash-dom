@@ -22,9 +22,33 @@
       @include anim();
     }
 
+    input {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      @include book();
+      line-height: (22/16);
+      height: 50px;
+      border: 1px solid $gray-light;
+      border-right-width: 0;
+      padding: 0 25px;
+      @include anim();
+    }
+
     &--rightTop {
       @include skewTransform('right', 'top', 13deg) {
 
+      }
+    }
+
+    &--straight {
+      margin-right: 0;
+      input {
+        border-width: 1px;
+      }
+
+      &:after {
+        display: none;
       }
     }
 
@@ -38,19 +62,6 @@
       input, &:after {
         border-color: $green-dark;
       }
-    }
-
-    input {
-      display: block;
-      width: 100%;
-      font-size: 16px;
-      @include book();
-      line-height: (22/16);
-      height: 50px;
-      border: 1px solid $gray-light;
-      border-right: 0;
-      padding: 0 25px;
-      @include anim();
     }
 
     &.wpcf7-not-valid {

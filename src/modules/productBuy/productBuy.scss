@@ -1,8 +1,19 @@
 .productBuy {
+  $this: &;
+
   display: flex;
   margin-bottom: 30px;
-  justify-content: space-between;
+  //justify-content: space-between;
+  align-items: flex-start;
+
+  &--length {
   align-items: flex-end;
+    #{$this} {
+      &__left {
+        flex: 1;
+      }
+    }
+  }
 
   @include mobile() {
     flex-direction: column;
@@ -18,7 +29,11 @@
   }
 
   &__right {
+    margin-left: auto;
+    padding-left: 20px;
+    min-width: 200px;
     @include mobile() {
+      padding-left: 0;
       margin-top: 29px;
     }
   }
@@ -45,6 +60,9 @@
   }
 
   &__counter {
+    @include mobile() {
+      flex: 1;
+    }
   }
 
   &__cheap {
@@ -62,10 +80,74 @@
     @include demi();
     font-size: 24px;
     line-height: 1;
-    margin-bottom: 11px;
+    margin-bottom: 16px;
     color: $green-dark;
     @include mobile() {
       font-size: 20px;
+    }
+  }
+
+  &__s {
+    font-size: 15px;
+    margin-bottom: 8px;
+
+    span {
+      background: $gray-light;
+      border: 1px solid $gray;
+      padding: 1px 3px;
+    }
+  }
+
+  &__message {
+    font-size: 15px;
+    line-height: 19px;
+    color: #959494;
+    text-align: center;
+    margin-top: 27px;
+  }
+
+  &__label {
+    font-size: 15px;
+    margin-bottom: 8px;
+    @include mobile() {
+      font-size: 14px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__length {
+    margin-right: 20px;
+    @include mobile() {
+      flex: 1;
+      margin-right: 5px;
+      & + #{$this}__counter {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__button {
+    @include mobile() {
+      align-self: stretch;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    @include book();
+    line-height: (22/16);
+    height: 50px;
+    border: 1px solid $gray-light;
+    padding: 0 12px;
+    @include anim();
+    @include mobile {
+      height: 40px;
     }
   }
 }

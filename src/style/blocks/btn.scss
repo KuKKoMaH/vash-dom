@@ -140,6 +140,10 @@
     }
   }
 
+  &--block {
+    width: 100%;
+  }
+
   @include mobile() {
     &--smLeftBottom {
       &:before, &:after {

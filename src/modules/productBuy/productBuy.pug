@@ -7,8 +7,30 @@
         button.counter__button.counter__button--minus &ndash;
         input.counter__value(value='0')
         button.counter__button.counter__button--plus +
+    .productBuy__message Окончательный расчет будет#[br]производиться нашим менеджером.
 
   .productBuy__right
     button.productBuy__cheap Нашли дешевле?
     .productBuy__total 600 рублей
-    .productBuy__button: button.btn.btn--rightTop.btn--smLeftBottom.btn--smMobile Добавить в корзину
+    .productBuy__button: button.btn.btn--rightTop.btn--smLeftBottom.btn--smMobile.btn--block В корзину
+
+.productBuy.productBuy--length
+  .productBuy__left
+    .productBuy__row
+      .productBuy__length
+        .productBuy__label Выберите длину
+        input.productBuy__input
+      .productBuy__counter
+        .productBuy__label Количество
+        .counter.counter--lg
+          button.counter__button.counter__button--minus &ndash;
+          input.counter__value(value='0')
+          button.counter__button.counter__button--plus +
+    .productBuy__message Окончательный расчет будет#[br]производиться нашим менеджером.
+
+
+  .productBuy__right
+    button.productBuy__cheap Нашли дешевле?
+    .productBuy__s итого за #[span 0.569 м#[sup 2]]
+    .productBuy__total 600 рублей
+    .productBuy__button: button.btn.btn--rightTop.btn--smLeftBottom.btn--smMobile.btn--block В корзину
