@@ -57,6 +57,13 @@
     //width: 100%;
     background: $white;
     border: 1px solid $gray;
+    max-height: 500px;
+    max-height: min(100vh - 200px, 500px);
+    overflow: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    touch-action: pan-y;
   }
 
   &__row {

@@ -46,9 +46,12 @@
     background-position: 50% 50%;
     background-size: cover;
     height: 100%;
-    padding: 73px 86px;
+    padding: 25px 86px;
     color: $white;
     min-height: 465px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include mobile() {
       min-height: 420px;
       padding: 33px 20px;
@@ -111,11 +114,11 @@
   }
 
   &__button {
-    position: absolute;
 
     &--desktop {
-      bottom: 50px;
-      right: 50px;
+      margin-top: 50px;
+      //bottom: 50px;
+      //right: 50px;
       @include mobile() {
         display: none;
       }
@@ -124,8 +127,9 @@
     &--mobile {
       display: none;
       @include mobile() {
+        position: absolute;
         display: block;
-        right: 0;
+        left: 0;
         top: 100%;
       }
     }
@@ -151,16 +155,18 @@
       margin-right: 20px;
       transform: rotate(180deg);
       @include mobile() {
-        right: auto;
-        left: 0;
+        right: 70px;
+        margin-right: 0;
       }
+
     }
 
     &--next {
       left: 100%;
       margin-left: 20px;
       @include mobile() {
-        left: 50px;
+        left: auto;
+        right: 20px;
         margin-left: 0;
       }
     }

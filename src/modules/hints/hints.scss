@@ -134,10 +134,12 @@
     @include mobile() {
       bottom: auto;
       margin-bottom: 0;
-      top: 77px;
-      margin-right: -18px;
+      top: 100%;
+      margin-right: 82px;
       height: 175px;
       width: auto;
+      margin-top: 140px;
+      right: 50%;
     }
   }
 
