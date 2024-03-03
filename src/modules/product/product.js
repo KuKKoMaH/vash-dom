@@ -1,29 +1,33 @@
 import initSlider from "src/js/initSlider";
-import initTabs   from "src/js/initTabs";
+import initTabs from "src/js/initTabs";
 
-const $thumbs = $('.product__thumb');
 const thumbActiveClass = 'product__thumb--active';
 
-const slider = initSlider('.product__slider', ( $el ) => ({
-  wrapperClass:  'product__slides',
-  slideClass:    'product__slide',
-  slidesPerView: 1,
-  spaceBetween:  0,
-  on:            {
-    slideChange( swiper ) {
-      const { activeIndex } = swiper;
-      $thumbs
-        .removeClass(thumbActiveClass)
-        .eq(activeIndex)
-        .addClass(thumbActiveClass);
+const slider = initSlider('.product__slider', ($el) => {
+  const $gallery = $el.parents('.product__gallery');
+  const $thumbs = $gallery.find('.product__thumb');
+  return ({
+    wrapperClass:  'product__slides',
+    slideClass:    'product__slide',
+    slidesPerView: 1,
+    spaceBetween:  0,
+    on:            {
+      slideChange(swiper) {
+        const { activeIndex } = swiper;
+        $thumbs
+          .removeClass(thumbActiveClass)
+          .eq(activeIndex)
+          .addClass(thumbActiveClass);
+      },
     },
-  },
-}));
+  })
+});
 
-$thumbs.on('click', ( e ) => {
+$('.product__thumb').on('click', (e) => {
   const $el = $(e.delegateTarget);
+  const $gallery = $el.parents('.product__gallery');
   const index = $el.index();
-  const sliderInstance = slider.getInstance();
+  const sliderInstance = $gallery.find('.product__slider')[0].swiper;
   sliderInstance.slideTo(index);
 });
 
@@ -53,7 +57,7 @@ $('.product__infoButton').on('click', () => {
   collapsed = !collapsed;
 });
 
-$('.product__toggle').on('click', ( e ) => {
+$('.product__toggle').on('click', (e) => {
   const $el = $(e.delegateTarget);
   const $block = $el.parents('.product__block');
   $block.toggleClass('product__block--active');

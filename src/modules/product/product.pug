@@ -7,15 +7,17 @@
           .product__badges
             .product__badge.product__badge--danger хит продаж
             .product__badge -20%
-          .product__slider
-            .product__slides
+          .product__gallery
+            .product__slider
+              .product__slides.gallery
+                each i in [1,2,3,4,5]
+                  .product__slide
+                    a.photos__item.gallery__item(href=require('src/img/catalog/' + i + '.jpg') data-pswp-width=1500 data-pswp-height=1500 target="_blank" data-cropped="true" data-thumbnail=require('src/img/catalog/' + i + '.jpg'))
+                      img(src=require('src/img/catalog/' + i + '.jpg'))
+            .product__thumbs
               each i in [1,2,3,4,5]
-                .product__slide
+                button.product__thumb(class=i === 1 && 'product__thumb--active')
                   img(src=require('src/img/catalog/' + i + '.jpg'))
-          .product__thumbs
-            each i in [1,2,3,4,5]
-              button.product__thumb(class=i === 1 && 'product__thumb--active')
-                img(src=require('src/img/catalog/' + i + '.jpg'))
           .product__buttons
             .product__button: a(href='#') Онлайн калькулятор
             .product__button: a(href='#') Калькулятор доставки

@@ -22,7 +22,7 @@ export default ( selector, props, initOptions ) => {
         if (slider) return;
         const finalProps = typeof props === 'function' ? props($el) : props;
         if (!finalProps) return;
-        lastSlider = slider = new Swiper(el, typeof props === 'function' ? props($el) : props);
+        lastSlider = slider = new Swiper(el, finalProps);
         $el.data('swiper', slider);
         if (initOptions.afterInit) initOptions.afterInit(slider, $el);
       };

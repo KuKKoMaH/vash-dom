@@ -113,3 +113,44 @@ img[data-srcset] {
     background: currentColor;
   }
 }
+
+
+.pswp__item {
+  height: calc(100% - 92px);
+}
+//.pswp__zoom-wrap {
+//  padding-bottom: 100px;
+//}
+
+.pswp__bullets-indicator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: auto;
+  max-width: 100%;
+}
+
+.pswp__bullet {
+  flex-shrink: 0;
+  width: 100px;
+  height: 72px;
+  margin: 0 5px;
+  border: 1px solid transparent;
+  @include anim();
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.pswp__bullet--active {
+  border: 1px solid $green;
+}
