@@ -31,12 +31,9 @@
 
   &__slides {
     display: flex;
-    align-items: stretch;
+    align-items: flex-start;
     height: 100%;
     transform: translateZ(0);
-    @include mobile() {
-      padding-bottom: 50px;
-    }
   }
 
   &__slide {
@@ -45,28 +42,51 @@
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;
-    height: 100%;
-    padding: 25px 86px;
+    //height: 100%;
     color: $white;
-    min-height: 465px;
-    display: flex;
+    //min-height: 465px;
+    display: grid;
     flex-direction: column;
     justify-content: center;
+    @include book();
     @include mobile() {
-      min-height: 420px;
-      padding: 33px 20px;
-      text-align: center;
+      padding-bottom: 50px;
     }
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: linear-gradient(315deg, rgb(62, 145, 0) 0%, rgba(62, 145, 0, 0) 30%);
-      pointer-events: none;
+    //&:after {
+    //  content: '';
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  right: 0;
+    //  bottom: 0;
+    //  background-image: linear-gradient(315deg, rgb(62, 145, 0) 0%, rgba(62, 145, 0, 0) 30%);
+    //  pointer-events: none;
+    //}
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    grid-area: q;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    grid-area: q;
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px 86px;
+
+    @include mobile() {
+      padding: 33px 20px;
+      text-align: center;
     }
   }
 
@@ -116,7 +136,8 @@
   &__button {
 
     &--desktop {
-      margin-top: 50px;
+      margin-top: auto;
+      padding-top: 50px;
       //bottom: 50px;
       //right: 50px;
       @include mobile() {
@@ -304,7 +325,7 @@
     flex-direction: column;
     padding-top: 7px;
     @include book();
-    font-size: 15px;
+    //font-size: 15px;
     background: $white;
     border: 1px solid $gray;
     border-right: 0;
@@ -314,7 +335,7 @@
       height: 90px;
       width: 50%;
       flex: auto;
-      font-size: 12px;
+      //font-size: 12px;
     }
 
     svg {

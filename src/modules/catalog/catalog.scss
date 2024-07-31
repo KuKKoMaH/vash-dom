@@ -176,6 +176,16 @@
     }
     @include demi();
     @include ls();
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: $green-dark;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     svg {
       width: 9px;

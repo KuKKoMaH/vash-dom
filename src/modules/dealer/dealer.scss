@@ -114,12 +114,12 @@
   }
 
   &__text {
-    color: $gray-dark;
-    font-size: 15px;
+    //color: $gray-dark;
+    //font-size: 15px;
     line-height: 1.4;
     @include ls();
     @include mobile() {
-      font-size: 14px;
+      //font-size: 14px;
     }
   }
 

@@ -1,8 +1,8 @@
 .header {
   $this: &;
 
-  background: $black;
-  color: $white;
+  //background: $black;
+  //color: $white;
   position: relative;
   z-index: 10;
 
@@ -67,7 +67,7 @@
       text-decoration: none;
       margin: 0 20px;
       font-size: 16px;
-      border-bottom: 1px dotted $green;
+      border-bottom: 1px dotted $green-dark;
       @include anim();
       @include mobile() {
         font-size: 12px;
@@ -98,7 +98,7 @@
 
   &__locationIcon {
     position: absolute;
-    color: $green;
+    color: $green-dark;
     width: 29px;
     height: 29px;
     top: 4px;
@@ -107,7 +107,7 @@
 
   &__locationLabel {
     font-size: 13px;
-    opacity: .25;
+    opacity: .75;
   }
 
   &__locationValue {
@@ -130,7 +130,7 @@
     left: -4px;
     width: 29px;
     height: 29px;
-    color: $green;
+    color: $green-dark;
   }
 
   &__contactValue {
@@ -188,7 +188,7 @@
     &--bottom {
       display: none;
       @include mobile() {
-        background: $black;
+        //background: $black;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -209,12 +209,12 @@
   &__cartIcon {
     width: 22px;
     height: 22px;
-    color: $green;
+    color: $green-dark;
   }
 
   &__cartLabel {
     font-size: 13px;
-    opacity: .25;
+    opacity: .75;
     @include mobile() {
       display: none;
     }
@@ -294,15 +294,18 @@
     position: relative;
     z-index: 1;
     background: $green-dark;
+    color: $white;
     @include mobile() {
       height: 48px;
       background: transparent;
+      color: $black;
     }
   }
 
   &__catalogButton {
     height: 100%;
     background: $green;
+    color: $white;
     display: flex;
     align-items: stretch;
 
@@ -310,6 +313,10 @@
       svg {
         color: $yellow;
       }
+    }
+
+    @include mobile() {
+      background: $green-dark;
     }
   }
 
@@ -354,9 +361,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    //color: $white;
     @include mobile() {
       font-size: 12px;
-      padding: 0 20px;
+      padding: 0 12px;
     }
   }
 
@@ -432,7 +441,9 @@
         }
 
         > a {
+          padding: 0 6px;
           text-decoration: none;
+          text-align: center;
           height: 100%;
           display: flex;
           align-items: center;
@@ -440,6 +451,7 @@
           border: 1px solid $green-border;
           border-right: 0;
           background: $green-dark;
+          color: $white;
           font-size: 15px;
           @include demi();
           text-transform: uppercase;
@@ -613,6 +625,7 @@
     width: 60px;
     border: 1px solid $green-border;
     background: $green-dark;
+    color: $white;
     margin-left: auto;
     @include mobile() {
       width: 48px;
@@ -668,7 +681,7 @@
       position: relative;
       width: 48px;
       height: 48px;
-      color: $white;
+      color: $black;
 
       svg {
         width: 14px;
@@ -686,9 +699,21 @@
     }
   }
 
+  &__catalogMobileLink {
+    display: none;
+    @include mobile() {
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+    }
+  }
+
   &__locationBottom {
     display: none;
     @include mobile() {
+      color: $white;
       background: $green-dark;
       display: flex;
       align-items: center;

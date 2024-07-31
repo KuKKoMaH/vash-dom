@@ -4,14 +4,16 @@
       .frontSlider__main
         .frontSlider__slider
           .frontSlider__slides
-            each i in [1,2]
-              .frontSlider__slide(style='background-image: url(' + require('src/modules/frontSlider/img/slide.jpg') + ')')
-                .frontSlider__title Гарантия#[br] лучшей цены!
-                +the_svg('wavyline').frontSlider__separator.wavyline
-                .frontSlider__subtitle Нашли такой же товар дешевле?
-                .frontSlider__cta Снизим цену и подарим#[br] подарок!
-                .frontSlider__button.frontSlider__button--desktop: a.btn.btn--rightTop(href='#') Подробнее
-                .frontSlider__button.frontSlider__button--mobile: a.btn.btn--rightTop(href='#') Подробнее
+            each i in [require('src/modules/frontSlider/img/slide.jpg'), require('src/modules/frontSlider/img/bg2.jpg')]
+              .frontSlider__slide
+                img.frontSlider__img(src=i)
+                .frontSlider__content
+                  .frontSlider__title Гарантия#[br] лучшей цены! Гарантия#[br] лучшей цены! Гарантия#[br] лучшей цены! Гарантия#[br] лучшей цены!
+                  +the_svg('wavyline').frontSlider__separator.wavyline
+                  .frontSlider__subtitle Нашли такой же товар дешевле?
+                  .frontSlider__cta Снизим цену и подарим#[br] подарок!
+                  .frontSlider__button.frontSlider__button--desktop: a.btn.btn--rightTop(href='#') Подробнее
+                  .frontSlider__button.frontSlider__button--mobile: a.btn.btn--rightTop(href='#') Подробнее
 
         button.frontSlider__nav.frontSlider__nav--prev: +the_svg('arrow-right')
         button.frontSlider__nav.frontSlider__nav--next: +the_svg('arrow-right')
@@ -38,19 +40,19 @@
     .frontSlider__categories
       a.frontSlider__category(href='#')
         +the_svg('category_01', 'frontSlider')
-        |Кровля
+        | Кровля
       a.frontSlider__category(href='#')
         +the_svg('category_02', 'frontSlider')
-        |Металлочерепица
+        | Металлочерепица
       a.frontSlider__category(href='#')
         +the_svg('category_03', 'frontSlider')
-        |Профнастил
+        | Профнастил
       a.frontSlider__category(href='#')
         +the_svg('category_04', 'frontSlider')
-        |Гибкая черепица
+        | Гибкая черепица
       a.frontSlider__category(href='#')
         +the_svg('category_05', 'frontSlider')
-        |Заборы
+        | Заборы
       a.frontSlider__category(href='#')
         +the_svg('category_06', 'frontSlider')
-        |Фасады
+        | Фасады

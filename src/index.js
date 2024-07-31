@@ -1,10 +1,10 @@
 import 'jquery';
 import 'selectize';
+import './style';
 import './js/scriptLoader';
 import './js/breakpoints';
 import './js/init';
 import './js/initGallery';
-import './style';
 import './sprites';
 
 import './modules/popup/popup.js';
