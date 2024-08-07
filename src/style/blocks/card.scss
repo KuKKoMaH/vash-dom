@@ -87,7 +87,7 @@
   }
 
   &__category {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1;
     color: $gray-dark;
     @include ls();
@@ -96,7 +96,6 @@
     //white-space: nowrap;
     //text-overflow: ellipsis;
     @include mobile() {
-      font-size: 10px;
       margin-bottom: 3px;
     }
   }
@@ -106,7 +105,7 @@
     line-height: 1.2;
     margin-bottom: 19px;
     @include mobile() {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.05;
     }
     //overflow: hidden;
@@ -126,7 +125,7 @@
     line-height: 1.2;
     @include ls();
     @include mobile(){
-      font-size: 10px;
+      //font-size: 10px;
     }
 
     span {

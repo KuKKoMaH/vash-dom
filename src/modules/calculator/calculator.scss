@@ -81,7 +81,7 @@
       padding: 0 15px 0 24px;
       font-size: 15px;
       line-height: 1.2;
-      color: $gray-dark;
+      //color: $gray-dark;
       border: 1px solid $gray;
       border-right: 0;
       position: relative;
@@ -94,7 +94,7 @@
       @include anim();
       @include mobile() {
         height: 50px;
-        font-size: 14px;
+        //font-size: 14px;
       }
     }
 
@@ -193,12 +193,12 @@
       align-items: center;
       justify-content: center;
       border: 1px solid $gray;
-      color: $gray-dark;
+      //color: $gray-dark;
       font-size: 15px;
       @include ls();
       @include anim();
       @include mobile() {
-        font-size: 14px;
+        //font-size: 14px;
       }
     }
 

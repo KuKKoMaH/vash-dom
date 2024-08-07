@@ -20,7 +20,7 @@ module.exports = {
 
   entry:   path.resolve(src, 'index.js'),
   output:  {
-    filename: 'app.js',
+    filename: 'js/app.js',
     path:     dist,
     // clean:    true,
   },
@@ -200,7 +200,9 @@ module.exports = {
   devServer: {
     host:        '0.0.0.0',
     port:        8081,
-    contentBase: dist, // для раздачи png спрайта
+    static: {
+      directory: dist, // для раздачи png спрайта
+    },
   },
 
   stats: "minimal",
