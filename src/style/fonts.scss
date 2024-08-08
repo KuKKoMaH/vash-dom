@@ -1,242 +1,267 @@
-@font-face {
-  font-family: 'Futura New Cond';
-  src: url('../fonts/subset-FuturaNewCondExtraBold-Reg.eot');
-  src: url('../fonts/subset-FuturaNewCondExtraBold-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewCondExtraBold-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewCondExtraBold-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewCondExtraBold-Reg.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
+// ============================================================================
+// Futura New Book
+// ============================================================================
 
 @font-face {
-  font-family: 'Futura New Cond Book';
-  src: url('../fonts/subset-FuturaNewCondBook-Obl.eot');
-  src: url('../fonts/subset-FuturaNewCondBook-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewCondBook-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewCondBook-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewCondBook-Obl.ttf') format('truetype');
+  font-family: 'Futura New Book';
+  src: url('../fonts/FuturaNewBook/subset-FuturaNewBook-Reg.eot');
+  src: url('../fonts/FuturaNewBook/subset-FuturaNewBook-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewBook/subset-FuturaNewBook-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNewBook/subset-FuturaNewBook-Reg.woff') format('woff'),
+  url('../fonts/FuturaNewBook/subset-FuturaNewBook-Reg.ttf') format('truetype');
   font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura New';
-  src: url('../fonts/subset-FuturaNewBold-Obl.eot');
-  src: url('../fonts/subset-FuturaNewBold-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewBold-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewBold-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewBold-Obl.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura New Cond';
-  src: url('../fonts/subset-FuturaNewCondMedium-Reg.eot');
-  src: url('../fonts/subset-FuturaNewCondMedium-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewCondMedium-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewCondMedium-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewCondMedium-Reg.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura New';
-  src: url('../fonts/subset-FuturaNewExtraBold-Reg.eot');
-  src: url('../fonts/subset-FuturaNewExtraBold-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewExtraBold-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewExtraBold-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewExtraBold-Reg.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura New Demi';
-  src: url('../fonts/subset-FuturaNewDemi-Reg.eot');
-  src: url('../fonts/subset-FuturaNewDemi-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewDemi-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewDemi-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewDemi-Reg.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura New';
-  src: url('../fonts/subset-FuturaNewExtraBold-Obl.eot');
-  src: url('../fonts/subset-FuturaNewExtraBold-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewExtraBold-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewExtraBold-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewExtraBold-Obl.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura New';
-  src: url('../fonts/subset-FuturaNewHeavy-Obl.eot');
-  src: url('../fonts/subset-FuturaNewHeavy-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewHeavy-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewHeavy-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewHeavy-Obl.ttf') format('truetype');
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura New';
-  src: url('../fonts/subset-FuturaNewHeavy-Reg.eot');
-  src: url('../fonts/subset-FuturaNewHeavy-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewHeavy-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewHeavy-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewHeavy-Reg.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura New';
-  src: url('../fonts/subset-FuturaNewLight-Obl.eot');
-  src: url('../fonts/subset-FuturaNewLight-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewLight-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewLight-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewLight-Obl.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura New';
-  src: url('../fonts/subset-FuturaNewLight-Reg.eot');
-  src: url('../fonts/subset-FuturaNewLight-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewLight-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewLight-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewLight-Reg.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura New Cond';
-  src: url('../fonts/subset-FuturaNewCondExtraBold-Obl.eot');
-  src: url('../fonts/subset-FuturaNewCondExtraBold-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewCondExtraBold-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewCondExtraBold-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewCondExtraBold-Obl.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura New Cond Book';
-  src: url('../fonts/subset-FuturaNewCondBook-Reg.eot');
-  src: url('../fonts/subset-FuturaNewCondBook-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewCondBook-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewCondBook-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewCondBook-Reg.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura New';
-  src: url('../fonts/subset-FuturaNewMedium-Obl.eot');
-  src: url('../fonts/subset-FuturaNewMedium-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewMedium-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewMedium-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewMedium-Obl.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura New Cond';
-  src: url('../fonts/subset-FuturaNewCondMedium-Obl.eot');
-  src: url('../fonts/subset-FuturaNewCondMedium-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewCondMedium-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewCondMedium-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewCondMedium-Obl.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura New Cond';
-  src: url('../fonts/subset-FuturaNewCondBold-Obl.eot');
-  src: url('../fonts/subset-FuturaNewCondBold-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewCondBold-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewCondBold-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewCondBold-Obl.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura New Demi';
-  src: url('../fonts/subset-FuturaNewDemi-Obl.eot');
-  src: url('../fonts/subset-FuturaNewDemi-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewDemi-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewDemi-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewDemi-Obl.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Futura New';
-  src: url('../fonts/subset-FuturaNewBold-Reg.eot');
-  src: url('../fonts/subset-FuturaNewBold-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewBold-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewBold-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewBold-Reg.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Futura New';
-  src: url('../fonts/subset-FuturaNewMedium-Reg.eot');
-  src: url('../fonts/subset-FuturaNewMedium-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewMedium-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewMedium-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewMedium-Reg.ttf') format('truetype');
-  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura New Book';
-  src: url('../fonts/subset-FuturaNewBook-Obl.eot');
-  src: url('../fonts/subset-FuturaNewBook-Obl.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewBook-Obl.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewBook-Obl.woff') format('woff'),
-  url('../fonts/subset-FuturaNewBook-Obl.ttf') format('truetype');
+  src: url('../fonts/FuturaNewBook/subset-FuturaNewBook-Obl.eot');
+  src: url('../fonts/FuturaNewBook/subset-FuturaNewBook-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewBook/subset-FuturaNewBook-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNewBook/subset-FuturaNewBook-Obl.woff') format('woff'),
+  url('../fonts/FuturaNewBook/subset-FuturaNewBook-Obl.ttf') format('truetype');
   font-weight: normal;
+  font-style: italic;
+}
+
+// ============================================================================
+// Futura New Cond
+// ============================================================================
+
+@font-face {
+  font-family: 'Futura New Cond';
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondMedium-Reg.eot');
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondMedium-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondMedium-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondMedium-Reg.woff') format('woff'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondMedium-Reg.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura New Cond';
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondMedium-Obl.eot');
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondMedium-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondMedium-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondMedium-Obl.woff') format('woff'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondMedium-Obl.ttf') format('truetype');
+  font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Futura New Cond';
-  src: url('../fonts/subset-FuturaNewCondBold-Reg.eot');
-  src: url('../fonts/subset-FuturaNewCondBold-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewCondBold-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewCondBold-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewCondBold-Reg.ttf') format('truetype');
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondBold-Reg.eot');
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondBold-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBold-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBold-Reg.woff') format('woff'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBold-Reg.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Futura New Book';
-  src: url('../fonts/subset-FuturaNewBook-Reg.eot');
-  src: url('../fonts/subset-FuturaNewBook-Reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/subset-FuturaNewBook-Reg.woff2') format('woff2'),
-  url('../fonts/subset-FuturaNewBook-Reg.woff') format('woff'),
-  url('../fonts/subset-FuturaNewBook-Reg.ttf') format('truetype');
+  font-family: 'Futura New Cond';
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondBold-Obl.eot');
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondBold-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBold-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBold-Obl.woff') format('woff'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBold-Obl.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura New Cond';
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondExtraBold-Reg.eot');
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondExtraBold-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondExtraBold-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondExtraBold-Reg.woff') format('woff'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondExtraBold-Reg.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura New Cond';
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondExtraBold-Obl.eot');
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondExtraBold-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondExtraBold-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondExtraBold-Obl.woff') format('woff'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondExtraBold-Obl.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura New Cond Book';
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondBook-Obl.eot');
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondBook-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBook-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBook-Obl.woff') format('woff'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBook-Obl.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura New Cond Book';
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondBook-Reg.eot');
+  src: url('../fonts/FuturaNewCond/subset-FuturaNewCondBook-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBook-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBook-Reg.woff') format('woff'),
+  url('../fonts/FuturaNewCond/subset-FuturaNewCondBook-Reg.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
+// ============================================================================
+// Futura New Demi
+// ============================================================================
+
+@font-face {
+  font-family: 'Futura New Demi';
+  src: url('../fonts/FuturaNewDemi/subset-FuturaNewDemi-Reg.eot');
+  src: url('../fonts/FuturaNewDemi/subset-FuturaNewDemi-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewDemi/subset-FuturaNewDemi-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNewDemi/subset-FuturaNewDemi-Reg.woff') format('woff'),
+  url('../fonts/FuturaNewDemi/subset-FuturaNewDemi-Reg.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura New Demi';
+  src: url('../fonts/FuturaNewDemi/subset-FuturaNewDemi-Obl.eot');
+  src: url('../fonts/FuturaNewDemi/subset-FuturaNewDemi-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNewDemi/subset-FuturaNewDemi-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNewDemi/subset-FuturaNewDemi-Obl.woff') format('woff'),
+  url('../fonts/FuturaNewDemi/subset-FuturaNewDemi-Obl.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+// ============================================================================
+// Futura New
+// ============================================================================
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('../fonts/FuturaNew/subset-FuturaNewLight-Reg.eot');
+  src: url('../fonts/FuturaNew/subset-FuturaNewLight-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNew/subset-FuturaNewLight-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNew/subset-FuturaNewLight-Reg.woff') format('woff'),
+  url('../fonts/FuturaNew/subset-FuturaNewLight-Reg.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('../fonts/FuturaNew/subset-FuturaNewLight-Obl.eot');
+  src: url('../fonts/FuturaNew/subset-FuturaNewLight-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNew/subset-FuturaNewLight-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNew/subset-FuturaNewLight-Obl.woff') format('woff'),
+  url('../fonts/FuturaNew/subset-FuturaNewLight-Obl.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('../fonts/FuturaNew/subset-FuturaNewMedium-Reg.eot');
+  src: url('../fonts/FuturaNew/subset-FuturaNewMedium-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNew/subset-FuturaNewMedium-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNew/subset-FuturaNewMedium-Reg.woff') format('woff'),
+  url('../fonts/FuturaNew/subset-FuturaNewMedium-Reg.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('../fonts/FuturaNew/subset-FuturaNewMedium-Obl.eot');
+  src: url('../fonts/FuturaNew/subset-FuturaNewMedium-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNew/subset-FuturaNewMedium-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNew/subset-FuturaNewMedium-Obl.woff') format('woff'),
+  url('../fonts/FuturaNew/subset-FuturaNewMedium-Obl.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('../fonts/FuturaNew/subset-FuturaNewBold-Reg.eot');
+  src: url('../fonts/FuturaNew/subset-FuturaNewBold-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNew/subset-FuturaNewBold-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNew/subset-FuturaNewBold-Reg.woff') format('woff'),
+  url('../fonts/FuturaNew/subset-FuturaNewBold-Reg.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('../fonts/FuturaNew/subset-FuturaNewBold-Obl.eot');
+  src: url('../fonts/FuturaNew/subset-FuturaNewBold-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNew/subset-FuturaNewBold-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNew/subset-FuturaNewBold-Obl.woff') format('woff'),
+  url('../fonts/FuturaNew/subset-FuturaNewBold-Obl.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('../fonts/FuturaNew/subset-FuturaNewExtraBold-Reg.eot');
+  src: url('../fonts/FuturaNew/subset-FuturaNewExtraBold-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNew/subset-FuturaNewExtraBold-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNew/subset-FuturaNewExtraBold-Reg.woff') format('woff'),
+  url('../fonts/FuturaNew/subset-FuturaNewExtraBold-Reg.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('../fonts/FuturaNew/subset-FuturaNewExtraBold-Obl.eot');
+  src: url('../fonts/FuturaNew/subset-FuturaNewExtraBold-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNew/subset-FuturaNewExtraBold-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNew/subset-FuturaNewExtraBold-Obl.woff') format('woff'),
+  url('../fonts/FuturaNew/subset-FuturaNewExtraBold-Obl.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('../fonts/FuturaNew/subset-FuturaNewHeavy-Obl.eot');
+  src: url('../fonts/FuturaNew/subset-FuturaNewHeavy-Obl.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNew/subset-FuturaNewHeavy-Obl.woff2') format('woff2'),
+  url('../fonts/FuturaNew/subset-FuturaNewHeavy-Obl.woff') format('woff'),
+  url('../fonts/FuturaNew/subset-FuturaNewHeavy-Obl.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura New';
+  src: url('../fonts/FuturaNew/subset-FuturaNewHeavy-Reg.eot');
+  src: url('../fonts/FuturaNew/subset-FuturaNewHeavy-Reg.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/FuturaNew/subset-FuturaNewHeavy-Reg.woff2') format('woff2'),
+  url('../fonts/FuturaNew/subset-FuturaNewHeavy-Reg.woff') format('woff'),
+  url('../fonts/FuturaNew/subset-FuturaNewHeavy-Reg.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

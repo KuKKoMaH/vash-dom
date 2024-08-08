@@ -49,6 +49,7 @@
   &__item {
     padding: 0 10px;
     flex: 1;
+    min-width: 0;
     @include mobile() {
       padding: 0 0 47px;
       &:last-child {

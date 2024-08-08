@@ -174,7 +174,8 @@
 }
 
 @mixin book() {
-  font-family: 'Futura New Book', sans-serif;
+  font-family: 'Futura New', sans-serif;
+  font-weight: 500;
 }
 
 @mixin hidden() {

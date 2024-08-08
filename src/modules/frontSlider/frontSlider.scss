@@ -151,7 +151,9 @@
         position: absolute;
         display: block;
         left: 0;
-        top: 100%;
+        bottom: 0;
+        width: 100%;
+        padding-right: 120px;
       }
     }
   }
@@ -322,8 +324,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-direction: column;
-    padding-top: 7px;
+    padding: 7px 7px 0;
     @include book();
     //font-size: 15px;
     background: $white;
