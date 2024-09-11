@@ -14,9 +14,9 @@ import './modules/menu/menu.js';
 import './modules/search/search.js';
 import './modules/footer/footer.js';
 import './modules/frontSlider/frontSlider.js';
-import './modules/hints/hints.js';
+// import './modules/hints/hints.js';
 import './modules/bests/bests.js';
-import './modules/about/about.js';
+// import './modules/about/about.js';
 import './modules/dealer/dealer.js';
 import './modules/services/services.js';
 import './modules/calculator/calculator.js';
@@ -55,3 +55,4 @@ import './modules/checkout/checkout.js';
 import './modules/checkoutStep/checkoutStep.js';
 import './modules/cartPopup/cartPopup.js';
 
+import './modules/frontCategories/frontCategories.js';

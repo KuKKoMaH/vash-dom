@@ -1,21 +1,18 @@
 .testimonials
   .c
-    .testimonials__title Истории клиентов и их домов:
+    .testimonials__title
+      | Отзывы клиентов
+      +the_svg('wavyline')
 
-    .testimonials__content
-      .testimonials__slider
-        .testimonials__slides
-          each i in [1,2,3,4,5]
-            .testimonials__slide
-              .testimonials__card
-                .testimonials__avatar: img(src=require('src/modules/testimonials/img/avatar.jpg'))
-                .testimonials__name
-                  | Петров Николай#{' '}
-                  =i
-                .testimonials__text Повседневная практика показывает, что рамки и место обучения кадров в значительной степени обуславливает создание новых предложений. Таким образом новая модель организационной деятельности влечет за собой .
-                .testimonials__gallery
-                  each i in [1,2,3]
-                    button.testimonials__img: img(src=require('src/modules/testimonials/img/img_0' + i + '.jpg'))
+    .testimonials__items
+      each i in [1,2,3,4,5]
+        .testimonials__item
+          .testimonials__card
+            .testimonials__head
+              +the_svg('testimonial')
+              .testimonials__name Юлия Каширская
+              .testimonials__label домохозяйка
+            .testimonials__content
+              p Заказывали дымник на вентиляционную трубу по своим размерам, сделали раньше обещанного срока (предупреждали, что могут делать его до месяца, а изготовили за 12 дней). У нас плоская кровля, приложу фото как смотрится на крыше.
 
-      .testimonials__nav.testimonials__nav--prev: +the_svg('arrow-right')
-      .testimonials__nav.testimonials__nav--next: +the_svg('arrow-right')
+

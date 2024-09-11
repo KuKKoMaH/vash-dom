@@ -1,0 +1,7 @@
+.frontCategories
+  .c
+    .frontCategories__items
+      each title, i in ['Все товары', 'Металлочерепица', 'Профнастил', 'Гибкая черепица', 'Забор', 'Сайдинг']
+        a.frontCategories__item(href='#')
+          span.frontCategories__icon: +the_svg('category_0' + (i + 1), 'frontCategories')
+          span.frontCategories__name= title

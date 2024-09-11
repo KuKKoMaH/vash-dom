@@ -1,23 +1,26 @@
 .banners
   .c
-    .banners__container
-      .banners__container
-        .banners__main
-          .banners__title Узнайте стоимость#[br] кровли, фасада, забора
-          .banners__text Отправьте нам чертежи вашего проекта#[br] и закажите предварительную смету
-          .banners__button: button.btn Подробнее
-          img.banners__decor(src=require('src/modules/banners/img/decor.png'))
+    .banners__items
+      .banners__item
+        .banners__img: +the_svg('services_03', 'services')
+        .banners__title Узнайте стоимость
+        .banners__subtitle кровли, фасада, забора
+        .banners__text Отправьте нам чертежи вашего проекта и закажите предварительную смету.
+        .banners__action: a.rawBtn.rawBtn--white(href='#') Подробнее
+      .banners__item
+        .banners__img: +the_svg('testimonial')
+        .banners__title Консультация
+        .banners__subtitle по материалам и монтажу
+        .banners__text Напишите нам из формы обратной связи на этом сайте, в любом мессенджере или позвоните по телефону
+        .banners__phone: a(href='#') +7 (8412) 21-05-67
+        .banners__action: a.rawBtn.rawBtn--white(href='#') Заказать звонок
 
-      .banners__container
-        .banners__item
-          .banners__title Получите#[br] консультацию#[br] по выбору и монтажу
-          .banners__text: a(href='tel:+7 (8412) 21-05-67') +7 (8412) 21-05-67
-          .banners__button: button.btn(data-micromodal-trigger="callback-popup") Заказать звонок
-
-        .banners__item.banners__item--gray
-          .banners__title Приходите к нам!
-          .banners__text Все покажем и расскажем
-          .banners__work ежедневно: #[span 8:00 - 19:00]
-          a.banners__address(href='#')
-            +the_svg('pin')
-            span Магазины на карте
+      .banners__item
+        .banners__img: +the_svg('geo')
+        .banners__title Приходите
+        .banners__subtitle к нам в магазин
+        .banners__text
+          | ПН-ПТ 8:00-18:00#[br]
+          | СБ 10:00-14:00#[br]
+          | ВС выходной
+        .banners__action: a.rawBtn.rawBtn--white(href='#') Магазины

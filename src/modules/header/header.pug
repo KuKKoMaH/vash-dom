@@ -1,34 +1,35 @@
 header.header
   .c
+    .header__titleMobile Всё для кровли, забора, фасада
     .header__top
       .header__logo: img(src=require('src/img/logo.png'))
-      .header__links
-        a(href='#') Производство по вашим размерам
-        a(href='#') Способы оплаты
-      .header__info
-        .header__location
+      .header__title Заказать онлайн #[br]всё для кровли, забора, фасада
+      //.header__links
+      //  a(href='#') Производство по вашим размерам
+      //  a(href='#') Способы оплаты
+      .header__aside
+        a.header__location
           +the_svg('geo')(class='header__locationIcon')
-          .header__locationLabel 3 магазина
-          .header__locationValue пн-вс с 8.00 до 19.00
+          .header__locationValue ПН-ПТ 8:00-18:00, СБ 10:00-14:00, ВС - ВЫХОДНОЙ
+          .header__locationLabel Магазины в Пензе
         .header__contact
           +the_svg('phone')(class='header__contactIcon')
           a.header__contactValue(href='tel:88412210567') 8 (8412) 21-05-67
           button.header__contactButton
-            | заказать звонок
-            +the_svg('chevrone-down')
+            | Заказать звонок
 
-      button.header__menuButton
-        +the_svg('hamburger').active
-        +the_svg('close').inactive
+        button.header__menuButton
+          +the_svg('hamburger').active
+          +the_svg('close').inactive
 
-      .header__cartContainer
-        a.header__cart.header__cart--top(href='#')
-          +the_svg('cart')(class='header__cartIcon')
-          .header__cartLabel Корзина
-          .header__cartValue 2 560 руб.
-          .header__cartCounter 2
-        .header__cartPopup
-          include ../cartPopup/cartPopup
+        .header__cartContainer
+          a.header__cart.header__cart--top(href='#')
+            +the_svg('cart')(class='header__cartIcon')
+            .header__cartLabel Корзина
+            .header__cartValue 2 560 руб.
+            .header__cartCounter 2
+          .header__cartPopup
+            include ../cartPopup/cartPopup
 
     .header__bottom
       button.header__catalogButton

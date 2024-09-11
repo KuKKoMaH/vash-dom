@@ -1,58 +1,18 @@
 .frontSlider
-  .c
-    .frontSlider__top
-      .frontSlider__main
-        .frontSlider__slider
-          .frontSlider__slides
-            each i in [require('src/modules/frontSlider/img/slide.jpg'), require('src/modules/frontSlider/img/bg2.jpg')]
-              .frontSlider__slide
-                img.frontSlider__img(src=i)
-                .frontSlider__content
-                  .frontSlider__title Гарантия#[br] лучшей цены! Гарантия#[br] лучшей цены! Гарантия#[br] лучшей цены! Гарантия#[br] лучшей цены!
-                  +the_svg('wavyline').frontSlider__separator.wavyline
-                  .frontSlider__subtitle Нашли такой же товар дешевле?
-                  .frontSlider__cta Снизим цену и подарим#[br] подарок!
-                  .frontSlider__button.frontSlider__button--desktop: a.btn.btn--rightTop(href='#') Подробнее
-                  .frontSlider__button.frontSlider__button--mobile: a.btn.btn--rightTop(href='#') Подробнее
+  .frontSlider__slider
+    .frontSlider__slides
+      each i in [1,2,3]
+        .frontSlider__slide
+          .c
+            .frontSlider__content
+              .frontSlider__info
+                .frontSlider__header Металлочерепица с матовым покрытием 901 р/кв. м
+                .frontSlider__text Доступные цвета: RAL 7024, RAL 8017, RAL 9005, RR32
+                .frontSlider__btn
+                  a.rawBtn.rawBtn--big.rawBtn--fill(href="") Подробнее
+              .frontSlider__img: img(src=require('src/modules/frontSlider/img/image 1.jpg'))
 
-        button.frontSlider__nav.frontSlider__nav--prev: +the_svg('arrow-right')
-        button.frontSlider__nav.frontSlider__nav--next: +the_svg('arrow-right')
-
-      .frontSlider__aside
-        .frontSlider__asideTitle Мы произвели
-        .frontSlider__asideCounter
-          span 1
-          span 2
-          span 3
-          span 4
-          span 5
-          span 6
-        .frontSlider__asideSubtitle квадратных метров кровли
-        .frontSlider__asideCategories
-          a(href='#') Металлочерепица
-          a(href='#') Кровельный профнастил
-          a(href='#') Натуральная черепица
-          a(href='#') Гибкая черепица
-          a(href='#') Сэндвич-панели
-          a(href='#') Композитная кровля
-          a(href='#') Фальцевая кровля
-
-    .frontSlider__categories
-      a.frontSlider__category(href='#')
-        +the_svg('category_01', 'frontSlider')
-        | Кровля
-      a.frontSlider__category(href='#')
-        +the_svg('category_02', 'frontSlider')
-        | Металлочерепица
-      a.frontSlider__category(href='#')
-        +the_svg('category_03', 'frontSlider')
-        | Профнастил
-      a.frontSlider__category(href='#')
-        +the_svg('category_04', 'frontSlider')
-        | Гибкая черепица
-      a.frontSlider__category(href='#')
-        +the_svg('category_05', 'frontSlider')
-        | Заборы
-      a.frontSlider__category(href='#')
-        +the_svg('category_06', 'frontSlider')
-        | Фасады
+  .frontSlider__navigation
+    .c
+      button.frontSlider__nav.frontSlider__nav--prev: +the_svg('arrow-right')
+      button.frontSlider__nav.frontSlider__nav--next: +the_svg('arrow-right')

@@ -1,24 +1,25 @@
 import initSlider from "src/js/initSlider";
-
-require.context("./img/", true, /\.sprite.svg$/);
+import { BREAKPOINT_LG } from "src/js/breakpoints";
 
 initSlider(".frontSlider__slider", ($el) => ({
-  wrapperClass: "frontSlider__slides",
-  slideClass:   "frontSlider__slide",
-  navigation:   {
+  wrapperClass:  "frontSlider__slides",
+  slideClass:    "frontSlider__slide",
+  navigation:    {
     prevEl: $el.parents(".frontSlider").find(".frontSlider__nav--prev")[0],
     nextEl: $el.parents(".frontSlider").find(".frontSlider__nav--next")[0],
   },
-  // pagination:      {
-  //   el:        $el.parents('.spare').find('.pagination')[0],
-  //   clickable: true,
-  // },
-  // touchEventsTarget: 'wrapper',
   slidesPerView: 1,
   spaceBetween:  0,
+  loop:          true,
   autoHeight:    true,
-  // autoplay:      {
-  //   delay:             3000,
-  //   pauseOnMouseEnter: false,
-  // },
+  breakpoints:   {
+    [BREAKPOINT_LG]: {
+      autoHeight: false,
+    },
+  },
+  // autoHeight:    true,
+  autoplay:      {
+    delay:             5000,
+    // pauseOnMouseEnter: false,
+  },
 }));

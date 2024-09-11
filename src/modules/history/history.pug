@@ -1,26 +1,12 @@
 .history
-  .c.history__container
-    img.history__decor.history__decor--01(src=require('src/modules/history/img/decor_01.png'))
-    img.history__decor.history__decor--02(src=require('src/modules/history/img/decor_02.png'))
-    +the_svg('wavyline').history__decor.history__decor--03.wavyline
-
-    .history__main
-      .history__title Наша кровля на здании XIX века в центре Пензы
-      .history__info
-        .history__media
-          .history__img
-            .history__slider
-              .history__slides
-                .history__slide: img(src=require('src/modules/history/img/slide.jpg'))
-                .history__slide: img(src=require('src/modules/history/img/slide.jpg'))
-          .history__nav
-            button.history__button.history__button--prev: +the_svg('arrow-right')
-            button.history__button.history__button--next: +the_svg('arrow-right')
-        .history__content
-          p Компании «Ваш Дом» выпала честь поучаствовать в реставрации одного из самых необычных памятников архитектуры Пензы на улице Володарского - дома у "дамы с собачкой". Памятник характеризуется  редко встречающимся сочетанием техник каменного строительства, воплощенных в дереве. #[span Важно было подобрать лёгкий, надёжный и экономичный материал], чтобы избежать излишнего давления на архитектурное сооружение и вписаться в строительную смету. Наши инженеры использовали металлочерепицу шведского производства Mera System толщиной всего 0,4 см, но с высоким содержанием цинка 240 г/м. Кстати, процент содержания этого металла в кровле может быть гораздо важнее, чем толщина профиля.
-
-    .history__aside
-      .history__label Использовали эту кровлю
-      .history__item
-        +the_card(1, false, true)
-
+  .c
+    .history__title
+      | Наша кровля в городе
+      +the_svg('wavyline')
+    .history__items
+      each i in [1,2,3,4]
+        .history__item
+          .history__card
+            .history__cardImg: img(src=require('src/img/catalog/2.jpg'))
+            .history__cardName Название объекта
+            .history__cardText Чем покрыт объект, какие работы проводила компания, какие услуги оказала, возможно указать сколько времени заняла вся работа
