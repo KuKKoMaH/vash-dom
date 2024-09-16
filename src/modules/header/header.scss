@@ -48,6 +48,33 @@
     }
   }
 
+  &__ctaMobile {
+    display: none;
+    @include mobile() {
+      margin: 0;
+      //position: absolute;
+      //height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: $gray-new-2;
+      font-size: 16px;
+
+    }
+  }
+
+  &__cta {
+    margin-left: 30px;
+    @include mobile() {
+      display: none;
+    }
+  }
+
+
   &__links {
     display: flex;
     align-items: center;
@@ -559,31 +586,18 @@
     }
   }
 
-  &__titleMobile {
+  &__title {
     display: none;
     @include mobile() {
-      margin: 0;
-      //position: absolute;
-      //height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      top: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      color: $gray-new-2;
-      font-size: 16px;
-
+      display: block;
+      @include demi();
+      text-transform: uppercase;
+      line-height: (26 / 20);
+      font-size: 20px;
+      margin: 20px;
     }
   }
 
-  &__title {
-    margin-left: 30px;
-    @include mobile() {
-      display: none;
-    }
-  }
 
   &__cards {
     margin: 40px;
@@ -718,17 +732,6 @@
     }
   }
 
-  &__catalogMobileLink {
-    display: none;
-    @include mobile() {
-      padding: 0 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 500;
-    }
-  }
-
   &__locationBottom {
     display: none;
     @include mobile() {
@@ -757,6 +760,61 @@
     @include demi();
     font-size: 14px;
     text-transform: uppercase;
+  }
+
+  &__mobileMenu {
+    display: none;
+    @include mobile() {
+      display: block;
+
+      //&:before {
+      //  content: '';
+      //  position: absolute;
+      //  left: 0;
+      //  width: 100%;
+      //  border-bottom: 1px solid $gray-new-2;
+      //}
+      //&:after {
+      //  content: '';
+      //  position: absolute;
+      //  left: 0;
+      //  width: 100%;
+      //  border-bottom: 1px solid $gray-new-2;
+      //}
+    }
+
+    ul, li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      flex: 1;
+      //border-right: 1px solid $gray-new-2;
+      //&:last-child {
+      //  border: 0;
+      //}
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      color: $green-dark;
+      font-size: 15px;
+      font-weight: 500;
+      height: 46px;
+      text-decoration: none;
+      letter-spacing: .1em;
+
+    }
   }
 
   &--search {

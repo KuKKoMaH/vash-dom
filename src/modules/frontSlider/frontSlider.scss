@@ -24,6 +24,11 @@
     width: 100%;
     flex-shrink: 0;
     overflow: hidden;
+    @include mobile() {
+      .c {
+        padding: 0;
+      }
+    }
   }
 
   &__content {
@@ -117,6 +122,7 @@
     left: 0;
     width: 100%;
     display: flex;
+    pointer-events: none;
 
     @include mobile() {
       bottom: 30px;
@@ -139,6 +145,7 @@
     color: $green-dark;
     border: 1px solid $green-dark;
     background: $gray-new;
+    pointer-events: all;
     @include mobile() {
       width: 52px;
       height: 52px;

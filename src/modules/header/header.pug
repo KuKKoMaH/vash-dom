@@ -1,9 +1,9 @@
 header.header
   .c
-    .header__titleMobile Всё для кровли, забора, фасада
+    .header__ctaMobile Всё для кровли, забора, фасада
     .header__top
       .header__logo: img(src=require('src/img/logo.png'))
-      .header__title Заказать онлайн #[br]всё для кровли, забора, фасада
+      .header__cta Заказать онлайн #[br]всё для кровли, забора, фасада
       //.header__links
       //  a(href='#') Производство по вашим размерам
       //  a(href='#') Способы оплаты
@@ -37,7 +37,6 @@ header.header
           +the_svg('hamburger').active
           +the_svg('close').inactive
         .header__catalogButtonText Каталог
-      a.header__catalogMobileLink(href='#') Доставка
 
       a.header__cart.header__cart--bottom(href='#')
         +the_svg('cart')(class='header__cartIcon')
@@ -111,3 +110,8 @@ header.header
 
       .header__catalog
         include ../menu/menu
+
+    .header__mobileMenu
+      ul
+        li: a(href='#') Доставка
+        li: a(href='#') Оплата

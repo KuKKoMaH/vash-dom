@@ -3,6 +3,7 @@
 
   padding: 23px 0;
   display: flex;
+  flex-wrap: wrap;
   margin: 0 -5px;
   @include mobile() {
     padding: 14px 0;

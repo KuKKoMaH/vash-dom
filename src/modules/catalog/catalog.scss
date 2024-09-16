@@ -27,6 +27,7 @@
       justify-content: center;
       width: 50px;
       height: 50px;
+      flex-shrink: 0;
       border: 1px solid $green-dark;
       color: $green-dark;
       margin-right: 10px;
@@ -123,7 +124,7 @@
     align-items: flex-start;
     margin-top: 25px;
     @include mobile() {
-      margin: 25px -20px 0;
+      margin: 0 -20px 0;
     }
   }
 
@@ -153,6 +154,7 @@
     @include mobile() {
       margin: 0 auto;
       padding: 33px 19px 19px;
+      max-width: 100%;
     }
   }
 
@@ -240,6 +242,14 @@
     @include mobile() {
       font-size: 24px;
       margin-bottom: 10px;
+    }
+  }
+
+  &__settings {
+    @include mobile() {
+      display: flex;
+      align-items: center;
+      max-width: 100%;
     }
   }
 
