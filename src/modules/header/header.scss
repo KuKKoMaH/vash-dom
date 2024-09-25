@@ -23,6 +23,25 @@
     }
   }
 
+  $main-height: 164px;
+  &__main {
+    @include mobile() {
+      position: fixed;
+      top:0;
+      left: 0;
+      width: 100%;
+      background: $white;
+      height: $main-height;
+      z-index: 1;
+    }
+  }
+
+  &__placeholder {
+    @include mobile() {
+      height: $main-height;
+    }
+  }
+
   &__top {
     display: flex;
     align-items: center;
@@ -52,13 +71,9 @@
     display: none;
     @include mobile() {
       margin: 0;
-      //position: absolute;
-      //height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      top: 0;
-      left: 0;
       width: 100%;
       text-align: center;
       color: $gray-new-2;
@@ -401,7 +416,7 @@
     }
   }
 
-  &__main {
+  &__mainMenu {
     flex: 1;
     position: relative;
     @include mobile() {

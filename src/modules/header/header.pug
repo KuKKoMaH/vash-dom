@@ -1,117 +1,119 @@
 header.header
-  .c
-    .header__ctaMobile Всё для кровли, забора, фасада
-    .header__top
-      .header__logo: img(src=require('src/img/logo.png'))
-      .header__cta Заказать онлайн #[br]всё для кровли, забора, фасада
-      //.header__links
-      //  a(href='#') Производство по вашим размерам
-      //  a(href='#') Способы оплаты
-      .header__aside
-        a.header__location
-          +the_svg('geo')(class='header__locationIcon')
-          .header__locationValue ПН-ПТ 8:00-18:00, СБ 10:00-14:00, ВС - ВЫХОДНОЙ
-          .header__locationLabel Магазины в Пензе
-        .header__contact
-          +the_svg('phone')(class='header__contactIcon')
-          a.header__contactValue(href='tel:88412210567') 8 (8412) 21-05-67
-          button.header__contactButton
-            | Заказать звонок
+  .header__placeholder
+  .header__main
+    .c
+      .header__ctaMobile Всё для кровли, забора, фасада
+      .header__top
+        .header__logo: img(src=require('src/img/logo.png'))
+        .header__cta Заказать онлайн #[br]всё для кровли, забора, фасада
+        //.header__links
+        //  a(href='#') Производство по вашим размерам
+        //  a(href='#') Способы оплаты
+        .header__aside
+          a.header__location
+            +the_svg('geo')(class='header__locationIcon')
+            .header__locationValue ПН-ПТ 8:00-18:00, СБ 10:00-14:00, ВС - ВЫХОДНОЙ
+            .header__locationLabel Магазины в Пензе
+          .header__contact
+            +the_svg('phone')(class='header__contactIcon')
+            a.header__contactValue(href='tel:88412210567') 8 (8412) 21-05-67
+            button.header__contactButton
+              | Заказать звонок
 
-        button.header__menuButton
-          +the_svg('hamburger').active
+          button.header__menuButton
+            +the_svg('hamburger').active
+            +the_svg('close').inactive
+
+          .header__cartContainer
+            a.header__cart.header__cart--top(href='#')
+              +the_svg('cart')(class='header__cartIcon')
+              .header__cartLabel Корзина
+              .header__cartValue 2 560 руб.
+              .header__cartCounter 2
+            .header__cartPopup
+              include ../cartPopup/cartPopup
+
+      .header__bottom
+        button.header__catalogButton
+          .header__catalogButtonIcon
+            +the_svg('hamburger').active
+            +the_svg('close').inactive
+          .header__catalogButtonText Каталог
+
+        a.header__cart.header__cart--bottom(href='#')
+          +the_svg('cart')(class='header__cartIcon')
+          .header__cartCounter 2
+
+
+        .header__mainMenu
+          .header__search
+            include ../search/search
+
+          .header__menu
+            .header__menuContainer
+              ul
+                li: a(href='#') Производство
+                li
+                  a(href='#') Услуги
+                  .header__submenu
+                    button.header__back
+                      +the_svg('chevrone-down')
+                      | МЕНЮ
+                    .header__submenuContent
+                      .header__title Услуги
+                      ul
+                        li: a(href='#') Замер и доставка образцов
+                        li: a(href='#') Бережная доставка (отгрузка)
+                        li: a(href='#') Оплата онлайн
+                        li: a(href='#') Проверенные монтажники (профессиональный монтаж)
+                        li: a(href='#') Калькулятор стоимости материалов для кровли
+                        li: a(href='#') Заказать расчет
+                        li: a(href='#') Возврат товара
+
+                li
+                  a(href='#') Рекомендации эксперта
+                  .header__submenu
+                    button.header__back
+                      +the_svg('chevrone-down')
+                      | МЕНЮ
+                    .header__submenuContent
+                      .header__title Рекомендации эксперта
+                      .header__cards
+                        a(href='#').header__card
+                          .header__head Лайф-хак: подбираем кровлю без потери времени и денег
+                          +the_svg('chevrone-down')
+                        a(href='#').header__card
+                          .header__head Цена кровли ниже средней на 10%?
+                          .header__text Будьте внимательны	к качеству и стоимости комплектующих.
+                          +the_svg('chevrone-down')
+                        a(href='#').header__card
+                          .header__head Не дайте себя обмануть!
+                          .header__text Измеряем толщину профлиста правильно
+                          +the_svg('chevrone-down')
+                        a(href='#').header__card
+                          .header__head Что нужно знать о кровельных материалах
+                          .header__text Преимущества и недостатки при выборе материала
+                          +the_svg('chevrone-down')
+                        a(href='#').header__card
+                          .header__head 5 главных правил для перевозки кровли без повреждений
+                          .header__text Особенности, о которых мало кто рассказывает
+                          +the_svg('chevrone-down')
+
+                li: a(href='#') Дилерам и строителям
+                li: a(href='#') VIP материалы
+              .header__locationBottom
+                +the_svg('geo')(class='header__locationBottomIcon')
+                .header__locationBottomLabel 3 магазина
+                .header__locationBottomValue пн-вс с 8.00 до 19.00
+
+        button.header__searchButton
+          +the_svg('search').active
           +the_svg('close').inactive
 
-        .header__cartContainer
-          a.header__cart.header__cart--top(href='#')
-            +the_svg('cart')(class='header__cartIcon')
-            .header__cartLabel Корзина
-            .header__cartValue 2 560 руб.
-            .header__cartCounter 2
-          .header__cartPopup
-            include ../cartPopup/cartPopup
+        .header__catalog
+          include ../menu/menu
 
-    .header__bottom
-      button.header__catalogButton
-        .header__catalogButtonIcon
-          +the_svg('hamburger').active
-          +the_svg('close').inactive
-        .header__catalogButtonText Каталог
-
-      a.header__cart.header__cart--bottom(href='#')
-        +the_svg('cart')(class='header__cartIcon')
-        .header__cartCounter 2
-
-
-      .header__main
-        .header__search
-          include ../search/search
-
-        .header__menu
-          .header__menuContainer
-            ul
-              li: a(href='#') Производство
-              li
-                a(href='#') Услуги
-                .header__submenu
-                  button.header__back
-                    +the_svg('chevrone-down')
-                    | МЕНЮ
-                  .header__submenuContent
-                    .header__title Услуги
-                    ul
-                      li: a(href='#') Замер и доставка образцов
-                      li: a(href='#') Бережная доставка (отгрузка)
-                      li: a(href='#') Оплата онлайн
-                      li: a(href='#') Проверенные монтажники (профессиональный монтаж)
-                      li: a(href='#') Калькулятор стоимости материалов для кровли
-                      li: a(href='#') Заказать расчет
-                      li: a(href='#') Возврат товара
-
-              li
-                a(href='#') Рекомендации эксперта
-                .header__submenu
-                  button.header__back
-                    +the_svg('chevrone-down')
-                    | МЕНЮ
-                  .header__submenuContent
-                    .header__title Рекомендации эксперта
-                    .header__cards
-                      a(href='#').header__card
-                        .header__head Лайф-хак: подбираем кровлю без потери времени и денег
-                        +the_svg('chevrone-down')
-                      a(href='#').header__card
-                        .header__head Цена кровли ниже средней на 10%?
-                        .header__text Будьте внимательны	к качеству и стоимости комплектующих.
-                        +the_svg('chevrone-down')
-                      a(href='#').header__card
-                        .header__head Не дайте себя обмануть!
-                        .header__text Измеряем толщину профлиста правильно
-                        +the_svg('chevrone-down')
-                      a(href='#').header__card
-                        .header__head Что нужно знать о кровельных материалах
-                        .header__text Преимущества и недостатки при выборе материала
-                        +the_svg('chevrone-down')
-                      a(href='#').header__card
-                        .header__head 5 главных правил для перевозки кровли без повреждений
-                        .header__text Особенности, о которых мало кто рассказывает
-                        +the_svg('chevrone-down')
-
-              li: a(href='#') Дилерам и строителям
-              li: a(href='#') VIP материалы
-            .header__locationBottom
-              +the_svg('geo')(class='header__locationBottomIcon')
-              .header__locationBottomLabel 3 магазина
-              .header__locationBottomValue пн-вс с 8.00 до 19.00
-
-      button.header__searchButton
-        +the_svg('search').active
-        +the_svg('close').inactive
-
-      .header__catalog
-        include ../menu/menu
-
-    .header__mobileMenu
-      ul
-        li: a(href='#') Доставка
-        li: a(href='#') Оплата
+      .header__mobileMenu
+        ul
+          li: a(href='#') Доставка
+          li: a(href='#') Оплата
